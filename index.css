@@ -497,7 +497,13 @@
   height: 65px;
   left: auto;
   right: 0;
-}.u-section-2 .u-sheet-1 {
+}
+
+.u-section-2 .u-sheet-2 {
+  min-height: 500px;
+}
+
+.u-section-2 .u-sheet-1 {
   min-height: 1170px;
 }
 
