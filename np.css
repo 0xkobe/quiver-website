@@ -32327,7 +32327,9 @@ a.u-link.u-text-hover-grey-90:hover {
             border-color: #8c7ee7 !important;
         }
         
-
+        .normal-text {
+          color: #aa9fed !important;
+        }
         
         .u-text-custom-color-1,
         a.u-button-style.u-text-custom-color-1,
