@@ -5,7 +5,7 @@ export default function Item(item: INavigationItem) {
     <a
       key={item.key}
       href={item.href}
-      className="text-base font-medium text-gray-500 hover:text-gray-900"
+      className="text-base text-gray-500 hover:text-gray-900"
     >
       {item.name}
     </a>
