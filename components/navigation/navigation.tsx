@@ -1,13 +1,10 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import {
-  MenuIcon,
-  XIcon,
-  DocumentTextIcon,
-} from "@heroicons/react/outline";
+import { MenuIcon, XIcon, DocumentTextIcon } from "@heroicons/react/outline";
 import { INavigationItem } from "./types";
 import Item from "./item";
 import Button from "../button/button";
+import Container from "../container/container";
 
 const action: INavigationItem = {
   key: "whitepaper",
@@ -43,12 +40,12 @@ export default function Navigation() {
     <Popover className="relative bg-white">
       {({ open }) => (
         <>
-          <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
+          <Container className="flex justify-between items-center md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="https://quiverprotocol.com">
                 <span className="sr-only">Quiver</span>
                 <img
-                  className="h-8 w-auto sm:h-10"
+                  className="w-auto h-8 sm:h-10"
                   src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                   alt="Quiver"
                 />
@@ -68,7 +65,7 @@ export default function Navigation() {
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
             </div>
-          </div>
+          </Container>
 
           <Transition
             show={open}
