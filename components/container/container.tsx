@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { PropsWithChildren } from "react";
 
 type IProps = {
-  className: string;
+  className?: string;
 };
 
 export default function Container(props: PropsWithChildren<IProps>) {
