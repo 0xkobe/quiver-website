@@ -37,7 +37,7 @@ const navigation: INavigationItem[] = [
 
 export default function Navigation() {
   return (
-    <Popover className="relative bg-white">
+    <Popover>
       {({ open }) => (
         <>
           <Container className="flex justify-between items-center md:justify-start md:space-x-10">
