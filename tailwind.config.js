@@ -3,6 +3,9 @@
 const mainColors = {
   primary: "#5540DB",
   secondary: "#D270FF",
+  purple: {
+    900: "#231B5C",
+  },
 };
 
 module.exports = {

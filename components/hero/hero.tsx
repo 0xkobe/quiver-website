@@ -25,7 +25,7 @@ export default function Hero(props: PropsWithChildren<IProps>) {
         <span className="block">1st Community-driven</span>
         <span className="block">Blockchain Investment Protocol</span>
       </h1>
-      <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+      <p className="mt-3 max-w-md mx-auto text-base text-purple-900 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
         Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem
         cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
       </p>
@@ -47,7 +47,9 @@ export default function Hero(props: PropsWithChildren<IProps>) {
             Community core members
           </h2>
         </div>
-        <nav className="flex flex-wrap justify-center">{props.members.map(Member)}</nav>
+        <nav className="flex flex-wrap justify-center">
+          {props.members.map(Member)}
+        </nav>
       </div>
     </Container>
   );
