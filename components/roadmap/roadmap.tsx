@@ -1,89 +1,105 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { CheckIcon } from "@heroicons/react/solid";
+import { DownloadIcon } from "@heroicons/react/outline";
+import Button from "../button/button";
 import Container from "../container/container";
+import Quarter from "./quarter";
+import { IQuarter } from "./types";
 
-const steps = [
-  { id: "01", name: "Job details", href: "#", status: "complete" },
-  { id: "02", name: "Application form", href: "#", status: "current" },
-  { id: "03", name: "Preview", href: "#", status: "upcoming" },
+const roadmap: IQuarter[] = [
+  {
+    quarter: "Q2",
+    steps: [
+      {
+        title: "Whitepaper writing",
+        icon: "📝",
+      },
+      {
+        title: "Community introduction & marketing materials",
+        icon: "👋",
+      },
+      {
+        title: "Emotional NFTs Sale",
+        icon: "😻",
+      },
+      {
+        title: "Community Seed investors",
+        icon: "💸",
+      },
+      {
+        title: "Initial community setup",
+        icon: "🎉",
+      },
+      {
+        title: "Initial Quiver IDAO governance setup",
+        icon: "⚖️",
+      },
+    ],
+  },
+  {
+    quarter: "Q3",
+    steps: [
+      {
+        title: "Finalization of Quiver IDAO governance setup",
+        icon: "⚖️",
+      },
+      {
+        title: "DICP MVP product",
+        icon: "🚀",
+      },
+      {
+        title: "DAO service management product",
+        icon: "📟",
+      },
+      {
+        title: "Prototyping of seed DAO services",
+        icon: "🛠",
+      },
+      {
+        title: "Community development",
+        icon: "💪",
+      },
+    ],
+  },
+  {
+    quarter: "Q4",
+    steps: [
+      {
+        title: "Implement ready-to-go product on Ethereum network",
+        icon: "🛰",
+      },
+      {
+        title: "QSTK Token public sale & DEX listing",
+        icon: "💰",
+      },
+      {
+        title: "Partnerships development",
+        icon: "🤝",
+      },
+      {
+        title: "Protocol governance setup",
+        icon: "⚖️",
+      },
+    ],
+  },
 ];
 
 export default function Roadmap() {
   return (
-    <Container>
-      <nav aria-label="Progress">
-        <ol className="border border-gray-300 rounded-md divide-y divide-gray-300 md:flex md:divide-y-0">
-          {steps.map((step, stepIdx) => (
-            <li key={step.name} className="relative md:flex-1 md:flex">
-              {step.status === "complete" ? (
-                <a href={step.href} className="group flex items-center w-full">
-                  <span className="px-6 py-4 flex items-center text-sm font-medium">
-                    <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-600 rounded-full group-hover:bg-primary-800">
-                      <CheckIcon
-                        className="w-6 h-6 text-white"
-                        aria-hidden="true"
-                      />
-                    </span>
-                    <span className="ml-4 text-sm font-medium text-gray-900">
-                      {step.name}
-                    </span>
-                  </span>
-                </a>
-              ) : step.status === "current" ? (
-                <a
-                  href={step.href}
-                  className="px-6 py-4 flex items-center text-sm font-medium"
-                  aria-current="step"
-                >
-                  <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center border-2 border-primary-600 rounded-full">
-                    <span className="text-primary-600">{step.id}</span>
-                  </span>
-                  <span className="ml-4 text-sm font-medium text-primary-600">
-                    {step.name}
-                  </span>
-                </a>
-              ) : (
-                <a href={step.href} className="group flex items-center">
-                  <span className="px-6 py-4 flex items-center text-sm font-medium">
-                    <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center border-2 border-gray-300 rounded-full group-hover:border-gray-400">
-                      <span className="text-gray-500 group-hover:text-gray-900">
-                        {step.id}
-                      </span>
-                    </span>
-                    <span className="ml-4 text-sm font-medium text-gray-500 group-hover:text-gray-900">
-                      {step.name}
-                    </span>
-                  </span>
-                </a>
-              )}
+    <Container className="text-center">
+      <h2 className="text-base font-semibold leading-6 text-primary tracking-wide uppercase">
+        Community Direction
+      </h2>
+      <p className="mt-3 text-4xl leading-10 font-extrabold text-purple-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+        Roadmap [2021]
+      </p>
+      <div className="mt-12">
+        <Button href="#" icon={DownloadIcon} text shadow>
+          Download Whitepaper
+        </Button>
+      </div>
 
-              {stepIdx !== steps.length - 1 ? (
-                <>
-                  {/* Arrow separator for lg screens and up */}
-                  <div
-                    className="hidden md:block absolute top-0 right-0 h-full w-5"
-                    aria-hidden="true"
-                  >
-                    <svg
-                      className="h-full w-full text-gray-300"
-                      viewBox="0 0 22 80"
-                      fill="none"
-                      preserveAspectRatio="none"
-                    >
-                      <path
-                        d="M0 -2L20 40L0 82"
-                        vectorEffect="non-scaling-stroke"
-                        stroke="currentcolor"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </>
-              ) : null}
-            </li>
-          ))}
-        </ol>
-      </nav>
+      <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {roadmap.map(Quarter)}
+      </div>
     </Container>
   );
 }
