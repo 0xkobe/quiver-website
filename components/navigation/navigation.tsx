@@ -40,7 +40,7 @@ export default function Navigation() {
     <Popover>
       {({ open }) => (
         <>
-          <Container className="flex justify-between items-center md:justify-start md:space-x-10">
+          <Container className="flex justify-between items-center md:justify-start md:space-x-10" padding={6}>
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="https://quiverprotocol.com">
                 <span className="sr-only">Quiver</span>

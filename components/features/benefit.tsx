@@ -2,20 +2,16 @@ import { IBenefit } from "./types";
 
 export default function Benefit(benefit: IBenefit) {
   return (
-    <div key={benefit.name} className="pt-6">
-      <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-        <div className="-mt-6">
-          <div>
-            <span className="inline-flex items-center justify-center p-3 bg-primary-500 rounded-md shadow-lg">
-              <benefit.icon className="h-6 w-6 text-white" aria-hidden="true" />
-            </span>
-          </div>
-          <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-            {benefit.name}
-          </h3>
-          <p className="mt-5 text-base text-gray-500">{benefit.description}</p>
-        </div>
-      </div>
+    <div
+      key={benefit.name}
+      className="flow-root bg-white-50 rounded-xl shadow-xl px-8 py-16"
+    >
+      <span className="inline-flex items-center justify-center p-3 bg-purple-100 rounded-md shadow-lg">
+        <span className="w-10 h-10 text-4xl">{benefit.icon}</span>
+      </span>
+      <h3 className="mt-8 text-lg leading-6 font-medium text-purple-900 tracking-tight">
+        {benefit.description}
+      </h3>
     </div>
   );
 }

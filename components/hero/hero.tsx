@@ -12,7 +12,7 @@ type IProps = {
 
 export default function Hero(props: PropsWithChildren<IProps>) {
   return (
-    <Container className="mt-16 px-12 sm:mt-24 text-center">
+    <Container className="px-12 text-center">
       <a
         href="#"
         className="inline-flex items-center text-purple-900 bg-purple-100 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-purple-600"
@@ -41,7 +41,7 @@ export default function Hero(props: PropsWithChildren<IProps>) {
         </div>
       </div>
 
-      <div className="mt-12 mb-8 space-y-8 sm:space-y-12">
+      <div className="mt-12 space-y-8 sm:space-y-12">
         <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
           <h2 className="text-2xl leading-7 font-bold tracking-tight text-purple-900">
             Community core members

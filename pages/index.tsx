@@ -71,7 +71,6 @@ export default function Home() {
     <>
       <Hero members={members} />
       <Information />
-      <Vision />
       <Features />
       <Ecosystem />
       <NFT />
