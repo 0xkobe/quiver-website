@@ -31,7 +31,7 @@ export default function Hero(props: PropsWithChildren<IProps>) {
         cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
       </p>
 
-      <div className="mt-12 mb-24 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
+      <div className="mt-12 mb-24 mx-auto sm:flex sm:justify-center">
         <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
           <Button href="#" large shadow>
             Join our Discord

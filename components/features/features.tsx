@@ -11,13 +11,13 @@ export default function Protocol() {
     <Container className="text-center">
       <Headline>Quiver Community Vision</Headline>
       <Title className="mt-3">An Innovative Way to Value Information</Title>
-      <p className="max-w-xl mt-6 leading-7 mx-auto text-xl text-purple-900">
+      <p className="mt-6 leading-7 mx-auto text-xl text-purple-900">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magnam
         voluptatum cupiditate veritatis in, accusamus quisquam.
       </p>
 
       <div className="lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8 mt-24 text-left">
-        <div className="px-4 max-w-xl mx-auto sm:px-6 lg:pt-16 lg:max-w-none lg:mx-0 lg:px-0">
+        <div className="px-4 mx-auto sm:px-6 lg:pt-16 lg:mx-0 lg:px-0">
           <Subtitle>Decentralized Information Collector Protocol</Subtitle>
           <p className="mt-4 text-base leading-6 text-purple-900">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
@@ -45,7 +45,7 @@ export default function Protocol() {
       <Benefits />
 
       <div className="mt-12 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8 text-left">
-        <div className="px-4 max-w-xl mx-auto sm:px-6 lg:pt-16 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+        <div className="px-4 mx-auto sm:px-6 lg:pt-16 lg:mx-0 lg:px-0 lg:col-start-2">
           <Subtitle>Reputation Based Community: The Source of Trust</Subtitle>
           <p className="mt-4 text-base leading-6 text-purple-900">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ex

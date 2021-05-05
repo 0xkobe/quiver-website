@@ -94,7 +94,7 @@ export default function Investor() {
   return (
     <Container>
       <div className="lg:grid lg:grid-cols-5 lg:grid-flow-col-dense lg:gap-8">
-        <div className="col-span-2 px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+        <div className="col-span-2 px-4 mx-auto sm:px-6 lg:py-16 lg:mx-0 lg:px-0">
           <Headline>Emotional NFTs sale</Headline>
           <Title className="mt-3">Become a Community Investor</Title>
           <p className="mt-6 leading-7 text-xl text-purple-900">
@@ -119,7 +119,9 @@ export default function Investor() {
         </div>
       </div>
 
-      <Subtitle2 className="mt-12 text-center">Early Investors Bundle Benefits</Subtitle2>
+      <Subtitle2 className="mt-12 text-center">
+        Early Investors Bundle Benefits
+      </Subtitle2>
       <div className="mt-12">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           {benefits.map(({ category, items, name }, i) => (
