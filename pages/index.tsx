@@ -2,7 +2,7 @@ import Hero from "../components/hero/hero";
 import Information from "../components/information/information";
 import Features from "../components/features/features";
 import Ecosystem from "../components/ecosystem/ecosystem";
-import NFT from "../components/nft/nft";
+import Investor from "../components/inverstor/investor";
 import Roadmap from "../components/roadmap/roadmap";
 import { IMember } from "../components/hero/types";
 
@@ -72,7 +72,7 @@ export default function Home() {
       <Information />
       <Features />
       <Ecosystem />
-      <NFT />
+      <Investor />
       <Roadmap />
     </>
   );

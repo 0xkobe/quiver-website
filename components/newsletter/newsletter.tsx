@@ -19,7 +19,7 @@ export default function Newsletter() {
         />
         <Button
           onClick={submit}
-          className="text-base leading-6 font-medium w-full"
+          className="text-base leading-6 font-medium w-full mt-3 lg:mt-0"
         >
           Notify me
         </Button>
