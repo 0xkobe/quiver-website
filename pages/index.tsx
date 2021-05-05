@@ -1,6 +1,5 @@
 import Hero from "../components/hero/hero";
 import Information from "../components/information/information";
-import Vision from "../components/vision/vision";
 import Features from "../components/features/features";
 import Ecosystem from "../components/ecosystem/ecosystem";
 import NFT from "../components/nft/nft";
