@@ -2,13 +2,12 @@ import { DownloadIcon } from "@heroicons/react/outline";
 import Button from "../button/button";
 import Container from "../container/container";
 import Benefits from "./benefits";
+import Headline from "../title/headline";
 
 export default function Protocol() {
   return (
     <Container className="text-center">
-      <h2 className="text-base font-semibold leading-6 text-primary tracking-wide uppercase">
-        Quiver Community Vision
-      </h2>
+      <Headline>Quiver Community Vision</Headline>
       <p className="mt-3 text-4xl leading-10 font-extrabold text-purple-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
         An Innovative Way to Value Information
       </p>

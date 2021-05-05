@@ -1,12 +1,11 @@
 import Container from "../container/container";
+import Headline from "../title/headline";
 import Products from "./products";
 
 export default function Ecosystem() {
   return (
     <Container className="text-center">
-      <h2 className="text-base font-semibold leading-6 text-primary tracking-wide uppercase">
-        Quiver upcoming Ecosystem
-      </h2>
+      <Headline>Quiver Upcoming Ecosystem</Headline>
       <p className="mt-3 text-4xl leading-10 font-extrabold text-purple-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
         <span className="block">All-in-one Solution for Stressless</span>
         <span className="block">Blockchain Investment</span>
