@@ -17,7 +17,7 @@ export default function Protocol() {
         voluptatum cupiditate veritatis in, accusamus quisquam.
       </p>
 
-      <div className="lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8 mt-24">
+      <div className="lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8 mt-24 text-left">
         <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
           <h2 className="text-3xl leading-9 font-bold tracking-tight text-purple-900">
             Decentralized Information Collector Protocol
@@ -47,7 +47,7 @@ export default function Protocol() {
 
       <Benefits />
 
-      <div className="mt-12 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8">
+      <div className="mt-12 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8 text-left">
         <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
           <h2 className="text-3xl leading-9 font-bold tracking-tight text-purple-900">
             Reputation Based Community: The Source of Trust
