@@ -26,11 +26,11 @@ export default function NFT(props: PropsWithChildren<IProps>) {
     },
   }[props.nft.progress];
 
-  return (
-    <div key={props.nft.name}>
+  return (  
+    <div>
       <div
         className={`p-6 border-2 border-primary rounded-xl shadow-xl ${
-          props.index < 3 && props.index % 3 !== 1 ? "mt-12" : ""
+          props.index < 3 && props.index % 3 !== 1 ? "lg:mt-12" : ""
         }`}
       >
         <div className="flex justify-between">
@@ -47,7 +47,7 @@ export default function NFT(props: PropsWithChildren<IProps>) {
 
         <img
           src={props.nft.imageUrl}
-          className={`mt-6 w-32 h-${props.index % 3 == 1 ? 44 : 32}`}
+          className={`mt-6 mx-auto w-32 h32 lg:h-${props.index % 3 == 1 ? 44 : 32}`}
         />
 
         <p className="mt-6 text-base leading-6 font-bold text-purple-900">

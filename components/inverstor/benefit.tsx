@@ -2,24 +2,23 @@ import { IBenefit } from "./types";
 
 export default function Benefit(benefit: IBenefit) {
   return (
-    <div key={benefit.name} className="pt-6">
-      <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-        <div className="-mt-6">
-          <div>
-            <span className="inline-flex items-center justify-center p-3 bg-primary-500 rounded-md shadow-lg">
-              <benefit.icon className="h-6 w-6 text-white" aria-hidden="true" />
-            </span>
-          </div>
-          <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-            {benefit.name}
-          </h3>
-          <ul>
-            {benefit.items.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
+    <div
+      key={benefit.name}
+      className="p-8 border border-purple-300 rounded-xl"
+    >
+      <h3 className="text-xl leading-7 font-bold text-purple-900">
+        {benefit.name}
+      </h3>
+      <p className="mt-2 text-base leading-6 font-normal text-gray-400">
+        [{benefit.category}]
+      </p>
+      <ul className="list-disc list-inside mt-6 text-purple-900">
+        {benefit.items.map((item, i) => (
+          <li key={i} className="mt-4 text-base leading-6 font-normal">
+            {item}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

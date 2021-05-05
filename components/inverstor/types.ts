@@ -8,6 +8,6 @@ export type INFT = {
 
 export type IBenefit = {
   name: string;
+  category: string;
   items: string[];
-  icon: any;
 };

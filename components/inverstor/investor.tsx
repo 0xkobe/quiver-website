@@ -1,8 +1,8 @@
 import Container from "../container/container";
 import Newsletter from "../newsletter/newsletter";
-import Benefits from "./benefits";
+import Benefit from "./benefit";
 import NFT from "./nft";
-import { INFT } from "./types";
+import { IBenefit, INFT } from "./types";
 
 const nfts: INFT[] = [
   {
@@ -55,6 +55,38 @@ const nfts: INFT[] = [
   },
 ];
 
+const benefits: IBenefit[] = [
+  {
+    name: "Emotional NFT",
+    items: [
+      "Lovely art for stressless investment",
+      "Get access to locked assets sale",
+      "Community gamification",
+    ],
+    category: "Community Art NFTs",
+  },
+  {
+    name: "QREP Token",
+    category: "Reputation Token",
+    items: [
+      "Get initial reputation in the ecosystem with QREP Token",
+      "Access DICP voting power",
+      "Unlock DICP protocol rewards",
+      "Trust from the community",
+    ],
+  },
+  {
+    name: "QSTK Token",
+    category: "Economy Token",
+    items: [
+      "Receive QSTK Token at a discounted price (locked asset)",
+      "Access Quiver IDAO voting power",
+      "Get discounted price on information purchase from the DICP",
+      "Unlock DICP protocol rewards",
+    ],
+  },
+];
+
 export default function Investor() {
   return (
     <Container>
@@ -82,13 +114,22 @@ export default function Investor() {
         <div className="col-span-3 md:px-14">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             {nfts.map((x, i) => (
-              <NFT nft={x} index={i} />
+              <NFT nft={x} index={i} key={i} />
             ))}
           </div>
         </div>
       </div>
 
-      <Benefits />
+      <p className="mt-12 text-center text-2xl leading-7 font-bold text-purple-900">
+        Early Investors Bundle Benefits
+      </p>
+      <div className="mt-12">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {benefits.map(({ category, items, name }, i) => (
+            <Benefit name={name} category={category} items={items} key={i} />
+          ))}
+        </div>
+      </div>
     </Container>
   );
 }
