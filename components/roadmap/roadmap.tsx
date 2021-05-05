@@ -2,6 +2,7 @@ import { DownloadIcon } from "@heroicons/react/outline";
 import Button from "../button/button";
 import Container from "../container/container";
 import Headline from "../title/headline";
+import Title from "../title/title";
 import Quarter from "./quarter";
 import { IQuarter } from "./types";
 
@@ -87,9 +88,7 @@ export default function Roadmap() {
   return (
     <Container className="text-center">
       <Headline>Community Direction</Headline>
-      <p className="mt-3 text-4xl leading-10 font-extrabold text-purple-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-        Roadmap [2021]
-      </p>
+      <Title className="mt-3">Roadmap [2021]</Title>
       <div className="mt-12">
         <Button href="#" icon={DownloadIcon} text shadow>
           Download Whitepaper

@@ -1,8 +1,9 @@
-import { ChevronRightIcon } from "@heroicons/react/outline";
 import { PropsWithChildren } from "react";
 import Button from "../button/button";
 import Container from "../container/container";
 import Tag from "../tag/tag";
+import MainTitle from "../title/main-title";
+import Subtitle2 from "../title/subtitle";
 import Member from "./member";
 import { IMember } from "./types";
 
@@ -21,10 +22,10 @@ export default function Hero(props: PropsWithChildren<IProps>) {
         <span className="ml-4 text-sm">Coming July 1st 🔥</span>
       </a>
 
-      <h1 className="mt-12 text-4xl tracking-tight font-extrabold text-purple-900 sm:text-5xl md:text-6xl">
+      <MainTitle className="mt-12">
         <span className="block">1st Community-driven</span>
         <span className="block">Blockchain Investment Protocol</span>
-      </h1>
+      </MainTitle>
       <p className="mt-3 max-w-md mx-auto text-base text-purple-900 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
         Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem
         cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
@@ -41,16 +42,10 @@ export default function Hero(props: PropsWithChildren<IProps>) {
         </div>
       </div>
 
-      <div className="mt-12 space-y-8 sm:space-y-12">
-        <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-          <h2 className="text-2xl leading-7 font-bold tracking-tight text-purple-900">
-            Community core members
-          </h2>
-        </div>
-        <nav className="flex flex-wrap justify-center">
-          {props.members.map(Member)}
-        </nav>
-      </div>
+      <Subtitle2 className="mt-12">Community core members</Subtitle2>
+      <nav className="mt-12 flex flex-wrap justify-center">
+        {props.members.map(Member)}
+      </nav>
     </Container>
   );
 }

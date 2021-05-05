@@ -1,5 +1,8 @@
 import Container from "../container/container";
 import Newsletter from "../newsletter/newsletter";
+import Headline from "../title/headline";
+import Subtitle2 from "../title/subtitle";
+import Title from "../title/title";
 import Benefit from "./benefit";
 import NFT from "./nft";
 import { IBenefit, INFT } from "./types";
@@ -92,12 +95,8 @@ export default function Investor() {
     <Container>
       <div className="lg:grid lg:grid-cols-5 lg:grid-flow-col-dense lg:gap-8">
         <div className="col-span-2 px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
-          <h2 className="text-base font-semibold leading-6 text-primary tracking-wide uppercase">
-            Emotional NFTs sale
-          </h2>
-          <p className="mt-3 text-4xl leading-10 font-extrabold text-purple-900 sm:tracking-tight">
-            Become a Community Investor
-          </p>
+          <Headline>Emotional NFTs sale</Headline>
+          <Title className="mt-3">Become a Community Investor</Title>
           <p className="mt-6 leading-7 text-xl text-purple-900">
             Quiver Emotional NFTs are designed to be part of our upcoming
             stressless portfolio tracker. They give you an ability to buy
@@ -120,9 +119,7 @@ export default function Investor() {
         </div>
       </div>
 
-      <p className="mt-12 text-center text-2xl leading-7 font-bold text-purple-900">
-        Early Investors Bundle Benefits
-      </p>
+      <Subtitle2 className="mt-12 text-center">Early Investors Bundle Benefits</Subtitle2>
       <div className="mt-12">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           {benefits.map(({ category, items, name }, i) => (

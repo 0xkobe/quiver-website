@@ -1,6 +1,7 @@
 import Button from "../button/button";
 import Container from "../container/container";
 import Headline from "../title/headline";
+import Title from "../title/title";
 
 const links = [
   { name: "Discord", icon: "", href: "#" },
@@ -15,9 +16,7 @@ export default function Footer() {
     <Container className="rounded-2xl rounded-b-none bg-secondary bg-opacity-20 px-24 sm:px-24 lg:px-24">
       <div className="rounded-2xl px-6 py-10 bg-white overflow-hidden shadow-xl sm:px-12 sm:py-12 sm:text-center">
         <Headline>Ready to dive in?</Headline>
-        <p className="mt-3 text-purple-900 text-4xl leading-10 font-extrabold">
-          Join the Community
-        </p>
+        <Title className="mt-3">Join the Community</Title>
         <nav className="mt-12">
           {links.map((x, i) => (
             <Button

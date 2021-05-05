@@ -5,15 +5,15 @@ type IProps = {
   className?: string;
 };
 
-export default function Headline(props: PropsWithChildren<IProps>) {
+export default function Title(props: PropsWithChildren<IProps>) {
   return (
-    <span
+    <h2
       className={classNames(
-        "text-base leading-6 font-semibold tracking-wide uppercase text-primary",
+        "text-4xl leading-10 font-extrabold tracking-tight text-purple-900",
         props.className
       )}
     >
       {props.children}
-    </span>
+    </h2>
   );
 }

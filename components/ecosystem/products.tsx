@@ -32,9 +32,6 @@ export default function Products() {
       className="-mt-12 max-w-7xl mx-auto relative z-10"
       aria-labelledby="contact-heading"
     >
-      <h2 className="sr-only" id="contact-heading">
-        Ecosystem
-      </h2>
       <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-6">
         {supportLinks.map(Product)}
       </div>
