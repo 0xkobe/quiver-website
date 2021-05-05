@@ -1,8 +1,16 @@
 import classNames from "classnames";
-import { PropsWithChildren } from "react";
+import { MouseEventHandler, PropsWithChildren } from "react";
 
-type IProps = {
+type ILink = {
   href: string;
+  onClick?: MouseEventHandler<any>;
+};
+
+type IButton = {
+  onClick: MouseEventHandler<any>;
+};
+
+type IProps = (ILink | IButton) & {
   outlined?: boolean;
   shadow?: boolean;
   icon?: any;
@@ -32,7 +40,8 @@ export default function Button(props: PropsWithChildren<IProps>) {
     : "mr-2";
   return (
     <a
-      href={props.href}
+      href={"href" in props ? props.href : "#"}
+      onClick={props.onClick}
       className={classNames(
         structure,
         size,
