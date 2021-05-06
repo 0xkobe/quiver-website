@@ -37,7 +37,7 @@ export default function Protocol() {
           <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
             <img
               className="rounded-xl ring-1 ring-black ring-opacity-5"
-              src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
+              src="https://via.placeholder.com/696x500"
               alt=""
             />
           </div>
@@ -64,7 +64,7 @@ export default function Protocol() {
           <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
             <img
               className="rounded-xl ring-1 ring-black ring-opacity-5"
-              src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
+              src="https://via.placeholder.com/696x500"
               alt=""
             />
           </div>
