@@ -1,7 +1,7 @@
 import Button from "../button/button";
 import Container from "../container/container";
-import Headline from "../title/headline";
-import Title from "../title/title";
+import Headline from "../text/headline";
+import Title from "../text/title";
 
 const links = [
   { name: "Discord", icon: "", href: "#" },

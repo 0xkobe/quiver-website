@@ -1,4 +1,4 @@
-import Subtitle2 from "../title/subtitle";
+import Subtitle2 from "../text/subtitle";
 import Benefit from "./benefit";
 import { IBenefit } from "./types";
 

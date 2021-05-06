@@ -1,6 +1,6 @@
 import Container from "../container/container";
-import Headline from "../title/headline";
-import Title from "../title/title";
+import Headline from "../text/headline";
+import Title from "../text/title";
 import Products from "./products";
 
 export default function Ecosystem() {

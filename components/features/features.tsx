@@ -2,9 +2,9 @@ import { DownloadIcon } from "@heroicons/react/outline";
 import Button from "../button/button";
 import Container from "../container/container";
 import Benefits from "./benefits";
-import Headline from "../title/headline";
-import Title from "../title/title";
-import Subtitle from "../title/subtitle";
+import Headline from "../text/headline";
+import Title from "../text/title";
+import Subtitle from "../text/subtitle";
 
 export default function Protocol() {
   return (

@@ -2,8 +2,8 @@ import { PropsWithChildren } from "react";
 import Button from "../button/button";
 import Container from "../container/container";
 import Tag from "../tag/tag";
-import MainTitle from "../title/main-title";
-import Subtitle2 from "../title/subtitle";
+import MainTitle from "../text/main-title";
+import Subtitle2 from "../text/subtitle";
 import Member from "./member";
 import { IMember } from "./types";
 

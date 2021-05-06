@@ -1,8 +1,8 @@
 import Container from "../container/container";
 import Newsletter from "../newsletter/newsletter";
-import Headline from "../title/headline";
-import Subtitle2 from "../title/subtitle";
-import Title from "../title/title";
+import Headline from "../text/headline";
+import Subtitle2 from "../text/subtitle";
+import Title from "../text/title";
 import Benefit from "./benefit";
 import NFT from "./nft";
 import { IBenefit, INFT } from "./types";
