@@ -16,7 +16,7 @@ const nfts: INFT[] = [
     name: "Fish",
     category: "Silver",
     crypto: IconCryptoBtc,
-    progress: "stable",
+    progress: "up",
     imageUrl: "/nfts/fish/silver/happy.png",
   },
   {
