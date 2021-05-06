@@ -5,7 +5,7 @@ import { IBenefit } from "./types";
 const benefits: IBenefit[] = [
   {
     name: "Access Time",
-    description: "Reduce required time to access an information",
+    description: "Reduce required time to access information",
     icon: "⏱",
   },
   {
@@ -15,12 +15,12 @@ const benefits: IBenefit[] = [
   },
   {
     name: "Reduce Risk",
-    description: "Reduce investment risks through community",
+    description: "Minimize investment risks ..",
     icon: "🤝",
   },
   {
     name: "Valuation",
-    description: "Increase information value",
+    description: "Maximize expected value of information",
     icon: "💎",
   },
 ];

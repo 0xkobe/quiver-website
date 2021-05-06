@@ -13,10 +13,10 @@ export default function Information() {
           <IconArrowSmall className="inline mx-2 -mt-2" />
           🤑
         </h2>
-        <p className="mt-6 font-normal mx-auto max-w-2xl text-lg text-purple-900">
-          Investment information are hard to value, access and trust.
+        <p className="mt-6 text-2xl leading-8 font-normal mx-auto max-w-2xl text-purple-900">
+          Investment information is hard to value, access and trust.
           <br />
-          Our mission is to make them{" "}
+          Our mission is to make our pre-vetted investment information,{" "}
           <span className="font-bold text-primary">profitable</span>,{" "}
           <span className="font-bold text-primary">trustable</span> and{" "}
           <span className="font-bold text-primary">accessible</span> to

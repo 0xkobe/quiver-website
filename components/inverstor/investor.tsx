@@ -59,12 +59,12 @@ const nfts: INFT[] = [
 const benefits: IBenefit[] = [
   {
     name: "Emotional NFT",
+    category: "Community Art NFTs",
     items: [
       "Lovely art for stressless investment",
       "Get access to locked assets sale",
       "Community gamification",
     ],
-    category: "Community Art NFTs",
   },
   {
     name: "QREP Token",
@@ -101,7 +101,7 @@ export default function Investor() {
             discounted QSTK token along with voting power.
           </Body1>
           <Body2 className="mt-12">
-            <strong className="text-primary font-bold">Coming July 1st</strong>,
+            <strong className="text-primary font-bold">Coming June 1st</strong>,
             sign up to get notified of the sale
           </Body2>
           <Newsletter className="my-6" />

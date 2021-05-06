@@ -7,19 +7,19 @@ const supportLinks = [
   {
     name: "Quiver IDAO",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
+      "The first investment DAO running on Quiver Protocol. Any users could join here for co-investment with other professionals and get voting power through our QSTK Token for the funds movement.",
     icon: IconIDAO,
   },
   {
     name: "Market Analysis Group",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
+      "Market Analysis Group will be organized to scout and explore new investment opportunities to give the community well informed financial decisions through vetted information and lead them to the right direction.",
     icon: IconAnalyse,
   },
   {
     name: "Lending & Borrowing",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
+      "Lending & Borrowing is a bonus service for reputational users. Community members provide lending for reputation collateral. As an option, high reputation users can borrow directly from the protocol treasury.",
     icon: IconLending,
   },
 ];

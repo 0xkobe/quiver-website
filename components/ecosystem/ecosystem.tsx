@@ -9,13 +9,13 @@ export default function Ecosystem() {
     <Container className="text-center">
       <Headline>Quiver Upcoming Ecosystem</Headline>
       <Title className="mt-3">
-        All-in-one Solution for Stressless
-        <br />
+        All-in-one Solution for Stressless <br />
         Blockchain Investment
       </Title>
       <Body1 className="mt-6 mx-auto max-w-md md:max-w-3xl">
         Trustworthy information is everything you exchange with your time.
-        Reduce your time and stress by being part of Quiver.
+        Reduce your time and stress and make a well informed financial decision
+        by being part of Quiver.
       </Body1>
 
       <img

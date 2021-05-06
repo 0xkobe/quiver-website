@@ -14,18 +14,19 @@ export default function Protocol() {
       <Headline>Quiver Community Vision</Headline>
       <Title className="mt-3">An Innovative Way to Value Information</Title>
       <Body1 className="mt-6 mx-auto max-w-md md:max-w-3xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magnam
-        voluptatum cupiditate veritatis in, accusamus quisquam.
+        Information is monetized to earn full potential.
+        <br />
+        Discover how it is converted to real-value NFTs.
       </Body1>
 
       <div className="lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8 mt-24 text-left">
         <div className="px-4 mx-auto sm:px-6 lg:pt-16 lg:mx-0 lg:px-0">
           <Subtitle>Decentralized Information Collector Protocol</Subtitle>
           <Body2 className="mt-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            minima sequi recusandae, porro maiores officia assumenda aliquam
-            laborum ab aliquid veritatis impedit odit adipisci optio iste
-            blanditiis facere. Totam, velit.
+            DICP, the backbone of Quiver Protocol, is the first ever
+            decentralized protocol to collect information to make it beneficial
+            for the community. This protocol is run by the information
+            collectors, verifiers, purchasers and the governance system.
           </Body2>
           <div className="mt-6">
             <Button href="#" icon={DownloadIcon} text shadow>
@@ -48,11 +49,17 @@ export default function Protocol() {
 
       <div className="mt-12 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8 text-left">
         <div className="px-4 mx-auto sm:px-6 lg:pt-16 lg:mx-0 lg:px-0 lg:col-start-2">
-          <Subtitle>Reputation Based Community: The Source of Trust</Subtitle>
+          <Subtitle>
+            Reputation Based Community: <br />
+            The Source of Trust
+          </Subtitle>
           <Body2 className="mt-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ex
-            obcaecati natus eligendi delectus, cum deleniti sunt in labore nihil
-            quod quibusdam expedita nemo.
+            Reputation doesn’t have a valuable factor and it’s hard to know who
+            to trust. Quiver introduces tokenized reputation through our QREP
+            Token to show users’ value in the ecosystem and mutual benefits
+            between information providers and investors. <br />
+            The better you do, the more reputation you get. The more reputation
+            you get, the community’s level of trust in you increases.
           </Body2>
           <div className="mt-6">
             <Button href="#" icon={DownloadIcon} text shadow>
