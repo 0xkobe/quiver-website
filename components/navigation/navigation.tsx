@@ -51,10 +51,7 @@ export default function Navigation() {
     <Popover>
       {({ open }) => (
         <>
-          <Container
-            className="flex justify-between items-center lg:justify-start lg:space-x-10"
-            padding={6}
-          >
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-0 py-6 flex justify-between items-center lg:justify-start lg:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="https://quiverprotocol.com">
                 <span className="sr-only">Quiver</span>
@@ -75,7 +72,7 @@ export default function Navigation() {
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
             </div>
-          </Container>
+          </div>
 
           <Transition
             show={open}
