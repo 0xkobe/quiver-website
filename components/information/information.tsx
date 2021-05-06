@@ -4,7 +4,7 @@ import IconQuiver from "../logo/icon";
 
 export default function Information() {
   return (
-    <Container className="rounded-2xl bg-secondary bg-opacity-20 px-24 sm:px-24 lg:px-24">
+    <Container className="rounded-2xl bg-gradient-to-r from-purple-100 to-purple-50 px-24 sm:px-24 lg:px-24">
       <div className="rounded-2xl px-6 py-10 bg-white overflow-hidden shadow-xl sm:px-12 sm:py-12 sm:text-center">
         <h2 className="text-3xl font-light tracking-tight sm:text-4xl">
           🤔

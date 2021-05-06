@@ -19,7 +19,7 @@ const links = [
 
 export default function Footer() {
   return (
-    <Container className="rounded-2xl rounded-b-none bg-secondary bg-opacity-20 px-24 sm:px-24 lg:px-24">
+    <Container className="rounded-2xl rounded-b-none bg-gradient-to-r from-purple-100 to-purple-50 px-24 sm:px-24 lg:px-24">
       <div className="rounded-2xl px-6 py-10 bg-white overflow-hidden shadow-xl sm:px-12 sm:py-12 text-center">
         <IconQuiver className="mx-auto" />
         <Headline className="mt-12 block">Ready to dive in?</Headline>
