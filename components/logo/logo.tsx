@@ -1,7 +1,13 @@
-export default function Logo({ className }) {
+import { PropsWithChildren } from "react";
+
+type IProps = {
+  className?: string;
+};
+
+export default function Logo(props: PropsWithChildren<IProps>) {
   return (
     <svg
-      className={className}
+      className={props.className}
       width="129"
       height="40"
       viewBox="0 0 129 40"

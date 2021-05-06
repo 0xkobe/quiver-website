@@ -8,7 +8,7 @@ export default function Product(product: IProduct) {
       className="text-left bg-white rounded-2xl shadow-xl px-6 pt-16 pb-8"
     >
       <div className="absolute top-0 p-5 inline-block bg-purple-100 rounded-xl shadow-lg transform -translate-y-1/2">
-        <product.icon className="h-6 w-6 text-purple-900" aria-hidden="true" />
+        <product.icon className="text-purple-900" aria-hidden="true" />
       </div>
       <h3 className="text-lg font-semibold leading-6 text-purple-900">
         {product.name}

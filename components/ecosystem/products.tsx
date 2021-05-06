@@ -1,8 +1,6 @@
-import {
-  NewspaperIcon,
-  LightningBoltIcon,
-  ChartPieIcon,
-} from "@heroicons/react/outline";
+import IconAnalyse from "../icon/analyse";
+import IconIDAO from "../icon/idao";
+import IconLending from "../icon/lending";
 import Product from "./product";
 
 const supportLinks = [
@@ -10,19 +8,19 @@ const supportLinks = [
     name: "Quiver IDAO",
     description:
       "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
-    icon: LightningBoltIcon,
+    icon: IconIDAO,
   },
   {
     name: "Market Analysis Group",
     description:
       "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
-    icon: ChartPieIcon,
+    icon: IconAnalyse,
   },
   {
     name: "Lending & Borrowing",
     description:
       "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
-    icon: NewspaperIcon,
+    icon: IconLending,
   },
 ];
 
