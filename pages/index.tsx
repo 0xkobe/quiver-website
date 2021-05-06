@@ -11,57 +11,49 @@ const members: IMember[] = [
     name: "216k155",
     href: "#",
     role: "Co-founder | Marketing Manager",
-    imageUrl:
-      "https://quivercommunity.github.io/quiver-website/images/dlf.pt-gon-png-4932385.png",
+    imageUrl: "/members/216k155.png",
   },
   {
     name: "Jun",
     href: "#",
     role: "Co-founder | Strateger",
-    imageUrl:
-      "https://quivercommunity.github.io/quiver-website/images/dlf.pt-hunter-x-hunter-png-5268695.png",
+    imageUrl: "/members/jun.png",
   },
   {
     name: "Andre",
     href: "#",
     role: "Co-founder | Technical Manager",
-    imageUrl:
-      "https://quivercommunity.github.io/quiver-website/images/KurapikaFullbody.png",
+    imageUrl: "/members/andre.png",
   },
   {
     name: "Akira",
     href: "#",
     role: "Co-founder | Project Manager",
-    imageUrl:
-      "https://quivercommunity.github.io/quiver-website/images/b24d133df726437aae9dbe5bbc69c683.png",
+    imageUrl: "/members/akira.png",
   },
   {
     name: "Evil",
     href: "#",
     role: "Co-founder | Design manager",
-    imageUrl:
-      "https://quivercommunity.github.io/quiver-website/images/Evil.png",
+    imageUrl: "/members/evil.png",
   },
   {
     name: "Eugen",
     href: "#",
     role: "Dude | Technical Advisor",
-    imageUrl:
-      "https://quivercommunity.github.io/quiver-website/images/Leorio-2011.png",
+    imageUrl: "/members/eugen.png",
   },
   {
     name: "Adidust.eth",
     href: "#",
     role: "Dude | Marketing Advisor",
-    imageUrl:
-      "https://www.larvalabs.com/public/images/cryptopunks/punk5917.png",
+    imageUrl: "/members/adidust.eth.png",
   },
   {
     name: "Ahmed",
     href: "#",
     role: "Dude | Frontend Advisor",
-    imageUrl:
-      "https://quivercommunity.github.io/quiver-website/images/dlf.pt-killua-png-4294457.png",
+    imageUrl: "/members/ahmed.png",
   },
 ];
 
