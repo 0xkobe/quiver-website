@@ -18,7 +18,7 @@ export default function Button(props: PropsWithChildren<IProps>) {
   const px = props.text ? "" : props.large ? "px-6" : "px-4";
   const py = props.large ? "py-3" : "py-2";
   const size = `${px} ${py}`;
-  const border = props.outlined ? "ring-1 ring-inset ring-primary" : null;
+  const border = props.outlined ? "ring-1 ring-inset ring-purple-200" : null;
   const color = props.outlined
     ? "text-purple-900 bg-white"
     : props.text

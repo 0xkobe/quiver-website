@@ -37,8 +37,8 @@ export default function Protocol() {
         <div className="mt-12 sm:mt-16 lg:mt-0">
           <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
             <img
-              className="rounded-xl ring-1 ring-black ring-opacity-5"
-              src="https://via.placeholder.com/696x500"
+              className="rounded-xl border border-purple-200"
+              src="https://via.placeholder.com/696x500/fff"
               alt=""
             />
           </div>
@@ -70,8 +70,8 @@ export default function Protocol() {
         <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
           <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
             <img
-              className="rounded-xl ring-1 ring-black ring-opacity-5"
-              src="https://via.placeholder.com/696x500"
+              className="rounded-xl border border-purple-200"
+              src="https://via.placeholder.com/696x500/fff"
               alt=""
             />
           </div>

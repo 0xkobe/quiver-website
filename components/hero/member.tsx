@@ -6,7 +6,7 @@ export default function Member(member: IMember) {
     <a
       key={member.name}
       href={member.href}
-      className="rounded-full border border-primary border-opacity-10 p-2 pr-6 mx-3 mt-3"
+      className="rounded-full border border-purple-200 p-2 pr-6 mx-3 mt-3"
     >
       <div className="flex items-center">
         <img

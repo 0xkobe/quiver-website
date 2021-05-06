@@ -19,8 +19,8 @@ export default function Ecosystem() {
       </Body1>
 
       <img
-        className="w-full h-full object-cover mt-24 rounded-xl"
-        src="https://via.placeholder.com/1216x660"
+        className="w-full h-full object-cover mt-24 rounded-xl border border-purple-200"
+        src="https://via.placeholder.com/1216x660/fff"
         alt=""
       />
 

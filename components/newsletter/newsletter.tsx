@@ -16,7 +16,7 @@ export default function Newsletter(props: PropsWithChildren<IProps>) {
       <div className="lg:grid lg:grid-cols-4 lg:grid-flow-col-dense lg:gap-3">
         <input
           type="email"
-          className="col-span-3 w-full p-3 border border-purple-100 rounded-full text-purple-900 text-base leading-6 font-medium focus:outline-none"
+          className="col-span-3 w-full p-3 border border-purple-200 rounded-full text-purple-900 text-base leading-6 font-medium focus:outline-none"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.currentTarget.value)}

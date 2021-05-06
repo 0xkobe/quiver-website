@@ -6,6 +6,7 @@ const mainColors = {
   purple: {
     50: "#FBF1FF",
     100: "#F2F0FF",
+    200: "#D7D1FE",
     900: "#231B5C",
   },
 };
