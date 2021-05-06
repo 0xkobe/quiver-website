@@ -13,7 +13,7 @@ export default function Protocol() {
     <Container className="text-center">
       <Headline>Quiver Community Vision</Headline>
       <Title className="mt-3">An Innovative Way to Value Information</Title>
-      <Body1 className="mt-6 mx-auto max-w-md md:max-w-3xl">
+      <Body1 className="mt-6 mx-auto max-w-md md:max-w-4xl">
         Information is monetized to earn full potential.
         <br />
         Discover how it is converted to real-value NFTs.

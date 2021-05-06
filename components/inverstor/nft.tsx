@@ -60,7 +60,7 @@ export default function NFT(props: PropsWithChildren<IProps>) {
 
         <Body2 className="mt-6">{props.nft.name}</Body2>
         <p className="mt-1 text-xs leading-none font-normal text-gray-400">
-          [{props.nft.category}]
+          [ {props.nft.category} ]
         </p>
       </div>
     </div>

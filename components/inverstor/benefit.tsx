@@ -8,7 +8,7 @@ export default function Benefit(benefit: IBenefit) {
         {benefit.name}
       </h3>
       <Body2 className="mt-2" color="text-gray-400">
-        [{benefit.category}]
+        [ {benefit.category} ]
       </Body2>
       <ul className="list-disc list-inside mt-6 text-purple-900">
         {benefit.items.map((item, i) => (

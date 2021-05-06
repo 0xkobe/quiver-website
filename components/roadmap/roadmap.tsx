@@ -91,7 +91,7 @@ export default function Roadmap() {
       <Title className="mt-3">Roadmap [2021]</Title>
       <div className="mt-12">
         <Button href="#" icon={DownloadIcon} text shadow>
-          Download Whitepaper
+          Download the Full Roadmap
         </Button>
       </div>
 

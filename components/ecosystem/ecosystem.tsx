@@ -12,8 +12,9 @@ export default function Ecosystem() {
         All-in-one Solution for Stressless <br />
         Blockchain Investment
       </Title>
-      <Body1 className="mt-6 mx-auto max-w-md md:max-w-3xl">
+      <Body1 className="mt-6 mx-auto max-w-md md:max-w-4xl">
         Trustworthy information is everything you exchange with your time.
+        <br />
         Reduce your time and stress and make a well informed financial decision
         by being part of Quiver.
       </Body1>

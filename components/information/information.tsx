@@ -17,10 +17,9 @@ export default function Information() {
           Investment information is hard to value, access and trust.
           <br />
           Our mission is to make our pre-vetted investment information,{" "}
-          <span className="font-bold text-primary">profitable</span>,{" "}
-          <span className="font-bold text-primary">trustable</span> and{" "}
-          <span className="font-bold text-primary">accessible</span> to
-          everyone.
+          <span className="font-bold">profitable</span>,{" "}
+          <span className="font-bold">trustable</span> and{" "}
+          <span className="font-bold">accessible</span> to everyone.
         </p>
       </div>
     </Container>

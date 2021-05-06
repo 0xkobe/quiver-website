@@ -30,7 +30,7 @@ export default function Hero(props: PropsWithChildren<IProps>) {
         <span className="block">Blockchain Investment Protocol</span>
       </MainTitle>
 
-      <Body1 className="mt-6 mx-auto max-w-md md:max-w-3xl">
+      <Body1 className="mt-6 mx-auto max-w-md md:max-w-4xl">
         Explore Investment opportunities market driven by the Quiver Community.
         Find the most profitable information and improve investment decisions,
         fast, easy and secure.
