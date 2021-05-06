@@ -1,19 +1,9 @@
-import classNames from "classnames";
-import { PropsWithChildren } from "react";
+import GenerateTextComponent from "./_generator";
 
-type IProps = {
-  className?: string;
-};
+const Subtitle = GenerateTextComponent({
+  tag: "h3",
+  className: "text-3xl leading-9 font-bold",
+  color: "text-purple-900"
+});
 
-export default function Subtitle2(props: PropsWithChildren<IProps>) {
-  return (
-    <h3
-      className={classNames(
-        "text-2xl leading-7 font-bold text-purple-900",
-        props.className
-      )}
-    >
-      {props.children}
-    </h3>
-  );
-}
+export default Subtitle;

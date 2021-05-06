@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { PropsWithChildren, useState } from "react";
 import Button from "../button/button";
 
-export default function Newsletter() {
+type IProps = {
+  className?: string;
+};
+
+export default function Newsletter(props: PropsWithChildren<IProps>) {
   const [email, setEmail] = useState("");
   const submit = (e) => {
     console.log(e);
   };
 
   return (
-    <form>
+    <form className={props.className}>
       <div className="lg:grid lg:grid-cols-4 lg:grid-flow-col-dense lg:gap-3">
         <input
           type="email"

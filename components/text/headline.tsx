@@ -1,19 +1,9 @@
-import classNames from "classnames";
-import { PropsWithChildren } from "react";
+import GenerateTextComponent from "./_generator";
 
-type IProps = {
-  className?: string;
-};
+const Headline = GenerateTextComponent({
+  tag: "span",
+  className: "text-base leading-6 font-semibold tracking-wide uppercase",
+  color: "text-primary",
+});
 
-export default function Headline(props: PropsWithChildren<IProps>) {
-  return (
-    <span
-      className={classNames(
-        "text-base leading-6 font-semibold tracking-wide uppercase text-primary",
-        props.className
-      )}
-    >
-      {props.children}
-    </span>
-  );
-}
+export default Headline;

@@ -1,3 +1,4 @@
+import Body2 from "../text/body2";
 import { IProduct } from "./types";
 
 export default function Product(product: IProduct) {
@@ -12,9 +13,7 @@ export default function Product(product: IProduct) {
       <h3 className="text-lg font-semibold leading-6 text-purple-900">
         {product.name}
       </h3>
-      <p className="mt-3 text-base leading-6 font-normal text-purple-900">
-        {product.description}
-      </p>
+      <Body2 className="mt-3">{product.description}</Body2>
       <a className="block mt-6 text-primary">Coming soon 🔥</a>
     </div>
   );

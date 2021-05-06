@@ -5,26 +5,28 @@ import Benefits from "./benefits";
 import Headline from "../text/headline";
 import Title from "../text/title";
 import Subtitle from "../text/subtitle";
+import Body1 from "../text/body1";
+import Body2 from "../text/body2";
 
 export default function Protocol() {
   return (
     <Container className="text-center">
       <Headline>Quiver Community Vision</Headline>
       <Title className="mt-3">An Innovative Way to Value Information</Title>
-      <p className="mt-6 leading-7 mx-auto text-xl text-purple-900">
+      <Body1 className="mt-6 mx-auto max-w-md md:max-w-3xl">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magnam
         voluptatum cupiditate veritatis in, accusamus quisquam.
-      </p>
+      </Body1>
 
       <div className="lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8 mt-24 text-left">
         <div className="px-4 mx-auto sm:px-6 lg:pt-16 lg:mx-0 lg:px-0">
           <Subtitle>Decentralized Information Collector Protocol</Subtitle>
-          <p className="mt-4 text-base leading-6 text-purple-900">
+          <Body2 className="mt-6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
             minima sequi recusandae, porro maiores officia assumenda aliquam
             laborum ab aliquid veritatis impedit odit adipisci optio iste
             blanditiis facere. Totam, velit.
-          </p>
+          </Body2>
           <div className="mt-6">
             <Button href="#" icon={DownloadIcon} text shadow>
               Download Whitepaper
@@ -47,11 +49,11 @@ export default function Protocol() {
       <div className="mt-12 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8 text-left">
         <div className="px-4 mx-auto sm:px-6 lg:pt-16 lg:mx-0 lg:px-0 lg:col-start-2">
           <Subtitle>Reputation Based Community: The Source of Trust</Subtitle>
-          <p className="mt-4 text-base leading-6 text-purple-900">
+          <Body2 className="mt-6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ex
             obcaecati natus eligendi delectus, cum deleniti sunt in labore nihil
             quod quibusdam expedita nemo.
-          </p>
+          </Body2>
           <div className="mt-6">
             <Button href="#" icon={DownloadIcon} text shadow>
               Download Whitepaper

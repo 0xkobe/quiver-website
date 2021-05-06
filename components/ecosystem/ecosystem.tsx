@@ -1,4 +1,5 @@
 import Container from "../container/container";
+import Body1 from "../text/body1";
 import Headline from "../text/headline";
 import Title from "../text/title";
 import Products from "./products";
@@ -8,13 +9,14 @@ export default function Ecosystem() {
     <Container className="text-center">
       <Headline>Quiver Upcoming Ecosystem</Headline>
       <Title className="mt-3">
-        <span className="block">All-in-one Solution for Stressless</span>
-        <span className="block">Blockchain Investment</span>
+        All-in-one Solution for Stressless
+        <br />
+        Blockchain Investment
       </Title>
-      <p className="max-w-xl mt-6 leading-7 mx-auto text-xl text-purple-900">
+      <Body1 className="mt-6 mx-auto max-w-md md:max-w-3xl">
         Trustworthy information is everything you exchange with your time.
         Reduce your time and stress by being part of Quiver.
-      </p>
+      </Body1>
 
       <img
         className="w-full h-full object-cover mt-24"

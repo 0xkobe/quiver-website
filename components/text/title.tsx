@@ -1,19 +1,9 @@
-import classNames from "classnames";
-import { PropsWithChildren } from "react";
+import GenerateTextComponent from "./_generator";
 
-type IProps = {
-  className?: string;
-};
+const Title = GenerateTextComponent({
+  tag: "h2",
+  className: "text-4xl leading-10 font-extrabold tracking-tight",
+  color: "text-purple-900",
+});
 
-export default function Title(props: PropsWithChildren<IProps>) {
-  return (
-    <h2
-      className={classNames(
-        "text-4xl leading-10 font-extrabold tracking-tight text-purple-900",
-        props.className
-      )}
-    >
-      {props.children}
-    </h2>
-  );
-}
+export default Title;

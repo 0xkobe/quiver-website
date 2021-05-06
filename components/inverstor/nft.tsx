@@ -1,5 +1,6 @@
 import { InboxIcon } from "@heroicons/react/outline";
 import { PropsWithChildren } from "react";
+import Body2 from "../text/body2";
 import { INFT } from "./types";
 
 type IProps = {
@@ -26,7 +27,7 @@ export default function NFT(props: PropsWithChildren<IProps>) {
     },
   }[props.nft.progress];
 
-  return (  
+  return (
     <div>
       <div
         className={`p-6 border-2 border-primary rounded-xl shadow-xl ${
@@ -47,12 +48,12 @@ export default function NFT(props: PropsWithChildren<IProps>) {
 
         <img
           src={props.nft.imageUrl}
-          className={`mt-6 mx-auto w-32 h32 lg:h-${props.index % 3 == 1 ? 44 : 32}`}
+          className={`mt-6 mx-auto w-32 h32 lg:h-${
+            props.index % 3 == 1 ? 44 : 32
+          }`}
         />
 
-        <p className="mt-6 text-base leading-6 font-bold text-purple-900">
-          {props.nft.name}
-        </p>
+        <Body2 className="mt-6">{props.nft.name}</Body2>
         <p className="mt-1 text-xs leading-none font-normal text-gray-400">
           [{props.nft.category}]
         </p>

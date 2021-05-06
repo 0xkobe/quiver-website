@@ -1,7 +1,9 @@
 import Container from "../container/container";
 import Newsletter from "../newsletter/newsletter";
+import Body1 from "../text/body1";
+import Body2 from "../text/body2";
 import Headline from "../text/headline";
-import Subtitle2 from "../text/subtitle";
+import Subtitle2 from "../text/subtitle2";
 import Title from "../text/title";
 import Benefit from "./benefit";
 import NFT from "./nft";
@@ -97,18 +99,16 @@ export default function Investor() {
         <div className="col-span-2 px-4 mx-auto sm:px-6 lg:py-16 lg:mx-0 lg:px-0">
           <Headline>Emotional NFTs sale</Headline>
           <Title className="mt-3">Become a Community Investor</Title>
-          <p className="mt-6 leading-7 text-xl text-purple-900">
+          <Body1 className="mt-6">
             Quiver Emotional NFTs are designed to be part of our upcoming
             stressless portfolio tracker. They give you an ability to buy
             discounted QSTK token along with voting power.
-          </p>
-          <p className="mt-12 text-base leading-6 font-normal text-purple-900">
+          </Body1>
+          <Body2 className="mt-12">
             <span className="text-primary">Coming July 1st</span>, sign up to
             get notified of the sale
-          </p>
-          <div className="my-6">
-            <Newsletter />
-          </div>
+          </Body2>
+          <Newsletter className="my-6" />
         </div>
         <div className="col-span-3 md:px-14">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">

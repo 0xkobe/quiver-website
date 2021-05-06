@@ -2,8 +2,9 @@ import { PropsWithChildren } from "react";
 import Button from "../button/button";
 import Container from "../container/container";
 import Tag from "../tag/tag";
+import Body1 from "../text/body1";
 import MainTitle from "../text/main-title";
-import Subtitle2 from "../text/subtitle";
+import Subtitle2 from "../text/subtitle2";
 import Member from "./member";
 import { IMember } from "./types";
 
@@ -26,10 +27,11 @@ export default function Hero(props: PropsWithChildren<IProps>) {
         <span className="block">1st Community-driven</span>
         <span className="block">Blockchain Investment Protocol</span>
       </MainTitle>
-      <p className="mt-3 max-w-md mx-auto text-base text-purple-900 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+
+      <Body1 className="mt-6 mx-auto max-w-md md:max-w-3xl">
         Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem
         cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
-      </p>
+      </Body1>
 
       <div className="mt-12 mb-24 mx-auto sm:flex sm:justify-center">
         <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">

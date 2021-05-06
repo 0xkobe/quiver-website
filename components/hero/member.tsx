@@ -1,3 +1,4 @@
+import Body2 from "../text/body2";
 import { IMember } from "./types";
 
 export default function Member(member: IMember) {
@@ -13,11 +14,7 @@ export default function Member(member: IMember) {
           src={member.imageUrl}
           alt={member.name}
         />
-        <div className="ml-3">
-          <p className="text-base leading-6 font-normal text-purple-900 group-hover:text-purple-700">
-            {member.name}
-          </p>
-        </div>
+        <Body2 className="ml-3">{member.name}</Body2>
       </div>
     </a>
   );
