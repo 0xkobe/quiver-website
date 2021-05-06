@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { PropsWithChildren } from "react";
 import IconTrendDown from "../icon/trend/down";
 import IconTrendStable from "../icon/trend/stable";
@@ -32,9 +33,11 @@ export default function NFT(props: PropsWithChildren<IProps>) {
   return (
     <div>
       <div
-        className={`p-6 ring-2 ring-purple-300 rounded-xl shadow-xl ${
+        className={classNames(
+          "p-6 ring-2 ring-purple-300 rounded-xl shadow-xl bg-gradient-to-t via-white to-white",
+          `from-${config.color}-50`,
           props.index < 3 && props.index % 3 !== 1 ? "lg:mt-12" : ""
-        }`}
+        )}
       >
         <div className="flex justify-between">
           <span
