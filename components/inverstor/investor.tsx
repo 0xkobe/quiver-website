@@ -17,48 +17,42 @@ const nfts: INFT[] = [
     category: "Silver",
     crypto: IconCryptoBtc,
     progress: "stable",
-    imageUrl:
-      "https://quivercommunity.github.io/quiver-website/images/Evil.png",
+    imageUrl: "/nfts/fish/silver/happy.png",
   },
   {
     name: "Dragon",
     category: "Platinium",
     crypto: IconCryptoEth,
     progress: "stable",
-    imageUrl:
-      "https://quivercommunity.github.io/quiver-website/images/Evil.png",
+    imageUrl: "/nfts/dragon/platinum/normal.png",
   },
   {
     name: "Bull",
     category: "Bronze",
     crypto: IconCryptoBtc,
     progress: "down",
-    imageUrl:
-      "https://quivercommunity.github.io/quiver-website/images/Evil.png",
+    imageUrl: "/nfts/bull/bronze/angry.png",
   },
   {
     name: "Dear",
     category: "Bronze",
     crypto: IconCryptoEth,
     progress: "down",
-    imageUrl:
-      "https://quivercommunity.github.io/quiver-website/images/Evil.png",
+    imageUrl: "/nfts/deer/bronze/angry.png",
   },
   {
     name: "Bear",
-    category: "Silver",
+    category: "Diamond",
     crypto: IconCryptoBtc,
     progress: "stable",
-    imageUrl:
-      "https://quivercommunity.github.io/quiver-website/images/Evil.png",
+    imageUrl: "/nfts/bear/diamond/normal.png",
   },
   {
     name: "Whale",
     category: "Diamond",
     crypto: IconCryptoEth,
     progress: "up",
-    imageUrl:
-      "https://quivercommunity.github.io/quiver-website/images/Evil.png",
+    imageUrl: "/nfts/whale/diamond/happy.png",
   },
 ];
 
