@@ -1,3 +1,4 @@
+import IconArrowLarge from "../icon/arrow-large";
 import { IQuarter } from "./types";
 
 export default function Quarter(quarter: IQuarter) {
@@ -6,6 +7,7 @@ export default function Quarter(quarter: IQuarter) {
       <span className="bg-purple-100 p-3 rounded-lg text-lg leading-6 font-semibold">
         {quarter.quarter}
       </span>
+      <IconArrowLarge />
       <div className="pl-12 pt-6">
         <ul className="ml-6">
           {quarter.steps.map((x) => (

@@ -11,12 +11,12 @@ const benefits: IBenefit[] = [
   {
     name: "ROI Performance",
     description: "Increase investment ROI based on performance",
-    icon: "🎉",
+    icon: "🚀",
   },
   {
     name: "Reduce Risk",
     description: "Reduce investment risks through community",
-    icon: "⚡️",
+    icon: "🤝",
   },
   {
     name: "Valuation",

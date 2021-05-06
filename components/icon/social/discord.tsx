@@ -4,7 +4,7 @@ type IProps = {
   className?: string;
 };
 
-export default function IconDiscord(props: PropsWithChildren<IProps>) {
+export default function IconSocialDiscord(props: PropsWithChildren<IProps>) {
   return (
     <svg
       className={props.className}

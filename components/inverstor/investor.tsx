@@ -1,4 +1,6 @@
 import Container from "../container/container";
+import IconCryptoBtc from "../icon/crypto/BTC";
+import IconCryptoEth from "../icon/crypto/ETH";
 import Newsletter from "../newsletter/newsletter";
 import Body1 from "../text/body1";
 import Body2 from "../text/body2";
@@ -13,7 +15,7 @@ const nfts: INFT[] = [
   {
     name: "Fish",
     category: "Silver",
-    crypto: "BTC",
+    crypto: IconCryptoBtc,
     progress: "stable",
     imageUrl:
       "https://quivercommunity.github.io/quiver-website/images/Evil.png",
@@ -21,7 +23,7 @@ const nfts: INFT[] = [
   {
     name: "Dragon",
     category: "Platinium",
-    crypto: "ETH",
+    crypto: IconCryptoEth,
     progress: "stable",
     imageUrl:
       "https://quivercommunity.github.io/quiver-website/images/Evil.png",
@@ -29,7 +31,7 @@ const nfts: INFT[] = [
   {
     name: "Bull",
     category: "Bronze",
-    crypto: "BTC",
+    crypto: IconCryptoBtc,
     progress: "down",
     imageUrl:
       "https://quivercommunity.github.io/quiver-website/images/Evil.png",
@@ -37,7 +39,7 @@ const nfts: INFT[] = [
   {
     name: "Dear",
     category: "Bronze",
-    crypto: "ETH",
+    crypto: IconCryptoEth,
     progress: "down",
     imageUrl:
       "https://quivercommunity.github.io/quiver-website/images/Evil.png",
@@ -45,7 +47,7 @@ const nfts: INFT[] = [
   {
     name: "Bear",
     category: "Silver",
-    crypto: "BTC",
+    crypto: IconCryptoBtc,
     progress: "stable",
     imageUrl:
       "https://quivercommunity.github.io/quiver-website/images/Evil.png",
@@ -53,7 +55,7 @@ const nfts: INFT[] = [
   {
     name: "Whale",
     category: "Diamond",
-    crypto: "ETH",
+    crypto: IconCryptoEth,
     progress: "up",
     imageUrl:
       "https://quivercommunity.github.io/quiver-website/images/Evil.png",
@@ -105,8 +107,8 @@ export default function Investor() {
             discounted QSTK token along with voting power.
           </Body1>
           <Body2 className="mt-12">
-            <span className="text-primary">Coming July 1st</span>, sign up to
-            get notified of the sale
+            <strong className="text-primary font-bold">Coming July 1st</strong>,
+            sign up to get notified of the sale
           </Body2>
           <Newsletter className="my-6" />
         </div>

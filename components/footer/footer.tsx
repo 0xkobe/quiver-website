@@ -1,19 +1,19 @@
 import Button from "../button/button";
 import Container from "../container/container";
-import IconDiscord from "../icon/discord";
-import IconGithub from "../icon/github";
-import IconMedium from "../icon/medium";
-import IconTelegram from "../icon/telegram";
-import IconTwitter from "../icon/twitter";
+import IconSocialDiscord from "../icon/social/discord";
+import IconSocialGithub from "../icon/social/github";
+import IconSocialMedium from "../icon/social/medium";
+import IconSocialTelegram from "../icon/social/telegram";
+import IconSocialTwitter from "../icon/social/twitter";
 import Headline from "../text/headline";
 import Title from "../text/title";
 
 const links = [
-  { name: "Discord", icon: IconDiscord, href: "#" },
-  { name: "Telegram", icon: IconTelegram, href: "#" },
-  { name: "Twitter", icon: IconTwitter, href: "#" },
-  { name: "Medium", icon: IconMedium, href: "#" },
-  { name: "Github", icon: IconGithub, href: "#" },
+  { name: "Discord", icon: IconSocialDiscord, href: "#" },
+  { name: "Telegram", icon: IconSocialTelegram, href: "#" },
+  { name: "Twitter", icon: IconSocialTwitter, href: "#" },
+  { name: "Medium", icon: IconSocialMedium, href: "#" },
+  { name: "Github", icon: IconSocialGithub, href: "#" },
 ];
 
 export default function Footer() {

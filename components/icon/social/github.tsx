@@ -4,7 +4,7 @@ type IProps = {
   className?: string;
 };
 
-export default function IconGithub(props: PropsWithChildren<IProps>) {
+export default function IconSocialGithub(props: PropsWithChildren<IProps>) {
   return (
     <svg
       className={props.className}

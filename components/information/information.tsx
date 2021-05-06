@@ -1,6 +1,6 @@
 import Container from "../container/container";
 import IconArrowSmall from "../icon/arrow-small";
-import Icon from "../logo/icon";
+import IconQuiver from "../logo/icon";
 
 export default function Information() {
   return (
@@ -9,7 +9,7 @@ export default function Information() {
         <h2 className="text-3xl font-light tracking-tight sm:text-4xl">
           🤔
           <IconArrowSmall className="inline mx-2 -mt-2" />{" "}
-          <Icon className="inline w-10 h-10 align-top" />{" "}
+          <IconQuiver className="inline w-10 h-10 align-top" />{" "}
           <IconArrowSmall className="inline mx-2 -mt-2" />
           🤑
         </h2>

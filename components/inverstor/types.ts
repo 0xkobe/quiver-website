@@ -2,7 +2,7 @@ export type INFT = {
   name: string;
   imageUrl: string;
   category: "Silver" | "Platinium" | "Bronze" | "Diamond";
-  crypto: "ETH" | "BTC";
+  crypto: any;
   progress: "up" | "down" | "stable";
 };
 

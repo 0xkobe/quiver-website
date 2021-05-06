@@ -4,7 +4,7 @@ type IProps = {
   className?: string;
 };
 
-export default function IconMedium(props: PropsWithChildren<IProps>) {
+export default function IconSocialMedium(props: PropsWithChildren<IProps>) {
   return (
     <svg
       className={props.className}

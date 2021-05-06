@@ -7,8 +7,8 @@ import MainTitle from "../text/main-title";
 import Subtitle2 from "../text/subtitle2";
 import Member from "./member";
 import { IMember } from "./types";
-import IconDiscord from "../icon/discord";
-import IconTelegram from "../icon/telegram";
+import IconSocialDiscord from "../icon/social/discord";
+import IconSocialTelegram from "../icon/social/telegram";
 
 type IProps = {
   members: IMember[];
@@ -37,10 +37,10 @@ export default function Hero(props: PropsWithChildren<IProps>) {
 
       <div className="mt-12 mb-24 mx-auto sm:flex sm:justify-center">
         <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-          <Button href="#" large shadow icon={IconDiscord}>
+          <Button href="#" large shadow icon={IconSocialDiscord}>
             Join our Discord
           </Button>
-          <Button href="#" large shadow outlined icon={IconTelegram}>
+          <Button href="#" large shadow outlined icon={IconSocialTelegram}>
             Join our Telegram
           </Button>
         </div>

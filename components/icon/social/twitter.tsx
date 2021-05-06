@@ -4,7 +4,7 @@ type IProps = {
   className?: string;
 };
 
-export default function IconTwitter(props: PropsWithChildren<IProps>) {
+export default function IconSocialTwitter(props: PropsWithChildren<IProps>) {
   return (
     <svg
       className={props.className}

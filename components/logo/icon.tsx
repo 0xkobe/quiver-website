@@ -4,7 +4,7 @@ type IProps = {
   className?: string;
 };
 
-export default function Icon(props: PropsWithChildren<IProps>) {
+export default function IconQuiver(props: PropsWithChildren<IProps>) {
   return (
     <svg
       className={props.className}

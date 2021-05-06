@@ -4,7 +4,7 @@ type IProps = {
   className?: string;
 };
 
-export default function IconTelegram(props: PropsWithChildren<IProps>) {
+export default function IconSocialTelegram(props: PropsWithChildren<IProps>) {
   return (
     <svg
       className={props.className}
