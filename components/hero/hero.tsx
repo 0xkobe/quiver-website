@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 import Button from "../button/button";
 import Container from "../container/container";
-import Tag from "../tag/tag";
+import Tag from "../text/tag";
 import Body1 from "../text/body1";
 import MainTitle from "../text/main-title";
 import Subtitle2 from "../text/subtitle2";
