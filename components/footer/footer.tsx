@@ -1,14 +1,19 @@
 import Button from "../button/button";
 import Container from "../container/container";
+import IconDiscord from "../icon/discord";
+import IconGithub from "../icon/github";
+import IconMedium from "../icon/medium";
+import IconTelegram from "../icon/telegram";
+import IconTwitter from "../icon/twitter";
 import Headline from "../text/headline";
 import Title from "../text/title";
 
 const links = [
-  { name: "Discord", icon: "", href: "#" },
-  { name: "Telegram", icon: "", href: "#" },
-  { name: "Twitter", icon: "", href: "#" },
-  { name: "Medium", icon: "", href: "#" },
-  { name: "Github", icon: "", href: "#" },
+  { name: "Discord", icon: IconDiscord, href: "#" },
+  { name: "Telegram", icon: IconTelegram, href: "#" },
+  { name: "Twitter", icon: IconTwitter, href: "#" },
+  { name: "Medium", icon: IconMedium, href: "#" },
+  { name: "Github", icon: IconGithub, href: "#" },
 ];
 
 export default function Footer() {

@@ -20,7 +20,7 @@ export default function Button(props: PropsWithChildren<IProps>) {
   const size = `${px} ${py}`;
   const border = props.outlined ? "ring-1 ring-inset ring-primary" : null;
   const color = props.outlined
-    ? "text-primary bg-white"
+    ? "text-purple-900 bg-white"
     : props.text
     ? "text-primary"
     : "text-white bg-gradient-to-r from-primary to-secondary";
