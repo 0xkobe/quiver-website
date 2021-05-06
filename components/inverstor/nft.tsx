@@ -42,8 +42,8 @@ export default function NFT(props: PropsWithChildren<IProps>) {
           >
             {config.text}
           </span>
-          <span className={`text-${config.color}-500 block`}>
-            <config.icon />
+          <span className={`flex text-${config.color}-500 block`}>
+            <config.icon className="mr-2" />
             <props.nft.crypto />
           </span>
         </div>
