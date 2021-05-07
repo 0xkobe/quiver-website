@@ -4,7 +4,6 @@ import { MenuIcon, XIcon, DocumentTextIcon } from "@heroicons/react/outline";
 import { INavigationItem } from "./types";
 import Item from "./item";
 import Button from "../../button/button";
-import Logo from "../../logo/logo";
 
 const action: INavigationItem = {
   key: "whitepaper",
@@ -54,7 +53,7 @@ export default function Navigation() {
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="/">
                 <span className="sr-only">Quiver</span>
-                <Logo className="w-auto h-8 sm:h-10" />
+                <img src="/logo.svg" className="w-auto h-8 sm:h-10" />
               </a>
             </div>
             <nav className="hidden lg:flex space-x-10">
@@ -91,7 +90,7 @@ export default function Navigation() {
               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                 <div className="pt-5 pb-6 px-5">
                   <div className="flex items-center justify-between">
-                    <Logo className="w-auto h-8" />
+                    <img src="logo.svg" className="w-auto h-8" />
                     <div className="-mr-2">
                       <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
                         <span className="sr-only">Close menu</span>
