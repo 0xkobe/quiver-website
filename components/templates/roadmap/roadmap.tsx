@@ -86,7 +86,7 @@ const roadmap: IQuarter[] = [
 
 export default function Roadmap() {
   return (
-    <Container className="text-center">
+    <Container className="text-center" id="roadmap">
       <Headline>Community Direction</Headline>
       <Title className="mt-3">Roadmap [2021]</Title>
       <div className="mt-12">

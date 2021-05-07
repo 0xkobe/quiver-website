@@ -91,7 +91,7 @@ const benefits: IBenefit[] = [
 
 export default function Investor() {
   return (
-    <Container>
+    <Container id="invest">
       <div className="lg:grid lg:grid-cols-5 lg:grid-flow-col-dense lg:gap-8">
         <div className="col-span-2 px-4 mx-auto sm:px-6 lg:py-16 lg:mx-0 lg:px-0">
           <Headline>Emotional NFTs sale</Headline>
