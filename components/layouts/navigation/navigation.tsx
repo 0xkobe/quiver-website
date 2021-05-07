@@ -40,7 +40,8 @@ const navigation: INavigationItem[] = [
   {
     key: "careers",
     name: "Careers",
-    href: "#", // TODO: Add carreer link
+    href:
+      "https://quiverprotocol.medium.com/careers-at-quiver-protocol-b8ffd3d59d6b",
   },
 ];
 
