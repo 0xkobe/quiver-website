@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-gradient {
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
 .bg-radial-gradient {
   background: radial-gradient(
       100% 100% at 50% 0%,
