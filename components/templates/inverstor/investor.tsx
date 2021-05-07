@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Container from "../../container/container";
 import IconCryptoBtc from "../../icon/crypto/BTC";
 import IconCryptoEth from "../../icon/crypto/ETH";
@@ -119,9 +120,18 @@ export default function Investor() {
         Early Investors Bundle Benefits
       </Subtitle2>
       <div className="mt-12">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-11">
           {benefits.map(({ category, items, name }, i) => (
-            <Benefit name={name} category={category} items={items} key={i} />
+            <Fragment key={i}>
+              {i > 0 && (
+                <div className="flex items-center">
+                  <span className="border border-purple-300 rounded-full text-purple-300 w-9 h-9 px-2 py-1 text-center mx-auto">
+                    +
+                  </span>
+                </div>
+              )}
+              <Benefit name={name} category={category} items={items} />
+            </Fragment>
           ))}
         </div>
       </div>

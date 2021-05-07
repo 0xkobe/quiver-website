@@ -3,7 +3,7 @@ import { IBenefit } from "./types";
 
 export default function Benefit(benefit: IBenefit) {
   return (
-    <div key={benefit.name} className="p-8 ring-1 ring-purple-300 rounded-xl">
+    <div key={benefit.name} className="p-8 ring-1 ring-purple-300 rounded-xl col-span-3">
       <h3 className="inline text-xl leading-7 font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
         {benefit.name}
       </h3>
