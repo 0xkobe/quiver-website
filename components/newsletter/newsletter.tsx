@@ -17,6 +17,7 @@ export default function Newsletter(props: PropsWithChildren<IProps>) {
       netlify-honeypot="bot-field"
     >
       <p className="hidden">
+        <input type="hidden" name="form-name" value="contact" />
         <label>
           Don’t fill this out if you’re human: <input name="bot-field" />
         </label>
