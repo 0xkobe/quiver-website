@@ -9,7 +9,7 @@ import Logo from "../../logo/logo";
 const action: INavigationItem = {
   key: "whitepaper",
   name: "Whitepaper",
-  href: "#whitepaper",
+  href: "/Quiver-Whitepaper.pdf",
 };
 
 const navigation: INavigationItem[] = [

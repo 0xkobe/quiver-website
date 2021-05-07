@@ -31,7 +31,12 @@ export default function Protocol() {
               system.
             </Body2>
             <div className="mt-12">
-              <Button href="#" icon={DownloadIcon} text shadow>
+              <Button
+                href="/Quiver-Whitepaper.pdf"
+                icon={DownloadIcon}
+                text
+                shadow
+              >
                 Download Whitepaper
               </Button>
             </div>
@@ -72,7 +77,12 @@ export default function Protocol() {
               increases.
             </Body2>
             <div className="mt-12">
-              <Button href="#" icon={DownloadIcon} text shadow>
+              <Button
+                href="/Quiver-Whitepaper.pdf"
+                icon={DownloadIcon}
+                text
+                shadow
+              >
                 Download Whitepaper
               </Button>
             </div>

@@ -90,7 +90,7 @@ export default function Roadmap() {
       <Headline>Community Direction</Headline>
       <Title className="mt-3">Roadmap [2021]</Title>
       <div className="mt-12">
-        <Button href="#" icon={DownloadIcon} text shadow>
+        <Button href="/Quiver-Whitepaper.pdf" icon={DownloadIcon} text shadow>
           Download the Full Roadmap
         </Button>
       </div>
