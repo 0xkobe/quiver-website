@@ -3,9 +3,9 @@ import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon, DocumentTextIcon } from "@heroicons/react/outline";
 import { INavigationItem } from "./types";
 import Item from "./item";
-import Button from "../button/button";
-import Container from "../container/container";
-import Logo from "../logo/logo";
+import Button from "../../button/button";
+import Container from "../../container/container";
+import Logo from "../../logo/logo";
 
 const action: INavigationItem = {
   key: "whitepaper",

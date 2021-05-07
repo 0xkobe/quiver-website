@@ -1,14 +1,14 @@
 import { PropsWithChildren } from "react";
-import Button from "../button/button";
-import Container from "../container/container";
-import Tag from "../text/tag";
-import Body1 from "../text/body1";
-import MainTitle from "../text/main-title";
-import Subtitle2 from "../text/subtitle2";
+import Button from "../../button/button";
+import Container from "../../container/container";
+import Tag from "../../text/tag";
+import Body1 from "../../text/body1";
+import MainTitle from "../../text/main-title";
+import Subtitle2 from "../../text/subtitle2";
 import Member from "./member";
 import { IMember } from "./types";
-import IconSocialDiscord from "../icon/social/discord";
-import IconSocialTelegram from "../icon/social/telegram";
+import IconSocialDiscord from "../../icon/social/discord";
+import IconSocialTelegram from "../../icon/social/telegram";
 
 type IProps = {
   members: IMember[];

@@ -1,11 +1,11 @@
 import Head from "next/head";
-import Hero from "../components/hero/hero";
-import Information from "../components/information/information";
-import Features from "../components/features/features";
-import Ecosystem from "../components/ecosystem/ecosystem";
-import Investor from "../components/inverstor/investor";
-import Roadmap from "../components/roadmap/roadmap";
-import { IMember } from "../components/hero/types";
+import Hero from "../components/templates/hero/hero";
+import Information from "../components/templates/information/information";
+import Features from "../components/templates/features/features";
+import Ecosystem from "../components/templates/ecosystem/ecosystem";
+import Investor from "../components/templates/inverstor/investor";
+import Roadmap from "../components/templates/roadmap/roadmap";
+import { IMember } from "../components/templates/hero/types";
 
 const members: IMember[] = [
   {

@@ -1,6 +1,6 @@
-import IconAnalyse from "../icon/analyse";
-import IconIDAO from "../icon/idao";
-import IconLending from "../icon/lending";
+import IconAnalyse from "../../icon/analyse";
+import IconIDAO from "../../icon/idao";
+import IconLending from "../../icon/lending";
 import Product from "./product";
 
 const supportLinks = [

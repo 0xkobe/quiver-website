@@ -1,8 +1,8 @@
 import { DownloadIcon } from "@heroicons/react/outline";
-import Button from "../button/button";
-import Container from "../container/container";
-import Headline from "../text/headline";
-import Title from "../text/title";
+import Button from "../../button/button";
+import Container from "../../container/container";
+import Headline from "../../text/headline";
+import Title from "../../text/title";
 import Quarter from "./quarter";
 import { IQuarter } from "./types";
 

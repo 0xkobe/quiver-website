@@ -1,6 +1,6 @@
-import ContainerWithBackground from "../container/container-with-background";
-import IconArrowSmall from "../icon/arrow-small";
-import IconQuiver from "../logo/icon";
+import ContainerWithBackground from "../../container/container-with-background";
+import IconArrowSmall from "../../icon/arrow-small";
+import IconQuiver from "../../logo/icon";
 
 export default function Information() {
   return (

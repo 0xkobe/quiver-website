@@ -1,13 +1,13 @@
-import Button from "../button/button";
-import ContainerWithBackground from "../container/container-with-background";
-import IconSocialDiscord from "../icon/social/discord";
-import IconSocialGithub from "../icon/social/github";
-import IconSocialMedium from "../icon/social/medium";
-import IconSocialTelegram from "../icon/social/telegram";
-import IconSocialTwitter from "../icon/social/twitter";
-import IconQuiver from "../logo/icon";
-import Headline from "../text/headline";
-import Title from "../text/title";
+import Button from "../../button/button";
+import ContainerWithBackground from "../../container/container-with-background";
+import IconSocialDiscord from "../../icon/social/discord";
+import IconSocialGithub from "../../icon/social/github";
+import IconSocialMedium from "../../icon/social/medium";
+import IconSocialTelegram from "../../icon/social/telegram";
+import IconSocialTwitter from "../../icon/social/twitter";
+import IconQuiver from "../../logo/icon";
+import Headline from "../../text/headline";
+import Title from "../../text/title";
 
 const links = [
   { name: "Discord", icon: IconSocialDiscord, href: "#" },

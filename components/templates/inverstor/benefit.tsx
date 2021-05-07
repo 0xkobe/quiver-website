@@ -1,4 +1,4 @@
-import Body2 from "../text/body2";
+import Body2 from "../../text/body2";
 import { IBenefit } from "./types";
 
 export default function Benefit(benefit: IBenefit) {

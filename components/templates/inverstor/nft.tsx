@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import { PropsWithChildren } from "react";
-import IconTrendDown from "../icon/trend/down";
-import IconTrendStable from "../icon/trend/stable";
-import IconTrendUp from "../icon/trend/up";
-import Body2 from "../text/body2";
+import IconTrendDown from "../../icon/trend/down";
+import IconTrendStable from "../../icon/trend/stable";
+import IconTrendUp from "../../icon/trend/up";
+import Body2 from "../../text/body2";
 import { INFT } from "./types";
 
 type IProps = {

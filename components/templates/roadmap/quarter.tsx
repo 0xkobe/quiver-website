@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import IconArrowLarge from "../icon/arrow-large";
+import IconArrowLarge from "../../icon/arrow-large";
 import { IQuarter } from "./types";
 
 export default function Quarter(quarter: IQuarter) {

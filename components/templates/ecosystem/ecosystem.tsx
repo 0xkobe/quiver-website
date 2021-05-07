@@ -1,7 +1,7 @@
-import Container from "../container/container";
-import Body1 from "../text/body1";
-import Headline from "../text/headline";
-import Title from "../text/title";
+import Container from "../../container/container";
+import Body1 from "../../text/body1";
+import Headline from "../../text/headline";
+import Title from "../../text/title";
 import Products from "./products";
 
 export default function Ecosystem() {

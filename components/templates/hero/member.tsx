@@ -1,4 +1,4 @@
-import Body2 from "../text/body2";
+import Body2 from "../../text/body2";
 import { IMember } from "./types";
 
 export default function Member(member: IMember) {

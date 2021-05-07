@@ -1,12 +1,12 @@
 import { DownloadIcon } from "@heroicons/react/outline";
-import Button from "../button/button";
-import Container from "../container/container";
+import Button from "../../button/button";
+import Container from "../../container/container";
 import Benefits from "./benefits";
-import Headline from "../text/headline";
-import Title from "../text/title";
-import Subtitle from "../text/subtitle";
-import Body1 from "../text/body1";
-import Body2 from "../text/body2";
+import Headline from "../../text/headline";
+import Title from "../../text/title";
+import Subtitle from "../../text/subtitle";
+import Body1 from "../../text/body1";
+import Body2 from "../../text/body2";
 
 export default function Protocol() {
   return (
