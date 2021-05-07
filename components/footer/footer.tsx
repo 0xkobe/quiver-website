@@ -1,5 +1,5 @@
 import Button from "../button/button";
-import Container from "../container/container";
+import ContainerWithBackground from "../container/container-with-background";
 import IconSocialDiscord from "../icon/social/discord";
 import IconSocialGithub from "../icon/social/github";
 import IconSocialMedium from "../icon/social/medium";
@@ -19,19 +19,17 @@ const links = [
 
 export default function Footer() {
   return (
-    <Container className="rounded-2xl rounded-b-none bg-gradient-to-r from-purple-100 to-purple-50 px-24 sm:px-24 lg:px-24">
-      <div className="rounded-2xl px-6 py-10 bg-white overflow-hidden shadow-xl sm:px-12 sm:py-12 text-center">
-        <IconQuiver className="mx-auto" />
-        <Headline className="mt-12 block">Ready to dive in?</Headline>
-        <Title className="mt-3">Join the Community</Title>
-        <nav className="mt-12 grid md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {links.map((x, i) => (
-            <Button key={x.name} href={x.href} icon={x.icon} outlined>
-              {x.name}
-            </Button>
-          ))}
-        </nav>
-      </div>
-    </Container>
+    <ContainerWithBackground className="rounded-b-none">
+      <IconQuiver className="mx-auto" />
+      <Headline className="mt-12 block">Ready to dive in?</Headline>
+      <Title className="mt-3">Join the Community</Title>
+      <nav className="mt-12 grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+        {links.map((x, i) => (
+          <Button key={x.name} href={x.href} icon={x.icon} outlined>
+            {x.name}
+          </Button>
+        ))}
+      </nav>
+    </ContainerWithBackground>
   );
 }
