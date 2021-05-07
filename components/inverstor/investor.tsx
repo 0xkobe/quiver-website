@@ -106,8 +106,8 @@ export default function Investor() {
           </Body2>
           <Newsletter className="my-6" />
         </div>
-        <div className="col-span-3 md:px-14">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div className="col-span-3 mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
             {nfts.map((x, i) => (
               <NFT nft={x} index={i} key={i} />
             ))}

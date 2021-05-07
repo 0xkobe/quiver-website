@@ -34,9 +34,9 @@ export default function NFT(props: PropsWithChildren<IProps>) {
     <div>
       <div
         className={classNames(
-          "p-6 ring-2 ring-purple-200 rounded-xl shadow-xl bg-gradient-to-t via-white to-white",
+          "p-6 ring-2 ring-purple-200 rounded-xl shadow-xl bg-gradient-to-t via-white to-white w-44 mx-auto",
           `from-${config.color}-50`,
-          props.index < 3 && props.index % 3 !== 1 ? "lg:mt-12" : ""
+          props.index < 3 && props.index % 3 !== 1 ? "md:mt-12" : ""
         )}
       >
         <div className="flex justify-between">
@@ -53,7 +53,7 @@ export default function NFT(props: PropsWithChildren<IProps>) {
 
         <img
           src={props.nft.imageUrl}
-          className={`mt-6 mx-auto w-32 h32 lg:h-${
+          className={`mt-6 mx-auto w-32 h-32 md:h-${
             props.index % 3 == 1 ? 44 : 32
           }`}
         />
