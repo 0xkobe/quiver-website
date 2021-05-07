@@ -5,6 +5,7 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <div className="fixed bg-radial-gradient w-full h-full"></div>
       <Navigation />
       <Component {...pageProps} />
       <Footer />

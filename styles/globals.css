@@ -9,3 +9,12 @@
   -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
 }
+
+.bg-radial-gradient {
+  background: radial-gradient(
+      100% 100% at 50% 0%,
+      #fbf1ff 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #fcfcff;
+}
