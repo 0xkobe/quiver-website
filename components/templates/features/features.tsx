@@ -49,6 +49,13 @@ export default function Protocol() {
       <Benefits />
 
       <div className="mt-12 grid lg:grid-cols-5 lg:gap-8 text-left">
+        <div className="lg:col-span-3">
+          <img
+            className="mx-auto w-full rounded-xl max-w-lg"
+            src="/reputation.svg"
+            alt="Reputation"
+          />
+        </div>
         <div className="lg:col-span-2 flex items-center">
           <div>
             <Subtitle>
@@ -70,13 +77,6 @@ export default function Protocol() {
               </Button>
             </div>
           </div>
-        </div>
-        <div className="lg:col-span-3">
-          <img
-            className="mx-auto w-full rounded-xl max-w-lg"
-            src="/reputation.svg"
-            alt="Reputation"
-          />
         </div>
       </div>
     </Container>
