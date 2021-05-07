@@ -20,18 +20,21 @@ export default function Protocol() {
       </Body1>
 
       <div className="mt-24 grid lg:grid-cols-5 lg:gap-8 text-left">
-        <div className="lg:col-span-2">
-          <Subtitle>Decentralized Information Collector Protocol</Subtitle>
-          <Body2 className="mt-6">
-            DICP, the backbone of Quiver Protocol, is the first ever
-            decentralized protocol to collect information to make it beneficial
-            for the community. This protocol is run by the information
-            collectors, verifiers, purchasers and the governance system.
-          </Body2>
-          <div className="mt-12">
-            <Button href="#" icon={DownloadIcon} text shadow>
-              Download Whitepaper
-            </Button>
+        <div className="lg:col-span-2 flex items-center">
+          <div>
+            <Subtitle>Decentralized Information Collector Protocol</Subtitle>
+            <Body2 className="mt-6">
+              DICP, the backbone of Quiver Protocol, is the first ever
+              decentralized protocol to collect information to make it
+              beneficial for the community. This protocol is run by the
+              information collectors, verifiers, purchasers and the governance
+              system.
+            </Body2>
+            <div className="mt-12">
+              <Button href="#" icon={DownloadIcon} text shadow>
+                Download Whitepaper
+              </Button>
+            </div>
           </div>
         </div>
         <div className="lg:col-span-3">
@@ -46,23 +49,26 @@ export default function Protocol() {
       <Benefits />
 
       <div className="mt-12 grid lg:grid-cols-5 lg:gap-8 text-left">
-        <div className="lg:col-span-2">
-          <Subtitle>
-            Reputation Based Community: <br />
-            The Source of Trust
-          </Subtitle>
-          <Body2 className="mt-6">
-            Reputation doesn’t have a valuable factor and it’s hard to know who
-            to trust. Quiver introduces tokenized reputation through our QREP
-            Token to show users’ value in the ecosystem and mutual benefits
-            between information providers and investors. <br />
-            The better you do, the more reputation you get. The more reputation
-            you get, the community’s level of trust in you increases.
-          </Body2>
-          <div className="mt-12">
-            <Button href="#" icon={DownloadIcon} text shadow>
-              Download Whitepaper
-            </Button>
+        <div className="lg:col-span-2 flex items-center">
+          <div>
+            <Subtitle>
+              Reputation Based Community: <br />
+              The Source of Trust
+            </Subtitle>
+            <Body2 className="mt-6">
+              Reputation doesn’t have a valuable factor and it’s hard to know
+              who to trust. Quiver introduces tokenized reputation through our
+              QREP Token to show users’ value in the ecosystem and mutual
+              benefits between information providers and investors. <br />
+              The better you do, the more reputation you get. The more
+              reputation you get, the community’s level of trust in you
+              increases.
+            </Body2>
+            <div className="mt-12">
+              <Button href="#" icon={DownloadIcon} text shadow>
+                Download Whitepaper
+              </Button>
+            </div>
           </div>
         </div>
         <div className="lg:col-span-3">
