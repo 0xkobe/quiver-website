@@ -15,7 +15,7 @@ const benefits: IBenefit[] = [
   },
   {
     name: "Reduce Risk",
-    description: "Minimize investment risks ..",
+    description: "Minimize investment risks",
     icon: "🤝",
   },
   {

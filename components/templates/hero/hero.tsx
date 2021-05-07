@@ -35,10 +35,21 @@ export default function Hero(props: PropsWithChildren<IProps>) {
 
       <div className="mt-12 mb-24 mx-auto sm:flex sm:justify-center">
         <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-          <Button href="#" large shadow icon={IconSocialDiscord}>
+          <Button
+            href="https://discord.com/invite/jqemf5XRMj"
+            large
+            shadow
+            icon={IconSocialDiscord}
+          >
             Join our Discord
           </Button>
-          <Button href="#" large shadow outlined icon={IconSocialTelegram}>
+          <Button
+            href="https://t.me/quiveridaochat"
+            large
+            shadow
+            outlined
+            icon={IconSocialTelegram}
+          >
             Join our Telegram
           </Button>
         </div>

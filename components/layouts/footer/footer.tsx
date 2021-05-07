@@ -10,11 +10,31 @@ import Headline from "../../text/headline";
 import Title from "../../text/title";
 
 const links = [
-  { name: "Discord", icon: IconSocialDiscord, href: "#" },
-  { name: "Telegram", icon: IconSocialTelegram, href: "#" },
-  { name: "Twitter", icon: IconSocialTwitter, href: "#" },
-  { name: "Medium", icon: IconSocialMedium, href: "#" },
-  { name: "Github", icon: IconSocialGithub, href: "#" },
+  {
+    name: "Discord",
+    icon: IconSocialDiscord,
+    href: "https://discord.com/invite/jqemf5XRMj",
+  },
+  {
+    name: "Telegram",
+    icon: IconSocialTelegram,
+    href: "https://t.me/quiveridaochat",
+  },
+  {
+    name: "Twitter",
+    icon: IconSocialTwitter,
+    href: "https://twitter.com/QuiverProtocol",
+  },
+  {
+    name: "Medium",
+    icon: IconSocialMedium,
+    href: "https://quiverprotocol.medium.com/",
+  },
+  {
+    name: "Github",
+    icon: IconSocialGithub,
+    href: "https://github.com/QuiverCommunity",
+  },
 ];
 
 export default function Footer() {

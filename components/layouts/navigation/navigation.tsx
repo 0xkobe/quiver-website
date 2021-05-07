@@ -4,7 +4,6 @@ import { MenuIcon, XIcon, DocumentTextIcon } from "@heroicons/react/outline";
 import { INavigationItem } from "./types";
 import Item from "./item";
 import Button from "../../button/button";
-import Container from "../../container/container";
 import Logo from "../../logo/logo";
 
 const action: INavigationItem = {
@@ -37,12 +36,12 @@ const navigation: INavigationItem[] = [
   {
     key: "blog",
     name: "Blog",
-    href: "#blog",
+    href: "https://quiverprotocol.medium.com/",
   },
   {
     key: "careers",
     name: "Careers",
-    href: "#careers",
+    href: "#", // TODO: Add carreer link
   },
 ];
 
@@ -53,7 +52,7 @@ export default function Navigation() {
         <>
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-0 py-6 flex justify-between items-center lg:justify-start lg:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
-              <a href="https://quiverprotocol.com">
+              <a href="/">
                 <span className="sr-only">Quiver</span>
                 <Logo className="w-auto h-8 sm:h-10" />
               </a>
