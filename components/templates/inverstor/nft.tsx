@@ -52,8 +52,8 @@ export default function NFT(props: PropsWithChildren<IProps>) {
         </div>
         <img
           src={props.nft.imageUrl}
-          className={`mt-6 mx-auto w-32 h-32 md:h-${
-            props.index % 3 == 1 ? 44 : 32
+          className={`mt-6 mx-auto w-32 h-32 ${
+            props.index % 3 == 1 ? "md:mt-12 md:mb-12" : ""
           }`}
         />
         <Body2 className="mt-6 font-bold">{props.nft.name}</Body2>
