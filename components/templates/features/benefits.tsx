@@ -27,7 +27,7 @@ const benefits: IBenefit[] = [
 
 export default function Benefits() {
   return (
-    <div className="relative bg-white pt-20 pb-12">
+    <div className="relative pt-20 pb-12">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <Subtitle2 className="mt-2">Quiver Protocol Benefits</Subtitle2>
         <div className="mt-12">

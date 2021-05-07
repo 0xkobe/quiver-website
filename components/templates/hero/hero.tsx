@@ -17,13 +17,10 @@ type IProps = {
 export default function Hero(props: PropsWithChildren<IProps>) {
   return (
     <Container className="px-12 text-center">
-      <a
-        href="#"
-        className="inline-flex items-center text-purple-900 bg-purple-100 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-purple-600"
-      >
+      <div className="inline-flex items-center text-purple-900 bg-white border border-purple-300 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base">
         <Tag>Emotional NFTs Sale</Tag>
         <span className="ml-4 text-sm">Coming June 1st 🔥</span>
-      </a>
+      </div>
 
       <MainTitle className="mt-12">
         <span className="block">1st Community-driven</span>

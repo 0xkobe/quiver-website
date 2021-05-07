@@ -19,9 +19,9 @@ const links = [
 
 export default function Footer() {
   return (
-    <ContainerWithBackground className="rounded-b-none">
+    <ContainerWithBackground className="xl:rounded-b-none">
       <IconQuiver className="mx-auto" />
-      <Headline className="mt-12 block">Ready to dive in?</Headline>
+      <Headline className="mt-12 inline-block">Ready to dive in?</Headline>
       <Title className="mt-3">Join the Community</Title>
       <nav className="mt-12 grid md:grid-cols-3 lg:grid-cols-5 gap-6">
         {links.map((x, i) => (

@@ -3,9 +3,8 @@ import { IMember } from "./types";
 
 export default function Member(member: IMember) {
   return (
-    <a
+    <div
       key={member.name}
-      href={member.href}
       className="rounded-full border border-purple-200 p-2 pr-6 mx-3 mt-3"
     >
       <div className="flex items-center">
@@ -16,6 +15,6 @@ export default function Member(member: IMember) {
         />
         <Body2 className="ml-3">{member.name}</Body2>
       </div>
-    </a>
+    </div>
   );
 }

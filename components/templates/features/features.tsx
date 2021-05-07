@@ -19,8 +19,8 @@ export default function Protocol() {
         Discover how it is converted to real-value NFTs.
       </Body1>
 
-      <div className="lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8 mt-24 text-left">
-        <div className="px-4 mx-auto sm:px-6 lg:pt-16 lg:mx-0 lg:px-0">
+      <div className="mt-24 grid lg:grid-cols-5 lg:gap-8 text-left">
+        <div className="lg:col-span-2">
           <Subtitle>Decentralized Information Collector Protocol</Subtitle>
           <Body2 className="mt-6">
             DICP, the backbone of Quiver Protocol, is the first ever
@@ -28,15 +28,15 @@ export default function Protocol() {
             for the community. This protocol is run by the information
             collectors, verifiers, purchasers and the governance system.
           </Body2>
-          <div className="mt-6">
+          <div className="mt-12">
             <Button href="#" icon={DownloadIcon} text shadow>
               Download Whitepaper
             </Button>
           </div>
         </div>
-        <div className="mt-12 sm:mt-16 lg:mt-0">
+        <div className="lg:col-span-3">
           <img
-            className="rounded-xl border border-purple-200"
+            className="mx-auto w-full rounded-xl border border-purple-200"
             src="https://via.placeholder.com/696x500/fff"
             alt=""
           />
@@ -45,8 +45,8 @@ export default function Protocol() {
 
       <Benefits />
 
-      <div className="mt-12 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8 text-left">
-        <div className="px-4 mx-auto sm:px-6 lg:pt-16 lg:mx-0 lg:px-0 lg:col-start-2">
+      <div className="mt-12 grid lg:grid-cols-5 lg:gap-8 text-left">
+        <div className="lg:col-span-2">
           <Subtitle>
             Reputation Based Community: <br />
             The Source of Trust
@@ -59,15 +59,15 @@ export default function Protocol() {
             The better you do, the more reputation you get. The more reputation
             you get, the community’s level of trust in you increases.
           </Body2>
-          <div className="mt-6">
+          <div className="mt-12">
             <Button href="#" icon={DownloadIcon} text shadow>
               Download Whitepaper
             </Button>
           </div>
         </div>
-        <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+        <div className="lg:col-span-3">
           <img
-            className="rounded-xl border border-purple-200"
+            className="mx-auto w-full rounded-xl border border-purple-200"
             src="https://via.placeholder.com/696x500/fff"
             alt=""
           />
