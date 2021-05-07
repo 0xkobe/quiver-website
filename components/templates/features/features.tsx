@@ -39,9 +39,9 @@ export default function Protocol() {
         </div>
         <div className="lg:col-span-3">
           <img
-            className="mx-auto w-full rounded-xl border border-purple-200"
-            src="https://via.placeholder.com/696x500/fff"
-            alt=""
+            className="mx-auto w-full rounded-xl max-w-lg"
+            src="/DICP.svg"
+            alt="DICP"
           />
         </div>
       </div>
@@ -73,9 +73,9 @@ export default function Protocol() {
         </div>
         <div className="lg:col-span-3">
           <img
-            className="mx-auto w-full rounded-xl border border-purple-200"
-            src="https://via.placeholder.com/696x500/fff"
-            alt=""
+            className="mx-auto w-full rounded-xl max-w-lg"
+            src="/reputation.svg"
+            alt="Reputation"
           />
         </div>
       </div>
