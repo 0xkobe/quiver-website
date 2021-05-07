@@ -6,6 +6,7 @@ import IconSocialMedium from "../../icon/social/medium";
 import IconSocialTelegram from "../../icon/social/telegram";
 import IconSocialTwitter from "../../icon/social/twitter";
 import IconQuiver from "../../logo/icon";
+import Body2 from "../../text/body2";
 import Headline from "../../text/headline";
 import Title from "../../text/title";
 
@@ -50,6 +51,7 @@ export default function Footer() {
           </Button>
         ))}
       </nav>
+      <Body2 className="hidden lg:block absolute bottom-8 right-0 left-0">© {new Date().getFullYear()} Quiver. All rights reserved.</Body2>
     </ContainerWithBackground>
   );
 }
