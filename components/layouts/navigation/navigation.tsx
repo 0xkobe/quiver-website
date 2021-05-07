@@ -47,7 +47,7 @@ const navigation: INavigationItem[] = [
 
 export default function Navigation() {
   return (
-    <Popover>
+    <Popover className="relative z-50">
       {({ open }) => (
         <>
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-0 py-6 flex justify-between items-center lg:justify-start lg:space-x-10">
