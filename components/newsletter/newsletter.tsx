@@ -8,18 +8,19 @@ type IProps = {
 export default function Newsletter(props: PropsWithChildren<IProps>) {
   const [email, setEmail] = useState("");
 
-  const submit = (e) => {
-    e.preventDefault();
-    document.querySelector("form").submit();
-  };
-
   return (
     <form
       className={props.className}
       name="contact"
       method="POST"
       data-netlify="true"
+      netlify-honeypot="bot-field"
     >
+      <p className="hidden">
+        <label>
+          Don’t fill this out if you’re human: <input name="bot-field" />
+        </label>
+      </p>
       <div className="lg:grid lg:grid-cols-4 lg:grid-flow-col-dense lg:gap-3">
         <input
           type="email"
@@ -29,12 +30,12 @@ export default function Newsletter(props: PropsWithChildren<IProps>) {
           value={email}
           onChange={(e) => setEmail(e.currentTarget.value)}
         />
-        <Button
-          onClick={submit}
-          className="text-base leading-6 font-medium w-full mt-3 lg:mt-0"
+        <button
+          type="submit"
+          className="whitespace-nowrap inline-flex items-center justify-center rounded-full text-base px-4 py-2 ring-1 ring-black ring-opacity-5 text-white bg-gradient-to-r from-primary to-secondary text-base leading-6 font-medium w-full mt-3 lg:mt-0"
         >
           Notify me
-        </Button>
+        </button>
       </div>
     </form>
   );
