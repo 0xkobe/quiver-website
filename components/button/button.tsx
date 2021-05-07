@@ -18,7 +18,11 @@ export default function Button(props: PropsWithChildren<IProps>) {
   const px = props.text ? "" : props.large ? "px-6" : "px-4";
   const py = props.large ? "py-3" : "py-2";
   const size = `${px} ${py}`;
-  const border = props.outlined ? "ring-1 ring-inset ring-purple-200" : null;
+  const border = props.outlined
+    ? "border border-purple-300 ring-1 ring-black ring-opacity-5"
+    : props.text
+    ? ""
+    : "ring-1 ring-black ring-opacity-5";
   const color = props.outlined
     ? "text-purple-900 bg-white"
     : props.text
@@ -27,10 +31,11 @@ export default function Button(props: PropsWithChildren<IProps>) {
   const shadow = props.shadow && !props.text ? "shadow-xl" : null;
   const icon = props.text
     ? classNames(
-        "rounded-full text-white bg-gradient-to-r from-primary to-secondary h-8 w-8 mr-3 p-2",
+        "rounded-full text-white bg-gradient-to-r from-primary to-secondary h-10 w-10 mr-3 p-2 ring-1 ring-black ring-opacity-5",
         props.shadow ? "shadow-xl" : null
       )
-    : "mr-2";
+    : "mr-3";
+  const iconSize = props.text ? "" : "h-4 w-4";
   return (
     <a
       href={"href" in props ? props.href : "#"}
@@ -46,7 +51,7 @@ export default function Button(props: PropsWithChildren<IProps>) {
     >
       {props.icon && (
         <div className={classNames("flex justify-center align-middle", icon)}>
-          <props.icon className={classNames("h-4 w-4")} aria-hidden="true" />
+          <props.icon className={classNames(iconSize)} aria-hidden="true" />
         </div>
       )}
       {props.children}
