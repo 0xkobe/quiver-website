@@ -15,7 +15,15 @@ type IProps = {
 export default function Button(props: PropsWithChildren<IProps>) {
   const structure =
     "whitespace-nowrap inline-flex items-center justify-center rounded-full text-base";
-  const px = props.text ? "" : props.large ? "px-6" : "px-4";
+  const px = props.text
+    ? ""
+    : props.large
+    ? props.children
+      ? "px-6"
+      : "px-3"
+    : props.children
+    ? "px-4"
+    : "px-2";
   const py = props.large ? "py-3" : "py-2";
   const size = `${px} ${py}`;
   const border = props.outlined
@@ -29,12 +37,13 @@ export default function Button(props: PropsWithChildren<IProps>) {
     ? "text-primary"
     : "text-white bg-gradient-to-r from-primary to-secondary";
   const shadow = props.shadow && !props.text ? "shadow-xl" : null;
+  const iconMargin = props.children ? "mr-3" : "";
   const icon = props.text
     ? classNames(
-        "rounded-full text-white bg-gradient-to-r from-primary to-secondary h-10 w-10 mr-3 p-2 ring-1 ring-black ring-opacity-5",
+        "rounded-full text-white bg-gradient-to-r from-primary to-secondary h-10 w-10 p-2 ring-1 ring-black ring-opacity-5",
         props.shadow ? "shadow-xl" : null
       )
-    : "mr-3";
+    : "";
   const iconSize = props.text ? "" : "h-4 w-4";
   return (
     <a
@@ -50,7 +59,13 @@ export default function Button(props: PropsWithChildren<IProps>) {
       )}
     >
       {props.icon && (
-        <div className={classNames("flex justify-center align-middle", icon)}>
+        <div
+          className={classNames(
+            "flex justify-center align-middle",
+            icon,
+            iconMargin
+          )}
+        >
           <props.icon className={classNames(iconSize)} aria-hidden="true" />
         </div>
       )}
