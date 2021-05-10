@@ -1,5 +1,6 @@
 import Navigation from "../components/layouts/navigation/navigation";
 import Footer from "../components/layouts/footer/footer";
+import ScrollButton from "../components/scroll-button/scroll-button";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
@@ -9,6 +10,7 @@ function MyApp({ Component, pageProps }) {
       <Navigation />
       <Component {...pageProps} />
       <Footer />
+      <ScrollButton />
     </>
   );
 }
