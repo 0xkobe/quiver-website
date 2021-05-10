@@ -15,22 +15,22 @@ const navigation: INavigationItem[] = [
   {
     key: "protocol",
     name: "Protocol",
-    href: "#protocol",
+    id: "protocol",
   },
   {
     key: "ecosystem",
     name: "Ecosystem",
-    href: "#ecosystem",
+    id: "ecosystem",
   },
   {
     key: "invest",
     name: "Invest",
-    href: "#invest",
+    id: "invest",
   },
   {
     key: "roadmap",
     name: "Roadmap",
-    href: "#roadmap",
+    id: "roadmap",
   },
   {
     key: "blog",
