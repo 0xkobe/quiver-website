@@ -28,14 +28,14 @@ export default function ScrollButton() {
   return (
     <Button
       className={classNames(
-        "bottom-0 right-0 m-4 z-50",
-        visible ? "fixed" : "hidden"
+        "fixed bottom-0 right-0 m-6 z-50",
+        visible ? "invisible md:visible" : "invisible"
       )}
+      outlined
+      large
       icon={ChevronUpIcon}
       shadow
       onClick={scrollToTop}
-    >
-      UP
-    </Button>
+    />
   );
 }
