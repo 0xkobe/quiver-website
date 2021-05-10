@@ -93,19 +93,23 @@ export default function Investor() {
   return (
     <Container id="invest">
       <div className="lg:grid lg:grid-cols-5 lg:grid-flow-col-dense lg:gap-8">
-        <div className="col-span-2 px-4 mx-auto sm:px-6 lg:py-16 lg:mx-0 lg:px-0">
-          <Headline>Emotional NFTs sale</Headline>
-          <Title className="mt-3">Become a Community Investor</Title>
-          <Body1 className="mt-6">
-            Quiver Emotional NFTs are designed to be part of our upcoming
-            stressless portfolio tracker. They give you an ability to buy
-            discounted QSTK token along with voting power.
-          </Body1>
-          <Body2 className="mt-12">
-            <strong className="text-primary font-bold">Coming June 1st</strong>,
-            sign up to get notified of the sale
-          </Body2>
-          <Newsletter className="my-6" />
+        <div className="col-span-2 flex items-center">
+          <div>
+            <Headline>Emotional NFTs sale</Headline>
+            <Title className="mt-3">Become a Community Investor</Title>
+            <Body1 className="mt-6">
+              Quiver Emotional NFTs are designed to be part of our upcoming
+              stressless portfolio tracker. They give you an ability to buy
+              discounted QSTK token along with voting power.
+            </Body1>
+            <Body2 className="mt-12">
+              <strong className="text-primary font-bold">
+                Coming June 1st
+              </strong>
+              , sign up to get notified of the sale
+            </Body2>
+            <Newsletter className="my-6" />
+          </div>
         </div>
         <div className="col-span-3 mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
