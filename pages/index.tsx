@@ -51,17 +51,28 @@ const members: IMember[] = [
 ]
 
 export default function Home(): JSX.Element {
+  const title =
+    'Quiver Protocol - 1st Community-driven Blockchain Investment Protocol'
+  const description =
+    'Explore Investment opportunities market driven by the Quiver Community. Find the most profitable information and improve investment decisions, fast, easy and secure.'
+  const url = 'https://quiverprotocol.com/'
+  const image = `${url}/og-picture.png`
   return (
     <>
       <Head>
-        <title>
-          Quiver Protocol - 1st Community-driven Blockchain Investment Protocol
-        </title>
-        <meta
-          name="description"
-          content="Explore Investment opportunities market driven by the Quiver Community. Find the most profitable information and improve investment decisions, fast, easy and secure."
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="twitter:card" content="summary"></meta>
+        <meta name="twitter:site" content="@QuiverProtocol"></meta>
+        <meta name="twitter:creator" content="@QuiverProtocol" />
+        <meta name="twitter:image" content={image} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        {/* <meta property="fb:app_id" content="" /> // https://developers.facebook.com/docs/development/create-an-app */}
       </Head>
       <Hero members={members} />
       <Information />
