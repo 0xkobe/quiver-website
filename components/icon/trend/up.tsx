@@ -1,10 +1,10 @@
-import { PropsWithChildren } from "react";
+import { FunctionComponent } from 'react'
 
 type IProps = {
-  className?: string;
-};
+  className?: string
+}
 
-export default function IconTrendUp(props: PropsWithChildren<IProps>) {
+const IconTrendUp: FunctionComponent<IProps> = (props) => {
   return (
     <svg
       className={props.className}
@@ -19,5 +19,7 @@ export default function IconTrendUp(props: PropsWithChildren<IProps>) {
         fill="#10B981"
       />
     </svg>
-  );
+  )
 }
+
+export default IconTrendUp

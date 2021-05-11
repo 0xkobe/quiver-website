@@ -1,20 +1,28 @@
-import { INavigationItem } from "./types";
+import { FunctionComponent } from 'react'
+import { INavigationItem } from './types'
 
-export default function Item(item: INavigationItem) {
+type IProps = {
+  item: INavigationItem
+}
+
+const Item: FunctionComponent<IProps> = (props) => {
   const handleClick = (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    document.getElementById(item.id).scrollIntoView({ behavior: "smooth" });
-  };
+    event.preventDefault()
+    event.stopPropagation()
+    document
+      .getElementById(props.item.id)
+      .scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <a
-      key={item.key}
-      href={item.href ? item.href : `#${item.id}`}
-      onClick={item.id && handleClick}
+      href={props.item.href ? props.item.href : `#${props.item.id}`}
+      onClick={props.item.id && handleClick}
       className="text-base text-gray-500 hover:text-gray-900"
     >
-      {item.name}
+      {props.item.name}
     </a>
-  );
+  )
 }
+
+export default Item

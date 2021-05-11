@@ -1,42 +1,42 @@
-import classNames from "classnames";
-import { PropsWithChildren } from "react";
-import IconTrendDown from "../../icon/trend/down";
-import IconTrendStable from "../../icon/trend/stable";
-import IconTrendUp from "../../icon/trend/up";
-import Body2 from "../../text/body2";
-import { INFT } from "./types";
+import classNames from 'classnames'
+import { FunctionComponent } from 'react'
+import IconTrendDown from '../../icon/trend/down'
+import IconTrendStable from '../../icon/trend/stable'
+import IconTrendUp from '../../icon/trend/up'
+import Body2 from '../../text/body2'
+import { INFT } from './types'
 
 type IProps = {
-  index: number;
-  nft: INFT;
-};
+  index: number
+  nft: INFT
+}
 
-export default function NFT(props: PropsWithChildren<IProps>) {
+const NFT: FunctionComponent<IProps> = (props) => {
   const config = {
     up: {
-      color: "green",
-      text: "Happy",
+      color: 'green',
+      text: 'Happy',
       icon: IconTrendUp,
     },
     down: {
-      color: "red",
-      text: "Angry",
+      color: 'red',
+      text: 'Angry',
       icon: IconTrendDown,
     },
     stable: {
-      color: "blue",
-      text: "Rest",
+      color: 'blue',
+      text: 'Rest',
       icon: IconTrendStable,
     },
-  }[props.nft.progress];
+  }[props.nft.progress]
 
   return (
     <div>
       <div
         className={classNames(
-          "p-6 ring-2 ring-purple-200 rounded-xl shadow-xl bg-gradient-to-t via-white to-white w-44 mx-auto",
+          'p-6 ring-2 ring-purple-200 rounded-xl shadow-xl bg-gradient-to-t via-white to-white w-44 mx-auto',
           `from-${config.color}-50`,
-          props.index < 3 && props.index % 3 !== 1 ? "md:mt-12" : ""
+          props.index < 3 && props.index % 3 !== 1 ? 'md:mt-12' : '',
         )}
       >
         <div className="flex justify-between">
@@ -53,7 +53,7 @@ export default function NFT(props: PropsWithChildren<IProps>) {
         <img
           src={props.nft.imageUrl}
           className={`mt-6 mx-auto w-32 h-32 ${
-            props.index % 3 == 1 ? "md:mt-12 md:mb-12" : ""
+            props.index % 3 == 1 ? 'md:mt-12 md:mb-12' : ''
           }`}
         />
         <Body2 className="mt-6 font-bold">{props.nft.name}</Body2>
@@ -62,5 +62,7 @@ export default function NFT(props: PropsWithChildren<IProps>) {
         </p>
       </div>
     </div>
-  );
+  )
 }
+
+export default NFT

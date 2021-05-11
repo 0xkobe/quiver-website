@@ -1,10 +1,10 @@
-import { PropsWithChildren } from "react";
+import { FunctionComponent } from 'react'
 
 type IProps = {
-  className?: string;
-};
+  className?: string
+}
 
-export default function IconCryptoBtc(props: PropsWithChildren<IProps>) {
+const IconCryptoBtc: FunctionComponent<IProps> = (props) => {
   return (
     <svg
       className={props.className}
@@ -36,5 +36,7 @@ export default function IconCryptoBtc(props: PropsWithChildren<IProps>) {
         </linearGradient>
       </defs>
     </svg>
-  );
+  )
 }
+
+export default IconCryptoBtc

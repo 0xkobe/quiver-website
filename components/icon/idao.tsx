@@ -1,10 +1,10 @@
-import { PropsWithChildren } from "react";
+import { FunctionComponent } from 'react'
 
 type IProps = {
-  className?: string;
-};
+  className?: string
+}
 
-export default function IconIDAO(props: PropsWithChildren<IProps>) {
+const IconIDAO: FunctionComponent<IProps> = (props) => {
   return (
     <svg
       className={props.className}
@@ -23,5 +23,7 @@ export default function IconIDAO(props: PropsWithChildren<IProps>) {
         fill="#5540DB"
       />
     </svg>
-  );
+  )
 }
+
+export default IconIDAO

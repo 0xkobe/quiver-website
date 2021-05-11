@@ -1,95 +1,95 @@
-import { Fragment } from "react";
-import Container from "../../container/container";
-import IconCryptoBtc from "../../icon/crypto/BTC";
-import IconCryptoEth from "../../icon/crypto/ETH";
-import Newsletter from "../../newsletter/newsletter";
-import Body1 from "../../text/body1";
-import Body2 from "../../text/body2";
-import Headline from "../../text/headline";
-import Subtitle2 from "../../text/subtitle2";
-import Title from "../../text/title";
-import Benefit from "./benefit";
-import NFT from "./nft";
-import { IBenefit, INFT } from "./types";
+import { Fragment, FunctionComponent } from 'react'
+import Container from '../../container/container'
+import IconCryptoBtc from '../../icon/crypto/BTC'
+import IconCryptoEth from '../../icon/crypto/ETH'
+import Newsletter from '../../newsletter/newsletter'
+import Body1 from '../../text/body1'
+import Body2 from '../../text/body2'
+import Headline from '../../text/headline'
+import Subtitle2 from '../../text/subtitle2'
+import Title from '../../text/title'
+import Benefit from './benefit'
+import NFT from './nft'
+import { IBenefit, INFT } from './types'
 
 const nfts: INFT[] = [
   {
-    name: "Fish",
-    category: "Silver",
+    name: 'Fish',
+    category: 'Silver',
     crypto: IconCryptoBtc,
-    progress: "up",
-    imageUrl: "/nfts/fish/silver/happy.png",
+    progress: 'up',
+    imageUrl: '/nfts/fish/silver/happy.png',
   },
   {
-    name: "Dragon",
-    category: "Platinium",
+    name: 'Dragon',
+    category: 'Platinium',
     crypto: IconCryptoEth,
-    progress: "stable",
-    imageUrl: "/nfts/dragon/platinum/normal.png",
+    progress: 'stable',
+    imageUrl: '/nfts/dragon/platinum/normal.png',
   },
   {
-    name: "Bull",
-    category: "Bronze",
+    name: 'Bull',
+    category: 'Bronze',
     crypto: IconCryptoBtc,
-    progress: "down",
-    imageUrl: "/nfts/bull/bronze/angry.png",
+    progress: 'down',
+    imageUrl: '/nfts/bull/bronze/angry.png',
   },
   {
-    name: "Dear",
-    category: "Bronze",
+    name: 'Dear',
+    category: 'Bronze',
     crypto: IconCryptoEth,
-    progress: "down",
-    imageUrl: "/nfts/deer/bronze/angry.png",
+    progress: 'down',
+    imageUrl: '/nfts/deer/bronze/angry.png',
   },
   {
-    name: "Bear",
-    category: "Diamond",
+    name: 'Bear',
+    category: 'Diamond',
     crypto: IconCryptoBtc,
-    progress: "stable",
-    imageUrl: "/nfts/bear/diamond/normal.png",
+    progress: 'stable',
+    imageUrl: '/nfts/bear/diamond/normal.png',
   },
   {
-    name: "Whale",
-    category: "Diamond",
+    name: 'Whale',
+    category: 'Diamond',
     crypto: IconCryptoEth,
-    progress: "up",
-    imageUrl: "/nfts/whale/diamond/happy.png",
+    progress: 'up',
+    imageUrl: '/nfts/whale/diamond/happy.png',
   },
-];
+]
 
 const benefits: IBenefit[] = [
   {
-    name: "Emotional NFT",
-    category: "Community Art NFTs",
+    name: 'Emotional NFT',
+    category: 'Community Art NFTs',
     items: [
-      "Lovely art for stressless investment",
-      "Get access to locked assets sale",
-      "Community gamification",
+      'Lovely art for stressless investment',
+      'Get access to locked assets sale',
+      'Community gamification',
     ],
   },
   {
-    name: "QREP Token",
-    category: "Reputation Token",
+    name: 'QREP Token',
+    category: 'Reputation Token',
     items: [
-      "Get initial reputation in the ecosystem with QREP Token",
-      "Access DICP voting power",
-      "Unlock DICP protocol rewards",
-      "Trust from the community",
+      'Get initial reputation in the ecosystem with QREP Token',
+      'Access DICP voting power',
+      'Unlock DICP protocol rewards',
+      'Trust from the community',
     ],
   },
   {
-    name: "QSTK Token",
-    category: "Economy Token",
+    name: 'QSTK Token',
+    category: 'Economy Token',
     items: [
-      "Receive QSTK Token at a discounted price (locked asset)",
-      "Access Quiver IDAO voting power",
-      "Get discounted price on information purchase from the DICP",
-      "Unlock DICP protocol rewards",
+      'Receive QSTK Token at a discounted price (locked asset)',
+      'Access Quiver IDAO voting power',
+      'Get discounted price on information purchase from the DICP',
+      'Unlock DICP protocol rewards',
     ],
   },
-];
+]
 
-export default function Investor() {
+const Investor: FunctionComponent = () => {
   return (
     <Container id="invest">
       <div className="lg:grid lg:grid-cols-5 lg:grid-flow-col-dense lg:gap-8">
@@ -125,7 +125,7 @@ export default function Investor() {
       </Subtitle2>
       <div className="mt-12">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-11">
-          {benefits.map(({ category, items, name }, i) => (
+          {benefits.map((x, i) => (
             <Fragment key={i}>
               {i > 0 && (
                 <div className="flex items-center">
@@ -134,11 +134,13 @@ export default function Investor() {
                   </span>
                 </div>
               )}
-              <Benefit name={name} category={category} items={items} />
+              <Benefit benefit={x} />
             </Fragment>
           ))}
         </div>
       </div>
     </Container>
-  );
+  )
 }
+
+export default Investor

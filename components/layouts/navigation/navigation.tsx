@@ -1,55 +1,55 @@
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon, DocumentTextIcon } from "@heroicons/react/outline";
-import { INavigationItem } from "./types";
-import Item from "./item";
-import Button from "../../button/button";
+import { Popover, Transition } from '@headlessui/react'
+import { DocumentTextIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Fragment, FunctionComponent } from 'react'
+import Button from '../../button/button'
+import Item from './item'
+import { INavigationItem } from './types'
 
 const action: INavigationItem = {
-  key: "whitepaper",
-  name: "Whitepaper",
-  href: "/Quiver-Whitepaper.pdf",
-};
+  key: 'whitepaper',
+  name: 'Whitepaper',
+  href: '/Quiver-Whitepaper.pdf',
+}
 
 const navigation: INavigationItem[] = [
   {
-    key: "protocol",
-    name: "Protocol",
-    id: "protocol",
+    key: 'protocol',
+    name: 'Protocol',
+    id: 'protocol',
   },
   {
-    key: "ecosystem",
-    name: "Ecosystem",
-    id: "ecosystem",
+    key: 'ecosystem',
+    name: 'Ecosystem',
+    id: 'ecosystem',
   },
   {
-    key: "invest",
-    name: "Invest",
-    id: "invest",
+    key: 'invest',
+    name: 'Invest',
+    id: 'invest',
   },
   {
-    key: "roadmap",
-    name: "Roadmap",
-    id: "roadmap",
+    key: 'roadmap',
+    name: 'Roadmap',
+    id: 'roadmap',
   },
   {
-    key: "blog",
-    name: "Blog",
-    href: "https://quiverprotocol.medium.com/",
+    key: 'blog',
+    name: 'Blog',
+    href: 'https://quiverprotocol.medium.com/',
   },
   {
-    key: "careers",
-    name: "Careers",
-    href: "https://quiverprotocol.medium.com/careers-at-quiver-protocol-b8ffd3d59d6b",
+    key: 'careers',
+    name: 'Careers',
+    href: 'https://quiverprotocol.medium.com/careers-at-quiver-protocol-b8ffd3d59d6b',
   },
   {
-    key: "guidance",
-    name: "User Guidance",
-    href: "/Quiver_Protocol_User_Guidance.pdf",
+    key: 'guidance',
+    name: 'User Guidance',
+    href: '/Quiver_Protocol_User_Guidance.pdf',
   },
-];
+]
 
-export default function Navigation() {
+const Navigation: FunctionComponent = () => {
   return (
     <Popover className="relative z-50">
       {({ open }) => (
@@ -62,7 +62,9 @@ export default function Navigation() {
               </a>
             </div>
             <nav className="hidden lg:flex space-x-10">
-              {navigation.map(Item)}
+              {navigation.map((x) => (
+                <Item key={x.key} item={x} />
+              ))}
             </nav>
             <div className="hidden lg:flex items-center justify-end lg:flex-1 lg:w-0">
               <Button href={action.href} icon={DocumentTextIcon} outlined>
@@ -105,7 +107,9 @@ export default function Navigation() {
                   </div>
                   <div className="mt-6">
                     <nav className="grid grid-cols-1 gap-7">
-                      {navigation.map(Item)}
+                      {navigation.map((x) => (
+                        <Item key={x.key} item={x} />
+                      ))}
                     </nav>
                   </div>
                 </div>
@@ -125,5 +129,7 @@ export default function Navigation() {
         </>
       )}
     </Popover>
-  );
+  )
 }
+
+export default Navigation
