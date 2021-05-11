@@ -35,11 +35,11 @@ const nfts: INFT[] = [
     imageUrl: '/nfts/bull/bronze/angry.png',
   },
   {
-    name: 'Dear',
-    category: 'Bronze',
+    name: 'Deer',
+    category: 'Gold',
     crypto: IconCryptoEth,
     progress: 'down',
-    imageUrl: '/nfts/deer/bronze/angry.png',
+    imageUrl: '/nfts/deer/gold/angry.png',
   },
   {
     name: 'Bear',

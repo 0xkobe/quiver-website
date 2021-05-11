@@ -1,7 +1,7 @@
 export type INFT = {
   name: string
   imageUrl: string
-  category: 'Silver' | 'Platinium' | 'Bronze' | 'Diamond'
+  category: 'Silver' | 'Platinium' | 'Bronze' | 'Diamond' | 'Gold'
   crypto: any
   progress: 'up' | 'down' | 'stable'
 }
