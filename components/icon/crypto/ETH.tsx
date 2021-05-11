@@ -1,10 +1,10 @@
-import { PropsWithChildren } from "react";
+import { FunctionComponent } from 'react'
 
 type IProps = {
-  className?: string;
-};
+  className?: string
+}
 
-export default function IconCryptoEth(props: PropsWithChildren<IProps>) {
+const IconCryptoEth: FunctionComponent<IProps> = (props) => {
   return (
     <svg
       className={props.className}
@@ -46,5 +46,7 @@ export default function IconCryptoEth(props: PropsWithChildren<IProps>) {
         fill="#F3F4F6"
       />
     </svg>
-  );
+  )
 }
+
+export default IconCryptoEth

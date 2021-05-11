@@ -1,56 +1,57 @@
-import Button from "../../button/button";
-import ContainerWithBackground from "../../container/container-with-background";
-import IconSocialDiscord from "../../icon/social/discord";
-import IconSocialFacebook from "../../icon/social/facebook";
-import IconSocialGithub from "../../icon/social/github";
-import IconSocialMedium from "../../icon/social/medium";
-import IconSocialTelegram from "../../icon/social/telegram";
-import IconSocialTwitter from "../../icon/social/twitter";
-import Body2 from "../../text/body2";
-import Headline from "../../text/headline";
-import Title from "../../text/title";
+import { FunctionComponent } from 'react'
+import Button from '../../button/button'
+import ContainerWithBackground from '../../container/container-with-background'
+import IconSocialDiscord from '../../icon/social/discord'
+import IconSocialFacebook from '../../icon/social/facebook'
+import IconSocialGithub from '../../icon/social/github'
+import IconSocialMedium from '../../icon/social/medium'
+import IconSocialTelegram from '../../icon/social/telegram'
+import IconSocialTwitter from '../../icon/social/twitter'
+import Body2 from '../../text/body2'
+import Headline from '../../text/headline'
+import Title from '../../text/title'
 
 const links = [
   {
-    name: "Discord",
+    name: 'Discord',
     icon: IconSocialDiscord,
-    href: "https://discord.com/invite/jqemf5XRMj",
+    href: 'https://discord.com/invite/jqemf5XRMj',
   },
   {
-    name: "Telegram",
+    name: 'Telegram',
     icon: IconSocialTelegram,
-    href: "https://t.me/quiveridaochat",
+    href: 'https://t.me/quiveridaochat',
   },
   {
-    name: "Twitter",
+    name: 'Twitter',
     icon: IconSocialTwitter,
-    href: "https://twitter.com/QuiverProtocol",
+    href: 'https://twitter.com/QuiverProtocol',
   },
   {
-    name: "Facebook",
+    name: 'Facebook',
     icon: IconSocialFacebook,
-    href: "https://www.facebook.com/Quiver-Protocol-106899561569141",
+    href: 'https://www.facebook.com/Quiver-Protocol-106899561569141',
   },
   {
-    name: "Medium",
+    name: 'Medium',
     icon: IconSocialMedium,
-    href: "https://quiverprotocol.medium.com/",
+    href: 'https://quiverprotocol.medium.com/',
   },
   {
-    name: "Github",
+    name: 'Github',
     icon: IconSocialGithub,
-    href: "https://github.com/QuiverCommunity",
+    href: 'https://github.com/QuiverCommunity',
   },
-];
+]
 
-export default function Footer() {
+const Footer: FunctionComponent = () => {
   return (
     <ContainerWithBackground className="xl:rounded-b-none">
       <img src="/icon.svg" className="mx-auto" />
       <Headline className="mt-12 inline-block">Ready to dive in?</Headline>
       <Title className="mt-3">Join the Community</Title>
       <nav className="mt-12 grid md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
-        {links.map((x, i) => (
+        {links.map((x) => (
           <Button key={x.name} href={x.href} icon={x.icon} outlined>
             {x.name}
           </Button>
@@ -60,5 +61,7 @@ export default function Footer() {
         © {new Date().getFullYear()} Quiver. All rights reserved.
       </Body2>
     </ContainerWithBackground>
-  );
+  )
 }
+
+export default Footer

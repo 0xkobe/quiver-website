@@ -1,10 +1,11 @@
-import Container from "../../container/container";
-import Body1 from "../../text/body1";
-import Headline from "../../text/headline";
-import Title from "../../text/title";
-import Products from "./products";
+import { FunctionComponent } from 'react'
+import Container from '../../container/container'
+import Body1 from '../../text/body1'
+import Headline from '../../text/headline'
+import Title from '../../text/title'
+import Products from './products'
 
-export default function Ecosystem() {
+const Ecosystem: FunctionComponent = () => {
   return (
     <Container className="text-center" id="ecosystem">
       <Headline>Quiver Upcoming Ecosystem</Headline>
@@ -27,5 +28,7 @@ export default function Ecosystem() {
 
       <Products />
     </Container>
-  );
+  )
 }
+
+export default Ecosystem

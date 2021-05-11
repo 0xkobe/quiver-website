@@ -1,10 +1,10 @@
-import { PropsWithChildren } from "react";
+import { FunctionComponent } from 'react'
 
 type IProps = {
-  className?: string;
-};
+  className?: string
+}
 
-export default function IconAnalyse(props: PropsWithChildren<IProps>) {
+const IconAnalyse: FunctionComponent<IProps> = (props) => {
   return (
     <svg
       className={props.className}
@@ -25,5 +25,7 @@ export default function IconAnalyse(props: PropsWithChildren<IProps>) {
         fill="#231B5C"
       />
     </svg>
-  );
+  )
 }
+
+export default IconAnalyse

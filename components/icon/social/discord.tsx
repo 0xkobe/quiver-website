@@ -1,10 +1,10 @@
-import { PropsWithChildren } from "react";
+import { FunctionComponent } from 'react'
 
 type IProps = {
-  className?: string;
-};
+  className?: string
+}
 
-export default function IconSocialDiscord(props: PropsWithChildren<IProps>) {
+const IconSocialDiscord: FunctionComponent<IProps> = (props) => {
   return (
     <svg
       className={props.className}
@@ -19,5 +19,7 @@ export default function IconSocialDiscord(props: PropsWithChildren<IProps>) {
         fill="currentColor"
       />
     </svg>
-  );
+  )
 }
+
+export default IconSocialDiscord

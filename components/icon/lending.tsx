@@ -1,10 +1,10 @@
-import { PropsWithChildren } from "react";
+import { FunctionComponent } from 'react'
 
 type IProps = {
-  className?: string;
-};
+  className?: string
+}
 
-export default function IconLending(props: PropsWithChildren<IProps>) {
+const IconLending: FunctionComponent<IProps> = (props) => {
   return (
     <svg
       className={props.className}
@@ -23,5 +23,7 @@ export default function IconLending(props: PropsWithChildren<IProps>) {
         fill="#5540DB"
       />
     </svg>
-  );
+  )
 }
+
+export default IconLending

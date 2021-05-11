@@ -1,25 +1,25 @@
-import { PropsWithChildren } from "react";
-import Button from "../../button/button";
-import Container from "../../container/container";
-import Tag from "../../text/tag";
-import Body1 from "../../text/body1";
-import MainTitle from "../../text/main-title";
-import Subtitle2 from "../../text/subtitle2";
-import Member from "./member";
-import { IMember } from "./types";
-import IconSocialDiscord from "../../icon/social/discord";
-import IconSocialTelegram from "../../icon/social/telegram";
+import { FunctionComponent } from 'react'
+import Button from '../../button/button'
+import Container from '../../container/container'
+import IconSocialDiscord from '../../icon/social/discord'
+import IconSocialTelegram from '../../icon/social/telegram'
+import Body1 from '../../text/body1'
+import MainTitle from '../../text/main-title'
+import Subtitle2 from '../../text/subtitle2'
+import Tag from '../../text/tag'
+import Member from './member'
+import { IMember } from './types'
 
 type IProps = {
-  members: IMember[];
-};
+  members: IMember[]
+}
 
-export default function Hero(props: PropsWithChildren<IProps>) {
+const Hero: FunctionComponent<IProps> = (props) => {
   return (
     <div className="relative">
       <div
         className="absolute -top-24 left-0 right-0 bottom-0 bg-local bg-top bg-no-repeat bg-cover"
-        style={{ backgroundImage: "url(/background.svg)" }}
+        style={{ backgroundImage: 'url(/background.svg)' }}
       ></div>
       <Container className="px-12 text-center">
         <div className="inline-flex items-center text-purple-900 bg-white border border-purple-300 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base">
@@ -62,9 +62,13 @@ export default function Hero(props: PropsWithChildren<IProps>) {
 
         <Subtitle2 className="mt-12">Community Core Members</Subtitle2>
         <nav className="mt-12 flex flex-wrap justify-center">
-          {props.members.map(Member)}
+          {props.members.map((x, i) => (
+            <Member key={i} member={x} />
+          ))}
         </nav>
       </Container>
     </div>
-  );
+  )
 }
+
+export default Hero

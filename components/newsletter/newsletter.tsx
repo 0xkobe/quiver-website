@@ -1,12 +1,11 @@
-import { PropsWithChildren, useState } from "react";
-import Button from "../button/button";
+import { FunctionComponent, useState } from 'react'
 
 type IProps = {
-  className?: string;
-};
+  className?: string
+}
 
-export default function Newsletter(props: PropsWithChildren<IProps>) {
-  const [email, setEmail] = useState("");
+const Newsletter: FunctionComponent<IProps> = (props) => {
+  const [email, setEmail] = useState('')
 
   return (
     <form
@@ -39,5 +38,7 @@ export default function Newsletter(props: PropsWithChildren<IProps>) {
         </button>
       </div>
     </form>
-  );
+  )
 }
+
+export default Newsletter

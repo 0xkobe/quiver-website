@@ -1,10 +1,10 @@
-import { PropsWithChildren } from "react";
+import { FunctionComponent } from 'react'
 
 type IProps = {
-  className?: string;
-};
+  className?: string
+}
 
-export default function IconSocialTelegram(props: PropsWithChildren<IProps>) {
+const IconSocialTelegram: FunctionComponent<IProps> = (props) => {
   return (
     <svg
       className={props.className}
@@ -19,5 +19,7 @@ export default function IconSocialTelegram(props: PropsWithChildren<IProps>) {
         fill="currentColor"
       />
     </svg>
-  );
+  )
 }
+
+export default IconSocialTelegram

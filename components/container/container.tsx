@@ -1,21 +1,23 @@
-import classNames from "classnames";
-import { PropsWithChildren } from "react";
+import classNames from 'classnames'
+import { FunctionComponent } from 'react'
 
 type IProps = {
-  className?: string;
-  id?: string;
-};
+  className?: string
+  id?: string
+}
 
-export default function Container(props: PropsWithChildren<IProps>) {
+const Container: FunctionComponent<IProps> = (props) => {
   return (
     <div
       id={props.id}
       className={classNames(
-        "relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24",
-        props.className
+        'relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24',
+        props.className,
       )}
     >
       {props.children}
     </div>
-  );
+  )
 }
+
+export default Container

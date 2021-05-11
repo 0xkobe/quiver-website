@@ -1,10 +1,10 @@
-import { PropsWithChildren } from "react";
+import { FunctionComponent } from 'react'
 
 type IProps = {
-  className?: string;
-};
+  className?: string
+}
 
-export default function IconSocialMedium(props: PropsWithChildren<IProps>) {
+const IconSocialMedium: FunctionComponent<IProps> = (props) => {
   return (
     <svg
       className={props.className}
@@ -31,5 +31,7 @@ export default function IconSocialMedium(props: PropsWithChildren<IProps>) {
         </clipPath>
       </defs>
     </svg>
-  );
+  )
 }
+
+export default IconSocialMedium

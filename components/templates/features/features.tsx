@@ -1,14 +1,15 @@
-import { DownloadIcon } from "@heroicons/react/outline";
-import Button from "../../button/button";
-import Container from "../../container/container";
-import Benefits from "./benefits";
-import Headline from "../../text/headline";
-import Title from "../../text/title";
-import Subtitle from "../../text/subtitle";
-import Body1 from "../../text/body1";
-import Body2 from "../../text/body2";
+import { DownloadIcon } from '@heroicons/react/outline'
+import { FunctionComponent } from 'react'
+import Button from '../../button/button'
+import Container from '../../container/container'
+import Body1 from '../../text/body1'
+import Body2 from '../../text/body2'
+import Headline from '../../text/headline'
+import Subtitle from '../../text/subtitle'
+import Title from '../../text/title'
+import Benefits from './benefits'
 
-export default function Protocol() {
+const Protocol: FunctionComponent = () => {
   return (
     <Container className="text-center" id="protocol">
       <Headline>Quiver Community Vision</Headline>
@@ -90,5 +91,7 @@ export default function Protocol() {
         </div>
       </div>
     </Container>
-  );
+  )
 }
+
+export default Protocol

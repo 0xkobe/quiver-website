@@ -1,10 +1,10 @@
-import { PropsWithChildren } from "react";
+import { FunctionComponent } from 'react'
 
 type IProps = {
-  className?: string;
-};
+  className?: string
+}
 
-export default function IconArrowSmall(props: PropsWithChildren<IProps>) {
+const IconArrowSmall: FunctionComponent<IProps> = (props) => {
   return (
     <svg
       className={props.className}
@@ -21,5 +21,7 @@ export default function IconArrowSmall(props: PropsWithChildren<IProps>) {
         fill="#D7D1FE"
       />
     </svg>
-  );
+  )
 }
+
+export default IconArrowSmall
