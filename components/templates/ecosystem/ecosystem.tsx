@@ -21,8 +21,9 @@ const Ecosystem: FunctionComponent = () => {
       </Body1>
 
       <img
-        className="w-full h-full object-cover mt-24 rounded-xl"
-        src="ecosystem.svg"
+        className="max-w-full h-full object-cover mt-24 mb-12 rounded-xl mx-auto"
+        src="ecosystem.png"
+        width={900}
         alt=""
       />
 
