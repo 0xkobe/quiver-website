@@ -50,7 +50,7 @@ const Footer: FunctionComponent = () => {
       <img src="/icon.svg" className="mx-auto" />
       <Headline className="mt-12 inline-block">Ready to dive in?</Headline>
       <Title className="mt-3">Join the Community</Title>
-      <nav className="mt-12 grid md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-2xl mx-auto">
+      <nav className="mt-12 grid md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
         {links.map((x) => (
           <Button key={x.name} href={x.href} icon={x.icon} outlined>
             {x.name}
