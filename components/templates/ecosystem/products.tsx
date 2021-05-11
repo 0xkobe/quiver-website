@@ -28,7 +28,7 @@ const supportLinks = [
 const Products: FunctionComponent = () => {
   return (
     <section
-      className="-mt-12 max-w-7xl mx-auto relative z-10"
+      className="max-w-7xl mx-auto relative"
       aria-labelledby="contact-heading"
     >
       <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-6">
