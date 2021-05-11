@@ -40,8 +40,12 @@ const navigation: INavigationItem[] = [
   {
     key: "careers",
     name: "Careers",
-    href:
-      "https://quiverprotocol.medium.com/careers-at-quiver-protocol-b8ffd3d59d6b",
+    href: "https://quiverprotocol.medium.com/careers-at-quiver-protocol-b8ffd3d59d6b",
+  },
+  {
+    key: "guidance",
+    name: "User Guidance",
+    href: "/Quiver_Protocol_User_Guidance.pdf",
   },
 ];
 
