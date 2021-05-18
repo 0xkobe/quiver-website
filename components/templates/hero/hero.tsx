@@ -49,7 +49,7 @@ const Hero: FunctionComponent<IProps> = (props) => {
               Join our Discord
             </Button>
             <Button
-              href="https://t.me/quiveridaochat"
+              href="https://t.me/quiverprotocolchat"
               large
               shadow
               outlined

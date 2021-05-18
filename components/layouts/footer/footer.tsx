@@ -4,6 +4,8 @@ import ContainerWithBackground from '../../container/container-with-background'
 import IconSocialDiscord from '../../icon/social/discord'
 import IconSocialFacebook from '../../icon/social/facebook'
 import IconSocialGithub from '../../icon/social/github'
+import IconSocialReddit from '../../icon/social/reddit'
+import IconSocialYoutube from '../../icon/social/youtube'
 import IconSocialMedium from '../../icon/social/medium'
 import IconSocialTelegram from '../../icon/social/telegram'
 import IconSocialTwitter from '../../icon/social/twitter'
@@ -20,7 +22,7 @@ const links = [
   {
     name: 'Telegram',
     icon: IconSocialTelegram,
-    href: 'https://t.me/quiveridaochat',
+    href: 'https://t.me/quiverprotocolchat',
   },
   {
     name: 'Twitter',
@@ -41,6 +43,16 @@ const links = [
     name: 'Github',
     icon: IconSocialGithub,
     href: 'https://github.com/QuiverCommunity',
+  },
+  {
+    name: 'Reddit',
+    icon: IconSocialReddit,
+    href: 'https://www.reddit.com/r/quiverprotocol/',
+  },
+  {
+    name: 'Youtube',
+    icon: IconSocialYoutube,
+    href: 'https://www.youtube.com/channel/UC4X_iUmSiZ0Cfo-2GwHNWYQ',
   },
 ]
 
