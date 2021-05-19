@@ -5,8 +5,10 @@ import IconSocialDiscord from '../../icon/social/discord'
 import IconSocialFacebook from '../../icon/social/facebook'
 import IconSocialGithub from '../../icon/social/github'
 import IconSocialMedium from '../../icon/social/medium'
+import IconSocialReddit from '../../icon/social/reddit'
 import IconSocialTelegram from '../../icon/social/telegram'
 import IconSocialTwitter from '../../icon/social/twitter'
+import IconSocialYoutube from '../../icon/social/youtube'
 import Body2 from '../../text/body2'
 import Headline from '../../text/headline'
 import Title from '../../text/title'
@@ -20,7 +22,7 @@ const links = [
   {
     name: 'Telegram',
     icon: IconSocialTelegram,
-    href: 'https://t.me/quiveridaochat',
+    href: 'https://t.me/quiverprotocolchat',
   },
   {
     name: 'Twitter',
@@ -42,6 +44,16 @@ const links = [
     icon: IconSocialGithub,
     href: 'https://github.com/QuiverCommunity',
   },
+  {
+    name: 'Reddit',
+    icon: IconSocialReddit,
+    href: 'https://www.reddit.com/r/quiverprotocol/',
+  },
+  {
+    name: 'Youtube',
+    icon: IconSocialYoutube,
+    href: 'https://www.youtube.com/channel/UC4X_iUmSiZ0Cfo-2GwHNWYQ',
+  },
 ]
 
 const Footer: FunctionComponent = () => {
@@ -50,7 +62,7 @@ const Footer: FunctionComponent = () => {
       <img src="/icon.svg" className="mx-auto" />
       <Headline className="mt-12 inline-block">Ready to dive in?</Headline>
       <Title className="mt-3">Join the Community</Title>
-      <nav className="mt-12 grid md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
+      <nav className="mt-12 grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
         {links.map((x) => (
           <Button key={x.name} href={x.href} icon={x.icon} outlined>
             {x.name}
