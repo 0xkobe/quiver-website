@@ -39,7 +39,7 @@ const members: IMember[] = [
     imageUrl: '/members/eugen.png',
   },
   {
-    name: 'Adidust.eth',
+    name: 'Adidust',
     role: 'Dude | Marketing Advisor',
     imageUrl: '/members/adidust.eth.png',
   },
