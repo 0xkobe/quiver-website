@@ -8,7 +8,7 @@ import { INavigationItem } from './types'
 const action: INavigationItem = {
   key: 'whitepaper',
   name: 'Whitepaper',
-  href: '/Quiver-Whitepaper.pdf',
+  href: '/Quiver-Whitepaper-User-2021-05-24.pdf',
 }
 
 const navigation: INavigationItem[] = [
