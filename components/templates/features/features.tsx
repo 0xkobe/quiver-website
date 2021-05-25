@@ -33,7 +33,7 @@ const Protocol: FunctionComponent = () => {
             </Body2>
             <div className="mt-12">
               <Button
-                href="/Quiver-Whitepaper.pdf"
+                href="/Quiver-Whitepaper-User-2021-05-24.pdf"
                 icon={DownloadIcon}
                 text
                 shadow
@@ -79,7 +79,7 @@ const Protocol: FunctionComponent = () => {
             </Body2>
             <div className="mt-12">
               <Button
-                href="/Quiver-Whitepaper.pdf"
+                href="/Quiver-Whitepaper-User-2021-05-24.pdf"
                 icon={DownloadIcon}
                 text
                 shadow
