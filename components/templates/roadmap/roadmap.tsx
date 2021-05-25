@@ -91,7 +91,7 @@ const Roadmap: FunctionComponent = () => {
       <Headline>Community Direction</Headline>
       <Title className="mt-3">Roadmap [2021]</Title>
       <div className="mt-12">
-        <Button href="/Quiver-Whitepaper-User-2021-05-24.pdf" icon={DownloadIcon} text shadow>
+        <Button href="/Quiver-Whitepaper-Tech-2021-05-22.pdf" icon={DownloadIcon} text shadow>
           Download the Full Roadmap
         </Button>
       </div>
