@@ -14,9 +14,9 @@ const members: IMember[] = [
     imageUrl: '/members/216k155.png',
   },
   {
-    name: 'Jun',
+    name: 'Gopher',
     role: 'Co-founder | Strateger',
-    imageUrl: '/members/jun.png',
+    imageUrl: '/members/gopher.png',
   },
   {
     name: 'Andre',
@@ -29,11 +29,6 @@ const members: IMember[] = [
     imageUrl: '/members/akira.png',
   },
   {
-    name: 'Evil',
-    role: 'Co-founder | Design manager',
-    imageUrl: '/members/evil.png',
-  },
-  {
     name: 'Eugen',
     role: 'Dude | Technical Advisor',
     imageUrl: '/members/eugen.png',
@@ -41,12 +36,12 @@ const members: IMember[] = [
   {
     name: 'Adidust',
     role: 'Dude | Marketing Advisor',
-    imageUrl: '/members/adidust.eth.png',
+    imageUrl: '/members/adidust.png',
   },
   {
-    name: 'Ahmed',
-    role: 'Dude | Frontend Advisor',
-    imageUrl: '/members/ahmed.png',
+    name: 'Demi',
+    role: 'Team | Marketing manager',
+    imageUrl: '/members/demi.png',
   },
 ]
 
