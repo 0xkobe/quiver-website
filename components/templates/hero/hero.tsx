@@ -24,7 +24,7 @@ const Hero: FunctionComponent<IProps> = (props) => {
       <Container className="px-12 text-center">
         <div className="inline-flex items-center text-purple-900 bg-white border border-purple-300 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base">
           <Tag>Emotional NFTs Sale</Tag>
-          <span className="ml-4 text-sm">Coming June 1st 🔥</span>
+          <span className="ml-4 text-sm">Coming early June 🔥</span>
         </div>
 
         <MainTitle className="mt-12">
