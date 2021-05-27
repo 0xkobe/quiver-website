@@ -104,7 +104,7 @@ const Investor: FunctionComponent = () => {
             </Body1>
             <Body2 className="mt-12">
               <strong className="text-primary font-bold">
-                Coming June 1st
+                Coming early June
               </strong>
               , sign up to get notified of the sale
             </Body2>
