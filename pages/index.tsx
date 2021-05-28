@@ -30,13 +30,8 @@ const members: IMember[] = [
   },
   {
     name: 'Eugen',
-    role: 'Dude | Technical Advisor',
+    role: 'Co-founder | Technical Advisor',
     imageUrl: '/members/eugen.png',
-  },
-  {
-    name: 'Adidust',
-    role: 'Dude | Marketing Advisor',
-    imageUrl: '/members/adidust.png',
   },
   {
     name: 'Demi',
