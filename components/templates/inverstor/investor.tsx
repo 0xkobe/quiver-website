@@ -100,15 +100,23 @@ const Investor: FunctionComponent = () => {
             <Body1 className="mt-6">
               Quiver Emotional NFTs are designed to be part of our upcoming
               stressless portfolio tracker. They give you an ability to buy
-              discounted QSTK token along with voting power.
+              discounted QSTK token along with voting power to become a DAO member.
             </Body1>
             <Body2 className="mt-12">
+              <button
+                onClick={() => window.open('https://emotional.quiverprotocol.com', '_blank').focus()}
+                className="whitespace-nowrap inline-flex items-center justify-center rounded-full text-base px-4 py-2 ring-1 ring-black ring-opacity-5 text-white bg-gradient-to-r from-primary to-secondary text-base leading-6 font-medium w-full mt-3 lg:mt-0"
+              >
+                Become an investor
+              </button>
+            </Body2>
+            {/* <Body2 className="mt-12">
               <strong className="text-primary font-bold">
                 Coming early June
               </strong>
               , sign up to get notified of the sale
             </Body2>
-            <Newsletter className="my-6" />
+            <Newsletter className="my-6" /> */}
           </div>
         </div>
         <div className="col-span-3 mx-auto">
