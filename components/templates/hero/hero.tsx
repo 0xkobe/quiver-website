@@ -22,13 +22,14 @@ const Hero: FunctionComponent<IProps> = (props) => {
         style={{ backgroundImage: 'url(/background.svg)' }}
       ></div>
       <Container className="px-12 text-center">
-        <div
+        <a
           className="cursor-pointer inline-flex items-center text-purple-900 bg-white border border-purple-300 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base"
-          onClick={() => window.open('https://emotional.quiverprotocol.com', '_blank').focus()}
+          href="https://emotional.quiverprotocol.com"
+          target="_blank"
         >
           <Tag>Emotional NFTs Sale</Tag>
           <span className="ml-4 text-sm">Become an investor now 🔥</span>
-        </div>
+        </a>
 
         <MainTitle className="mt-12">
           <span className="block">1st Community-driven</span>

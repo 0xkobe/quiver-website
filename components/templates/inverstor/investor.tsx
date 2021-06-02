@@ -1,8 +1,8 @@
 import { Fragment, FunctionComponent } from 'react'
+import Button from '../../button/button'
 import Container from '../../container/container'
 import IconCryptoBtc from '../../icon/crypto/BTC'
 import IconCryptoEth from '../../icon/crypto/ETH'
-import Newsletter from '../../newsletter/newsletter'
 import Body1 from '../../text/body1'
 import Body2 from '../../text/body2'
 import Headline from '../../text/headline'
@@ -100,15 +100,18 @@ const Investor: FunctionComponent = () => {
             <Body1 className="mt-6">
               Quiver Emotional NFTs are designed to be part of our upcoming
               stressless portfolio tracker. They give you an ability to buy
-              discounted QSTK token along with voting power to become a DAO member.
+              discounted QSTK token along with voting power to become a DAO
+              member.
             </Body1>
             <Body2 className="mt-12">
-              <button
-                onClick={() => window.open('https://emotional.quiverprotocol.com', '_blank').focus()}
-                className="whitespace-nowrap inline-flex items-center justify-center rounded-full text-base px-4 py-2 ring-1 ring-black ring-opacity-5 text-white bg-gradient-to-r from-primary to-secondary text-base leading-6 font-medium w-full mt-3 lg:mt-0"
+              <Button
+                href="https://emotional.quiverprotocol.com"
+                target="_blank"
+                large
+                shadow
               >
                 Become an investor
-              </button>
+              </Button>
             </Body2>
             {/* <Body2 className="mt-12">
               <strong className="text-primary font-bold">

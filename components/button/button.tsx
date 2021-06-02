@@ -10,6 +10,7 @@ type IProps = {
   large?: boolean
   text?: boolean
   className?: string
+  target?: string
 }
 
 const Button: FunctionComponent<IProps> = (props) => {
@@ -49,6 +50,7 @@ const Button: FunctionComponent<IProps> = (props) => {
     <a
       href={'href' in props ? props.href : '#'}
       onClick={'onClick' in props ? props.onClick : null}
+      target={props.target}
       className={classNames(
         structure,
         size,
