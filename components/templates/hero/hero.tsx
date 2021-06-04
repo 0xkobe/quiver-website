@@ -1,3 +1,4 @@
+import { ChevronRightIcon } from '@heroicons/react/outline'
 import { FunctionComponent } from 'react'
 import Button from '../../button/button'
 import Container from '../../container/container'
@@ -22,10 +23,17 @@ const Hero: FunctionComponent<IProps> = (props) => {
         style={{ backgroundImage: 'url(/background.svg)' }}
       ></div>
       <Container className="px-12 text-center">
-        <div className="inline-flex items-center text-purple-900 bg-white border border-purple-300 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base">
+        <a
+          className="cursor-pointer inline-flex items-center text-purple-900 bg-white border border-purple-300 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base"
+          href="https://emotional.quiverprotocol.com"
+          target="_blank"
+        >
           <Tag>Emotional NFTs Sale</Tag>
-          <span className="ml-4 text-sm">Coming early June 🔥</span>
-        </div>
+          <span className="ml-4 text-sm">
+            Become an investor now{' '}
+            <ChevronRightIcon className="inline w-3 h-3 mx-2" />
+          </span>
+        </a>
 
         <MainTitle className="mt-12">
           <span className="block">1st Community-driven</span>
