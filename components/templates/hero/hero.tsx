@@ -1,3 +1,4 @@
+import { ChevronRightIcon } from '@heroicons/react/outline'
 import { FunctionComponent } from 'react'
 import Button from '../../button/button'
 import Container from '../../container/container'
@@ -28,7 +29,10 @@ const Hero: FunctionComponent<IProps> = (props) => {
           target="_blank"
         >
           <Tag>Emotional NFTs Sale</Tag>
-          <span className="ml-4 text-sm">Become an investor now 🔥</span>
+          <span className="ml-4 text-sm">
+            Become an investor now{' '}
+            <ChevronRightIcon className="inline w-3 h-3 mx-2" />
+          </span>
         </a>
 
         <MainTitle className="mt-12">
