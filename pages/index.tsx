@@ -9,9 +9,9 @@ import Roadmap from '../components/templates/roadmap/roadmap'
 
 const members: IMember[] = [
   {
-    name: '216k155',
+    name: '0xmike',
     role: 'Co-founder | Marketing Manager',
-    imageUrl: '/members/216k155.png',
+    imageUrl: '/members/0xmike.png',
   },
   {
     name: 'Gopher',
