@@ -42,7 +42,7 @@ const links = [
   {
     name: 'Github',
     icon: IconSocialGithub,
-    href: 'https://github.com/QuiverCommunity',
+    href: 'https://github.com/Quiver-Protocol',
   },
   {
     name: 'Reddit',
