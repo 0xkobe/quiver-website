@@ -1,153 +1,78 @@
-import { Fragment, FunctionComponent } from 'react'
+import { FunctionComponent } from 'react'
 import Button from '../../button/button'
 import Container from '../../container/container'
-import IconCryptoBtc from '../../icon/crypto/BTC'
-import IconCryptoEth from '../../icon/crypto/ETH'
 import Body1 from '../../text/body1'
-import Body2 from '../../text/body2'
 import Headline from '../../text/headline'
-import Subtitle2 from '../../text/subtitle2'
+import Subtitle from '../../text/subtitle'
 import Title from '../../text/title'
-import Benefit from './benefit'
-import NFT from './nft'
-import { IBenefit, INFT } from './types'
-
-const nfts: INFT[] = [
-  {
-    name: 'Fish',
-    category: 'Silver',
-    crypto: IconCryptoBtc,
-    progress: 'up',
-    imageUrl: '/nfts/fish/silver/happy.png',
-  },
-  {
-    name: 'Dragon',
-    category: 'Platinium',
-    crypto: IconCryptoEth,
-    progress: 'stable',
-    imageUrl: '/nfts/dragon/platinum/normal.png',
-  },
-  {
-    name: 'Bull',
-    category: 'Bronze',
-    crypto: IconCryptoBtc,
-    progress: 'down',
-    imageUrl: '/nfts/bull/bronze/angry.png',
-  },
-  {
-    name: 'Deer',
-    category: 'Gold',
-    crypto: IconCryptoEth,
-    progress: 'down',
-    imageUrl: '/nfts/deer/gold/angry.png',
-  },
-  {
-    name: 'Bear',
-    category: 'Diamond',
-    crypto: IconCryptoBtc,
-    progress: 'stable',
-    imageUrl: '/nfts/bear/diamond/normal.png',
-  },
-  {
-    name: 'Whale',
-    category: 'Diamond',
-    crypto: IconCryptoEth,
-    progress: 'up',
-    imageUrl: '/nfts/whale/diamond/happy.png',
-  },
-]
-
-const benefits: IBenefit[] = [
-  {
-    name: 'Emotional NFT',
-    category: 'Community Art NFTs',
-    items: [
-      'Lovely art for stressless investment',
-      'Get access to locked assets sale',
-      'Community gamification',
-    ],
-  },
-  {
-    name: 'QREP Token',
-    category: 'Reputation Token',
-    items: [
-      'Get initial reputation in the ecosystem with QREP Token',
-      'Access DICP voting power',
-      'Unlock DICP protocol rewards',
-      'Trust from the community',
-    ],
-  },
-  {
-    name: 'QSTK Token',
-    category: 'Economy Token',
-    items: [
-      'Receive QSTK Token at a discounted price (locked asset)',
-      'Access Quiver IDAO voting power',
-      'Get discounted price on information purchase from the DICP',
-      'Unlock DICP protocol rewards',
-    ],
-  },
-]
 
 const Investor: FunctionComponent = () => {
   return (
-    <Container id="invest">
-      <div className="lg:grid lg:grid-cols-5 lg:grid-flow-col-dense lg:gap-8">
-        <div className="col-span-2 flex items-center">
+    <Container id="invest" className="text-center">
+      <Headline>Quiver seed sale</Headline>
+      <Title className="mt-3 mx-auto max-w-md md:max-w-2xl">
+        Become part of the journey as a Quiver early-investor
+      </Title>
+      <Body1 className="mt-6 mx-auto max-w-md md:max-w-4xl">
+        As an early-investor and supporter you will access benefits like QSTK
+        token at a discounted price, eligibility to upcoming airdrops and much
+        more.
+      </Body1>
+      <div className="lg:grid lg:grid-cols-2 lg:gap-8 text-left mt-12">
+        <div className="p-12">
+          <div className="mb-6">
+            <span className="bg-white rounded-2xl shadow-md inline-block overflow-hidden">
+              <img src="/icon.svg" className="m-4 w-10 h-10" />
+            </span>
+          </div>
+          <Headline>Option #1</Headline>
+          <Subtitle className="mt-3">Buy QSTK Token</Subtitle>
+          <Body1 className="mt-6">
+            QSTK Token is the Fuel of the Quiver ecosystem. <br />
+            You can purchase it right now as part of our Seed Sale to become a
+            Quiver investor and access the following benefits:
+          </Body1>
+          <ul className="list-disc list-inside mt-6 text-purple-900">
+            <li>Invest together with DAO</li>
+            <li>Access Quiver IDAO voting power</li>
+            <li>Unlock DICP protocol rewards</li>
+          </ul>
           <div>
-            <Headline>Emotional NFTs sale</Headline>
-            <Title className="mt-3">Become a Community Investor</Title>
-            <Body1 className="mt-6">
-              Quiver Emotional NFTs are designed to be part of our upcoming
-              stressless portfolio tracker. They give you an ability to buy
-              discounted QSTK token along with voting power to become a DAO
-              member.
-            </Body1>
-            <Body2 className="mt-12">
-              <Button
-                href="https://emotional.quiverprotocol.com"
-                target="_blank"
-                large
-                shadow
-              >
-                Become an investor
-              </Button>
-            </Body2>
-            {/* <Body2 className="mt-12">
-              <strong className="text-primary font-bold">
-                Coming early June
-              </strong>
-              , sign up to get notified of the sale
-            </Body2>
-            <Newsletter className="my-6" /> */}
+            <Button href="#TODO" large shadow className="mt-12">
+              Buy QSTK Token
+            </Button>
           </div>
         </div>
-        <div className="col-span-3 mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
-            {nfts.map((x, i) => (
-              <NFT nft={x} index={i} key={i} />
-            ))}
-          </div>
-        </div>
-      </div>
 
-      <Subtitle2 className="mt-12 text-center">
-        Early Investors Bundle Benefits
-      </Subtitle2>
-      <div className="mt-12">
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-11">
-          {benefits.map((x, i) => (
-            <Fragment key={i}>
-              {i > 0 && (
-                <div className="flex items-center">
-                  <span className="border border-purple-300 rounded-full text-purple-300 w-9 h-9 px-2 py-1 text-center mx-auto">
-                    +
-                  </span>
-                </div>
-              )}
-              <Benefit benefit={x} />
-            </Fragment>
-          ))}
+        <div className="p-12">
+          <div className="mb-6">
+            <span className="bg-white rounded-2xl shadow-md inline-block overflow-hidden">
+              <img src="/nft-pic.png" width={72} height={72} />
+            </span>
+          </div>
+          <Headline>Option #2</Headline>
+          <Subtitle className="mt-3">Mint your own Emotional NFTs</Subtitle>
+          <Body1 className="mt-6">
+            Quiver Emotional NFTs are designed to be part of our upcoming
+            stressless portfolio tracker. It’s an innovative way to become an
+            investor and access the following benefits:
+          </Body1>
+          <ul className="list-disc list-inside mt-6 text-purple-900">
+            <li>Lovely art for stressless investment</li>
+            <li>Receive QSTK Token at a discounted price (locked asset)</li>
+            <li>Access Quiver IDAO and DICP voting power </li>
+            <li>Unlock DICP protocol rewards</li>
+          </ul>
+          <div>
+            <Button
+              href="https://emotional.quiverprotocol.com/"
+              large
+              shadow
+              className="mt-12"
+            >
+              Mint Emotional NFTs
+            </Button>
+          </div>
         </div>
       </div>
     </Container>
