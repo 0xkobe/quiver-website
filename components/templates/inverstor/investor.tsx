@@ -55,7 +55,7 @@ const Investor: FunctionComponent = () => {
   const { error, started, getEthPrice, purchase } = useQSTKSale()
 
   useEffect(() => {
-    activate(networkConnector, null, true)
+    void activate(networkConnector, null, true)
   }, [activate, walletError]) // fallback to network connector in case of error
 
   useEffect(() => {
