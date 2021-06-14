@@ -49,8 +49,8 @@ const Purchase: FunctionComponent<{
         </div>
 
         <Button
-          outlined={!canPurchase}
           className="w-full mt-4"
+          disabled={!canPurchase}
           onClick={(e) => {
             e.stopPropagation()
             e.preventDefault()

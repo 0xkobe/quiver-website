@@ -172,11 +172,15 @@ const Investor: FunctionComponent = () => {
             <li>Unlock DICP protocol rewards</li>
           </ul>
           <div>
-            {started && (
-              <Button onClick={openModal} large shadow className="mt-12">
-                Buy QSTK Token
-              </Button>
-            )}
+            <Button
+              onClick={openModal}
+              disabled={!started}
+              large
+              shadow
+              className="mt-12"
+            >
+              Buy QSTK Token
+            </Button>
           </div>
         </div>
 
