@@ -30,7 +30,7 @@ export const LoaderTitleSuffix = (
 const Modal: FunctionComponent<IProps> = (props) => {
   const focusRef = useRef()
   return (
-    <Transition.Root show={props.isOpen} as={Fragment}>
+    <Transition appear show={props.isOpen} as={Fragment}>
       <Dialog
         initialFocus={focusRef}
         as="div"
@@ -70,11 +70,11 @@ const Modal: FunctionComponent<IProps> = (props) => {
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
-            enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enterTo="opacity-100 translate-y-0 sm:scale-100"
+            enterFrom="opacity-0 scale-95 translate-y-20"
+            enterTo="opacity-100 scale-100"
             leave="ease-in duration-200"
-            leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-            leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            leaveFrom="opacity-100 scale-100"
+            leaveTo="opacity-0 scale-95 translate-y-20"
           >
             <div className="inline-block rounded-xl text-left overflow-hidden shadow-xl align-middle transform transition-all w-full sm:w-96">
               <div className="bg-white p-8">
@@ -98,7 +98,7 @@ const Modal: FunctionComponent<IProps> = (props) => {
           </Transition.Child>
         </div>
       </Dialog>
-    </Transition.Root>
+    </Transition>
   )
 }
 
