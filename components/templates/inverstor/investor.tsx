@@ -101,6 +101,7 @@ const Investor: FunctionComponent = () => {
     }
   }, [tx])
 
+  // TODO: improve with some state machine eg: https://github.com/davidkpiano/xstate/tree/main/packages/xstate-react or similar
   const modal: {
     content: ReactElement
     titleSuffix?: ReactElement
@@ -118,22 +119,37 @@ const Investor: FunctionComponent = () => {
         content: <Steps.Transaction hash={tx.hash} />,
         titleSuffix: LoaderTitleSuffix,
       }
-    if (account && active && !walletError)
+    if (!amount)
       return {
-        content: <Steps.Wallet />,
+        content: (
+          <Steps.Purchase purchase={setAmount} getEthPrice={getEthPrice} />
+        ),
+        info: Info,
       }
-    if (amount)
+    if (!account || !active)
       return {
         content: <Steps.Connect error={walletError} />,
       }
 
+    if (sellChainId !== chainId)
+      return {
+        content: <Steps.Network chainId={sellChainId} />,
+      }
+
     return {
-      content: (
-        <Steps.Purchase purchase={setAmount} getEthPrice={getEthPrice} />
-      ),
-      info: Info,
+      content: <Steps.Wallet />,
     }
-  }, [isOpen, receipt, tx, account, walletError, amount, setAmount])
+  }, [
+    isOpen,
+    receipt,
+    tx,
+    account,
+    walletError,
+    chainId,
+    sellChainId,
+    amount,
+    setAmount,
+  ])
 
   function openModal(event) {
     event.preventDefault()

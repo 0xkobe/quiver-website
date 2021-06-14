@@ -47,6 +47,6 @@ export default function useQSTKSale(key?: string) {
     price,
     getEthPrice,
     purchase,
-    ready: !!contract
+    ready: !!contract && price.gt(0) && started,
   }
 }
