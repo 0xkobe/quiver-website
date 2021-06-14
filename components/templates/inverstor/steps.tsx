@@ -69,6 +69,13 @@ const Connect: FunctionComponent<{ error?: Error }> = ({ error }) => {
   const [isWalletConnectActivating, setIsWalletConnectActivating] =
     useState<boolean>(false)
 
+  useEffect(() => {
+    setIsWalletConnectActivating(false)
+    return () => {
+      setIsWalletConnectActivating(false)
+    }
+  }, [error])
+
   function activateWithConnector(event: any, connector: AbstractConnector) {
     event.stopPropagation()
     event.preventDefault()
@@ -110,7 +117,22 @@ const Connect: FunctionComponent<{ error?: Error }> = ({ error }) => {
           outlined
           className="mt-4"
         >
-          Wallet connect
+          {isWalletConnectActivating ? (
+            <span className="animate-spin w-6 h-6 text-purple-700">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.5 1.5C13.5 0.703125 12.7969 0 12 0C11.1562 0 10.5 0.703125 10.5 1.5C10.5 2.34375 11.1562 3 12 3C12.7969 3 13.5 2.34375 13.5 1.5ZM12 21C11.1562 21 10.5 21.7031 10.5 22.5C10.5 23.3438 11.1562 24 12 24C12.7969 24 13.5 23.3438 13.5 22.5C13.5 21.7031 12.7969 21 12 21ZM24 12C24 11.2031 23.2969 10.5 22.5 10.5C21.6562 10.5 21 11.2031 21 12C21 12.8438 21.6562 13.5 22.5 13.5C23.2969 13.5 24 12.8438 24 12ZM3 12C3 11.2031 2.29688 10.5 1.5 10.5C0.65625 10.5 0 11.2031 0 12C0 12.8438 0.65625 13.5 1.5 13.5C2.29688 13.5 3 12.8438 3 12ZM4.54688 17.9531C3.70312 17.9531 3.04688 18.6094 3.04688 19.4531C3.04688 20.2969 3.70312 20.9531 4.54688 20.9531C5.39062 20.9531 6.04688 20.2969 6.04688 19.4531C6.04688 18.6094 5.39062 17.9531 4.54688 17.9531ZM19.4062 17.9531C18.5625 17.9531 17.9062 18.6094 17.9062 19.4531C17.9062 20.2969 18.5625 20.9531 19.4062 20.9531C20.25 20.9531 20.9062 20.2969 20.9062 19.4531C20.9062 18.6094 20.25 17.9531 19.4062 17.9531ZM4.54688 3.09375C3.70312 3.09375 3.04688 3.75 3.04688 4.59375C3.04688 5.4375 3.70312 6.09375 4.54688 6.09375C5.39062 6.09375 6.04688 5.4375 6.04688 4.59375C6.04688 3.75 5.39062 3.09375 4.54688 3.09375Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+          ) : (
+            'Wallet connect'
+          )}
         </Button>
       </nav>
     </>
