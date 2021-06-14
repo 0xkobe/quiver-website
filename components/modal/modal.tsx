@@ -1,6 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { CheckIcon } from '@heroicons/react/outline'
-import { Fragment, FunctionComponent, ReactElement } from 'react'
+import { CheckIcon, XIcon } from '@heroicons/react/outline'
+import { Fragment, FunctionComponent, ReactElement, useRef } from 'react'
 
 type IProps = {
   isOpen: boolean
@@ -28,15 +28,16 @@ export const LoaderTitleSuffix = (
 )
 
 const Modal: FunctionComponent<IProps> = (props) => {
+  const focusRef = useRef()
   return (
     <Transition.Root show={props.isOpen} as={Fragment}>
       <Dialog
-        initialFocus={null}
+        initialFocus={focusRef}
         as="div"
         static
         className="fixed z-10 inset-0 overflow-y-auto"
         open={props.isOpen}
-        onClose={props.setIsOpen}
+        onClose={() => {}}
       >
         <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
           <Transition.Child
@@ -48,7 +49,15 @@ const Modal: FunctionComponent<IProps> = (props) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+            <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
+              <a
+                onClick={() => props.setIsOpen(false)}
+                className="bg-white p-1 inline-block rounded-full absolute top-4 right-4 cursor-pointer text-purple-900"
+                ref={focusRef}
+              >
+                <XIcon className="w-4 h-4" />
+              </a>
+            </Dialog.Overlay>
           </Transition.Child>
 
           {/* This element is to trick the browser into centering the modal contents. */}
