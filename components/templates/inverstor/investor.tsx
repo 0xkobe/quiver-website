@@ -51,8 +51,11 @@ const Investor: FunctionComponent = () => {
     account,
     error: walletError,
     setError,
-  } = useWeb3React<Web3Provider>()
-  const { error, started, getEthPrice, purchase } = useQSTKSale()
+  const signer = useMemo(() => {
+    if (!library) return
+    if (!account) return
+    return library.getSigner(account)
+  }, [library, account])
 
   useEffect(() => {
     void activate(networkConnector, null, true)
@@ -79,12 +82,12 @@ const Investor: FunctionComponent = () => {
   useEffect(() => {
     if (!amount) return
     if (!account) return
-    if (!library.getSigner(account)) return
-    purchase(amount, library.getSigner(account)).then(setTx).catch(setError)
+    if (!signer) return
+    purchase(amount, signer).then(setTx).catch(setError)
     return () => {
       setTx(undefined)
     }
-  }, [amount, account, library])
+  }, [amount, account, signer])
 
   useEffect(() => {
     if (!tx) return
