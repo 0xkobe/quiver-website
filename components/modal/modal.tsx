@@ -34,12 +34,11 @@ const Modal: FunctionComponent<IProps> = (props) => {
       <Dialog
         initialFocus={focusRef}
         as="div"
-        static
         className="fixed z-10 inset-0 overflow-y-auto"
         open={props.isOpen}
         onClose={() => {}}
       >
-        <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div className="min-h-screen px-4 text-center">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -49,20 +48,21 @@ const Modal: FunctionComponent<IProps> = (props) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
+            <div>
               <a
                 onClick={() => props.setIsOpen(false)}
-                className="bg-white p-1 inline-block rounded-full absolute top-4 right-4 cursor-pointer text-purple-900"
+                className="bg-white p-1 inline-block rounded-full absolute top-4 right-4 cursor-pointer text-purple-900 z-50 shadow-lg"
                 ref={focusRef}
               >
                 <XIcon className="w-4 h-4" />
               </a>
-            </Dialog.Overlay>
+              <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></Dialog.Overlay>
+            </div>
           </Transition.Child>
 
           {/* This element is to trick the browser into centering the modal contents. */}
           <span
-            className="hidden sm:inline-block sm:align-middle sm:h-screen"
+            className="inline-block h-screen align-middle"
             aria-hidden="true"
           >
             &#8203;
@@ -76,7 +76,7 @@ const Modal: FunctionComponent<IProps> = (props) => {
             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className="inline-block rounded-xl text-left overflow-hidden shadow-xl transform transition-all w-96">
+            <div className="inline-block rounded-xl text-left overflow-hidden shadow-xl align-middle transform transition-all w-full sm:w-96">
               <div className="bg-white p-8">
                 <Dialog.Title
                   as="h3"
