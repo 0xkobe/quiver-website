@@ -45,12 +45,17 @@ const Investor: FunctionComponent = () => {
   const [tx, setTx] = useState<ContractTransaction>()
   const [receipt, setReceipt] = useState<ContractReceipt>()
 
+  const { activate } = useWeb3React<Web3Provider>()
+  const { error, started, getEthPrice } = useQSTKSale()
   const {
-    activate,
     library,
     account,
+    active,
     error: walletError,
     setError,
+  } = useWeb3React<Web3Provider>('user')
+  const { ready, purchase } = useQSTKSale('user')
+
   const signer = useMemo(() => {
     if (!library) return
     if (!account) return
@@ -83,11 +88,12 @@ const Investor: FunctionComponent = () => {
     if (!amount) return
     if (!account) return
     if (!signer) return
+    if (!ready) return
     purchase(amount, signer).then(setTx).catch(setError)
     return () => {
       setTx(undefined)
     }
-  }, [amount, account, signer])
+  }, [amount, account, ready, signer])
 
   useEffect(() => {
     if (!tx) return
@@ -114,7 +120,7 @@ const Investor: FunctionComponent = () => {
         content: <Steps.Transaction hash={tx.hash} />,
         titleSuffix: LoaderTitleSuffix,
       }
-    if (account && !walletError)
+    if (account && active && !walletError)
       return {
         content: <Steps.Wallet />,
       }

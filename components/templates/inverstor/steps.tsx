@@ -65,7 +65,7 @@ const Purchase: FunctionComponent<{
 }
 
 const Connect: FunctionComponent = () => {
-  const { activate, setError } = useWeb3React<Web3Provider>()
+  const { activate, setError } = useWeb3React<Web3Provider>('user')
   const [isWalletConnectActivating, setIsWalletConnectActivating] =
     useState<boolean>(false)
 
