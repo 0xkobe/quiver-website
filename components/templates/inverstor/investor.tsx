@@ -64,6 +64,11 @@ const Investor: FunctionComponent = () => {
   }, [error])
 
   useEffect(() => {
+    if (!walletError) return
+    alert(walletError.message)
+  }, [walletError])
+
+  useEffect(() => {
     if (isOpen) return
     if (tx && !receipt) return
     setAmount(undefined)
