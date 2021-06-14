@@ -45,7 +45,7 @@ const Investor: FunctionComponent = () => {
   const [tx, setTx] = useState<ContractTransaction>()
   const [receipt, setReceipt] = useState<ContractReceipt>()
 
-  const { activate } = useWeb3React<Web3Provider>()
+  const { activate, chainId: sellChainId } = useWeb3React<Web3Provider>()
   const { error, started, getEthPrice } = useQSTKSale()
   const {
     library,
@@ -53,6 +53,7 @@ const Investor: FunctionComponent = () => {
     active,
     error: walletError,
     setError,
+    chainId,
   } = useWeb3React<Web3Provider>('user')
   const { ready, purchase } = useQSTKSale('user')
 
@@ -85,11 +86,12 @@ const Investor: FunctionComponent = () => {
     if (!account) return
     if (!signer) return
     if (!ready) return
+    if (chainId !== sellChainId) return
     purchase(amount, signer).then(setTx).catch(setError)
     return () => {
       setTx(undefined)
     }
-  }, [amount, account, ready, signer])
+  }, [amount, account, ready, signer, chainId, sellChainId])
 
   useEffect(() => {
     if (!tx) return

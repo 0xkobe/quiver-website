@@ -117,6 +117,18 @@ const Connect: FunctionComponent<{ error?: Error }> = ({ error }) => {
   )
 }
 
+const Network: FunctionComponent<{ chainId: number }> = ({ chainId }) => {
+  const name = { 1: 'Mainnet', 3: 'Ropsten' }[chainId]
+  return (
+    <>
+      <Body2 className="mt-6">Select {name} Network</Body2>
+      <Dialog.Description className="mt-2 text-sm leading-5 font-normal text-gray-500">
+        Please open your Ethereum wallet and select the {name} network.
+      </Dialog.Description>
+    </>
+  )
+}
+
 const Wallet: FunctionComponent = () => (
   <>
     <Body2 className="mt-6">Continue on Wallet</Body2>
@@ -170,6 +182,7 @@ export default {
   Purchase,
   Connect,
   Wallet,
+  Network,
   Transaction,
   Success,
 }
