@@ -1,10 +1,10 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { Web3Provider } from '@ethersproject/providers'
-import { formatEther } from '@ethersproject/units'
 import { Dialog } from '@headlessui/react'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import { useWeb3React } from '@web3-react/core'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
+import { commify, formatEther } from 'ethers/lib/utils'
 import { FunctionComponent, useEffect, useMemo, useState } from 'react'
 import { injectedConnector, walletConnectConnector } from '../../../providers'
 import Button from '../../button/button'
@@ -44,7 +44,7 @@ const Purchase: FunctionComponent<{
           <span>Price</span>
           <span className="flex-grow"></span>
           <span className="text-purple-700">
-            {getEthPrice && formatEther(getEthPrice(amount))} ETH
+            {getEthPrice && commify(formatEther(getEthPrice(amount)))} ETH
           </span>
         </div>
 
@@ -192,7 +192,7 @@ const Success: FunctionComponent<{ account: string; amount: BigNumber }> = ({
   <>
     <Body2 className="mt-6">Transaction Succeeded</Body2>
     <Dialog.Description className="mt-2 text-sm leading-5 font-normal text-gray-500 truncate">
-      You successfully purchased {amount.toString()} QSTK tokens
+      You successfully purchased {commify(amount.toString())} QSTK tokens
     </Dialog.Description>
     <Button
       href={`https://etherscan.com/address/${account}`}
