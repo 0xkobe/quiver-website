@@ -110,6 +110,7 @@ const Connect: FunctionComponent = () => {
           outlined
           className="mt-6"
         >
+          <img src="/metamask.svg" className="mr-2" />
           Metamask
         </Button>
         <Button
@@ -131,7 +132,10 @@ const Connect: FunctionComponent = () => {
               </svg>
             </span>
           ) : (
-            'Wallet connect'
+            <>
+              <img src="/walletconnect.svg" className="mr-2" />
+              Wallet connect
+            </>
           )}
         </Button>
       </nav>
