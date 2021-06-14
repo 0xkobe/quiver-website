@@ -5,7 +5,7 @@ import { Dialog } from '@headlessui/react'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import { useWeb3React } from '@web3-react/core'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
-import { FunctionComponent, useMemo, useState } from 'react'
+import { FunctionComponent, useEffect, useMemo, useState } from 'react'
 import { injectedConnector, walletConnectConnector } from '../../../providers'
 import Button from '../../button/button'
 import Body2 from '../../text/body2'
@@ -64,8 +64,8 @@ const Purchase: FunctionComponent<{
   )
 }
 
-const Connect: FunctionComponent<{ error?: Error }> = ({ error }) => {
-  const { activate, setError } = useWeb3React<Web3Provider>('user')
+const Connect: FunctionComponent = () => {
+  const { activate, error, setError } = useWeb3React<Web3Provider>('user')
   const [isWalletConnectActivating, setIsWalletConnectActivating] =
     useState<boolean>(false)
 

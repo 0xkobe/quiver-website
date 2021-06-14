@@ -47,14 +47,8 @@ const Investor: FunctionComponent = () => {
 
   const { activate, chainId: sellChainId } = useWeb3React<Web3Provider>()
   const { error, started, getEthPrice } = useQSTKSale()
-  const {
-    library,
-    account,
-    active,
-    error: walletError,
-    setError,
-    chainId,
-  } = useWeb3React<Web3Provider>('user')
+  const { library, account, active, setError, chainId } =
+    useWeb3React<Web3Provider>('user')
   const { ready, purchase } = useQSTKSale('user')
 
   const signer = useMemo(() => {
@@ -65,7 +59,7 @@ const Investor: FunctionComponent = () => {
 
   useEffect(() => {
     void activate(networkConnector, null, true)
-  }, [activate, walletError]) // fallback to network connector in case of error
+  }, [])
 
   useEffect(() => {
     if (!error) return
@@ -128,7 +122,7 @@ const Investor: FunctionComponent = () => {
       }
     if (!account || !active)
       return {
-        content: <Steps.Connect error={walletError} />,
+        content: <Steps.Connect />,
       }
 
     if (sellChainId !== chainId)
@@ -139,17 +133,7 @@ const Investor: FunctionComponent = () => {
     return {
       content: <Steps.Wallet />,
     }
-  }, [
-    isOpen,
-    receipt,
-    tx,
-    account,
-    walletError,
-    chainId,
-    sellChainId,
-    amount,
-    setAmount,
-  ])
+  }, [isOpen, receipt, tx, account, chainId, sellChainId, amount, setAmount])
 
   function openModal(event) {
     event.preventDefault()
