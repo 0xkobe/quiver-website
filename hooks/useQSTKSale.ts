@@ -31,6 +31,7 @@ export default function useQSTKSale(key?: string) {
 
   const purchase = useCallback(
     (qstkAmount: BigNumber, signer: Signer) => {
+      if (!contract) throw new Error('not ready')
       return contract
         .connect(signer)
         .buyQStk(qstkAmount.mul(BigNumber.from(10).pow(18)), {
@@ -46,5 +47,6 @@ export default function useQSTKSale(key?: string) {
     price,
     getEthPrice,
     purchase,
+    ready: !!contract
   }
 }
