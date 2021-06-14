@@ -45,10 +45,15 @@ const Investor: FunctionComponent = () => {
   const [tx, setTx] = useState<ContractTransaction>()
   const [receipt, setReceipt] = useState<ContractReceipt>()
 
-  const { activate, chainId: sellChainId } = useWeb3React<Web3Provider>()
+  const { activate, chainId: remoteChainId } = useWeb3React<Web3Provider>()
   const { error, started, getEthPrice } = useQSTKSale()
-  const { library, account, active, setError, chainId } =
-    useWeb3React<Web3Provider>('user')
+  const {
+    library,
+    account,
+    active,
+    setError,
+    chainId: userChainId,
+  } = useWeb3React<Web3Provider>('user')
   const { ready, purchase } = useQSTKSale('user')
 
   const signer = useMemo(() => {
@@ -80,12 +85,12 @@ const Investor: FunctionComponent = () => {
     if (!account) return
     if (!signer) return
     if (!ready) return
-    if (chainId !== sellChainId) return
+    if (userChainId !== remoteChainId) return
     purchase(amount, signer).then(setTx).catch(setError)
     return () => {
       setTx(undefined)
     }
-  }, [amount, account, ready, signer, chainId, sellChainId])
+  }, [amount, account, ready, signer, userChainId, remoteChainId])
 
   useEffect(() => {
     if (!tx) return
@@ -125,15 +130,24 @@ const Investor: FunctionComponent = () => {
         content: <Steps.Connect />,
       }
 
-    if (sellChainId !== chainId)
+    if (remoteChainId !== userChainId)
       return {
-        content: <Steps.Network chainId={sellChainId} />,
+        content: <Steps.Network chainId={remoteChainId} />,
       }
 
     return {
       content: <Steps.Wallet />,
     }
-  }, [isOpen, receipt, tx, account, chainId, sellChainId, amount, setAmount])
+  }, [
+    isOpen,
+    receipt,
+    tx,
+    account,
+    userChainId,
+    remoteChainId,
+    amount,
+    setAmount,
+  ])
 
   function openModal(event) {
     event.preventDefault()
