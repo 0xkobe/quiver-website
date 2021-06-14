@@ -6,8 +6,9 @@ import { useEffect, useState } from 'react'
 export default function useContract<T extends Contract>(
   address: string,
   abi: ContractInterface,
+  key?: string,
 ): T {
-  const { library } = useWeb3React<Web3Provider>()
+  const { library } = useWeb3React<Web3Provider>(key)
   const [contract, setContract] = useState<T>()
 
   useEffect(() => {

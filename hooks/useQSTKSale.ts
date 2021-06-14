@@ -4,8 +4,8 @@ import { useCallback, useEffect, useState } from 'react'
 import { abi, address } from '../contract'
 import useContract from './useContract'
 
-export default function useQSTKSale() {
-  const contract = useContract(address, abi)
+export default function useQSTKSale(key?: string) {
+  const contract = useContract(address, abi, key)
   const [price, setPrice] = useState<BigNumber>(BigNumber.from(0))
   const [started, setStarted] = useState<boolean>(false)
   const [error, setError] = useState<Error>()
