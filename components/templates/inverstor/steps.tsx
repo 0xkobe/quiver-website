@@ -64,7 +64,7 @@ const Purchase: FunctionComponent<{
   )
 }
 
-const Connect: FunctionComponent = () => {
+const Connect: FunctionComponent<{ error?: Error }> = ({ error }) => {
   const { activate, setError } = useWeb3React<Web3Provider>('user')
   const [isWalletConnectActivating, setIsWalletConnectActivating] =
     useState<boolean>(false)
@@ -92,6 +92,11 @@ const Connect: FunctionComponent = () => {
       <Dialog.Description className="mt-2 text-sm leading-5 font-normal text-gray-500">
         To purchase QSTK Token you need to connect to an Ethereum Wallet.
       </Dialog.Description>
+      {error && (
+        <span className="text-sm leading-5 font-normal text-red-600 ">
+          {'error' in error ? (error as any).error.message : error.message}
+        </span>
+      )}
       <nav className="flex flex-col">
         <Button
           onClick={(e) => activateWithConnector(e, injectedConnector)}

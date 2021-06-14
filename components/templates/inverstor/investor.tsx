@@ -72,16 +72,12 @@ const Investor: FunctionComponent = () => {
   }, [error])
 
   useEffect(() => {
-    if (!walletError) return
-    alert(walletError.message)
-  }, [walletError])
-
-  useEffect(() => {
     if (isOpen) return
     if (tx && !receipt) return
     setAmount(undefined)
     setTx(undefined)
     setReceipt(undefined)
+    setError(undefined)
   }, [isOpen])
 
   useEffect(() => {
@@ -126,7 +122,7 @@ const Investor: FunctionComponent = () => {
       }
     if (amount)
       return {
-        content: <Steps.Connect />,
+        content: <Steps.Connect error={walletError} />,
       }
 
     return {
