@@ -14,10 +14,15 @@ const Purchase: FunctionComponent<{
   getEthPrice: (amount: BigNumber) => BigNumber
   purchase: (amount: BigNumber) => void
 }> = ({ purchase, getEthPrice }) => {
-  const [amount, setAmount] = useState<BigNumber>()
+  const [amount, setAmount] = useState<BigNumber>(BigNumber.from(100_000))
   const canPurchase = useMemo(() => {
     return amount !== undefined && amount.gt(0)
   }, [amount])
+
+  const updateAmount = (e) => {
+    const value = BigNumber.from(e.target.value || '0')
+    if (value.gte(0)) setAmount(value)
+  }
   return (
     <>
       <Body2 className="mt-6">Chose an amount</Body2>
@@ -31,7 +36,8 @@ const Purchase: FunctionComponent<{
         <input
           type="number"
           min="1"
-          onChange={(e) => setAmount(BigNumber.from(e.target.value || '0'))}
+          value={amount.toString()}
+          onChange={updateAmount}
           id="qstk-amount"
           className="w-full border shadow rounded-2xl text-sm leading-5 font-normal text-purple-900 px-4 py-2 pr-16 outline-none placeholder-gray-400 focus:ring-2 ring-purple-300 border-purple-100"
         />
@@ -57,7 +63,7 @@ const Purchase: FunctionComponent<{
             purchase(amount)
           }}
         >
-          Purchase
+          {canPurchase ? 'Purchase' : 'Enter an amount'}
         </Button>
       </div>
     </>
