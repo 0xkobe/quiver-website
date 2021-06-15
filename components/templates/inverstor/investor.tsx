@@ -6,6 +6,7 @@ import { useWeb3React } from '@web3-react/core'
 import {
   FunctionComponent,
   ReactElement,
+  ReactNode,
   useEffect,
   useMemo,
   useState,
@@ -14,7 +15,7 @@ import useQSTKSale from '../../../hooks/useQSTKSale'
 import { networkConnector } from '../../../providers'
 import Button from '../../button/button'
 import Container from '../../container/container'
-import Modal, { LoaderTitleSuffix, SuccessTitleSuffix } from '../../modal/modal'
+import Modal from '../../modal/modal'
 import Body1 from '../../text/body1'
 import Headline from '../../text/headline'
 import Subtitle from '../../text/subtitle'
@@ -102,41 +103,47 @@ const Investor: FunctionComponent = () => {
 
   // TODO: improve with some state machine eg: https://github.com/davidkpiano/xstate/tree/main/packages/xstate-react or similar
   const modal: {
-    content: ReactElement
-    titleSuffix?: ReactElement
+    children: ReactNode
     info?: ReactElement
+    loading?: boolean
+    closable?: boolean
   } = useMemo(() => {
     if (!isOpen) return null
     if (receipt)
       return {
-        content: <Steps.Success account={account} amount={amount} />,
-        titleSuffix: SuccessTitleSuffix,
+        children: <Steps.Success account={account} amount={amount} />,
+        closable: true,
       }
 
     if (tx)
       return {
-        content: <Steps.Transaction hash={tx.hash} />,
-        titleSuffix: LoaderTitleSuffix,
+        children: <Steps.Transaction hash={tx.hash} />,
+        loading: true,
+        closable: false,
       }
     if (!amount)
       return {
-        content: (
+        children: (
           <Steps.Purchase purchase={setAmount} getEthPrice={getEthPrice} />
         ),
+        closable: true,
         info: Info,
       }
     if (!account || !active)
       return {
-        content: <Steps.Connect />,
+        children: <Steps.Connect />,
+        closable: true,
       }
 
     if (remoteChainId !== userChainId)
       return {
-        content: <Steps.Network chainId={remoteChainId} />,
+        children: <Steps.Network chainId={remoteChainId} />,
+        closable: true,
       }
 
     return {
-      content: <Steps.Wallet />,
+      children: <Steps.Wallet />,
+      closable: true,
     }
   }, [
     isOpen,
@@ -235,11 +242,8 @@ const Investor: FunctionComponent = () => {
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           title="Buy QSTK Token"
-          info={modal.info}
-          titleSuffix={modal.titleSuffix}
-        >
-          {modal.content}
-        </Modal>
+          {...modal}
+        />
       )}
     </Container>
   )
