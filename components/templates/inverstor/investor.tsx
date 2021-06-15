@@ -64,7 +64,7 @@ const Investor: FunctionComponent = () => {
   }, [library, account])
 
   useEffect(() => {
-    void activate(networkConnector, null, true)
+    void activate(networkConnector)
   }, [])
 
   useEffect(() => {
