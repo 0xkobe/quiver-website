@@ -1,155 +1,250 @@
-import { Fragment, FunctionComponent } from 'react'
+import { BigNumber } from '@ethersproject/bignumber'
+import { ContractReceipt, ContractTransaction } from '@ethersproject/contracts'
+import { Web3Provider } from '@ethersproject/providers'
+import { ArrowNarrowRightIcon } from '@heroicons/react/outline'
+import { useWeb3React } from '@web3-react/core'
+import {
+  FunctionComponent,
+  ReactElement,
+  ReactNode,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react'
+import useQSTKSale from '../../../hooks/useQSTKSale'
+import { networkConnector } from '../../../providers'
 import Button from '../../button/button'
 import Container from '../../container/container'
-import IconCryptoBtc from '../../icon/crypto/BTC'
-import IconCryptoEth from '../../icon/crypto/ETH'
+import Modal from '../../modal/modal'
 import Body1 from '../../text/body1'
-import Body2 from '../../text/body2'
 import Headline from '../../text/headline'
-import Subtitle2 from '../../text/subtitle2'
+import Subtitle from '../../text/subtitle'
 import Title from '../../text/title'
-import Benefit from './benefit'
-import NFT from './nft'
-import { IBenefit, INFT } from './types'
+import Steps from './steps'
 
-const nfts: INFT[] = [
-  {
-    name: 'Fish',
-    category: 'Silver',
-    crypto: IconCryptoBtc,
-    progress: 'up',
-    imageUrl: '/nfts/fish/silver/happy.png',
-  },
-  {
-    name: 'Dragon',
-    category: 'Platinium',
-    crypto: IconCryptoEth,
-    progress: 'stable',
-    imageUrl: '/nfts/dragon/platinum/normal.png',
-  },
-  {
-    name: 'Bull',
-    category: 'Bronze',
-    crypto: IconCryptoBtc,
-    progress: 'down',
-    imageUrl: '/nfts/bull/bronze/angry.png',
-  },
-  {
-    name: 'Deer',
-    category: 'Gold',
-    crypto: IconCryptoEth,
-    progress: 'down',
-    imageUrl: '/nfts/deer/gold/angry.png',
-  },
-  {
-    name: 'Bear',
-    category: 'Diamond',
-    crypto: IconCryptoBtc,
-    progress: 'stable',
-    imageUrl: '/nfts/bear/diamond/normal.png',
-  },
-  {
-    name: 'Whale',
-    category: 'Diamond',
-    crypto: IconCryptoEth,
-    progress: 'up',
-    imageUrl: '/nfts/whale/diamond/happy.png',
-  },
-]
-
-const benefits: IBenefit[] = [
-  {
-    name: 'Emotional NFT',
-    category: 'Community Art NFTs',
-    items: [
-      'Lovely art for stressless investment',
-      'Get access to locked assets sale',
-      'Community gamification',
-    ],
-  },
-  {
-    name: 'QREP Token',
-    category: 'Reputation Token',
-    items: [
-      'Get initial reputation in the ecosystem with QREP Token',
-      'Access DICP voting power',
-      'Unlock DICP protocol rewards',
-      'Trust from the community',
-    ],
-  },
-  {
-    name: 'QSTK Token',
-    category: 'Economy Token',
-    items: [
-      'Receive QSTK Token at a discounted price (locked asset)',
-      'Access Quiver IDAO voting power',
-      'Get discounted price on information purchase from the DICP',
-      'Unlock DICP protocol rewards',
-    ],
-  },
-]
+const Info = (
+  <>
+    <h5 className="text-sm leading-5 font-medium text-purple-900">
+      Get a better deal with Emotional NFTs
+    </h5>
+    <p className="mt-2 text-xs leading-4 font-normal text-purple-900">
+      Did you know you can get a higher discount on your QSTK Token purchase?
+    </p>
+    <a
+      href="https://emotional.quiverprotocol.com"
+      className="mt-4 text-xs leading-4 font-medium text-purple-700"
+    >
+      Check out our Emotional NFTs
+      <ArrowNarrowRightIcon className="ml-2 w-3 h-3 inline-flex" />
+    </a>
+  </>
+)
 
 const Investor: FunctionComponent = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [amount, setAmount] = useState<BigNumber>()
+  const [tx, setTx] = useState<ContractTransaction>()
+  const [receipt, setReceipt] = useState<ContractReceipt>()
+
+  const { activate, chainId: remoteChainId } = useWeb3React<Web3Provider>()
+  const { error, started, getEthPrice } = useQSTKSale()
+  const {
+    library,
+    account,
+    active,
+    setError,
+    chainId: userChainId,
+  } = useWeb3React<Web3Provider>('user')
+  const { ready, purchase } = useQSTKSale('user')
+
+  const signer = useMemo(() => {
+    if (!library) return
+    if (!account) return
+    return library.getSigner(account)
+  }, [library, account])
+
+  useEffect(() => {
+    void activate(networkConnector)
+  }, [])
+
+  useEffect(() => {
+    if (!error) return
+    alert(error.message)
+  }, [error])
+
+  useEffect(() => {
+    if (isOpen) return
+    if (tx && !receipt) return
+    setAmount(undefined)
+    setTx(undefined)
+    setReceipt(undefined)
+    setError(undefined)
+  }, [isOpen])
+
+  useEffect(() => {
+    if (!amount) return
+    if (!account) return
+    if (!signer) return
+    if (!ready) return
+    if (userChainId !== remoteChainId) return
+    purchase(amount, signer).then(setTx).catch(setError)
+    return () => {
+      setTx(undefined)
+    }
+  }, [amount, account, ready, signer, userChainId, remoteChainId])
+
+  useEffect(() => {
+    if (!tx) return
+    tx.wait().then(setReceipt).catch(setError)
+    return () => {
+      setReceipt(undefined)
+    }
+  }, [tx])
+
+  // TODO: improve with some state machine eg: https://github.com/davidkpiano/xstate/tree/main/packages/xstate-react or similar
+  const modal: {
+    children: ReactNode
+    info?: ReactElement
+    loading?: boolean
+    closable?: boolean
+  } = useMemo(() => {
+    if (!isOpen) return null
+    if (receipt)
+      return {
+        children: <Steps.Success account={account} amount={amount} />,
+        closable: true,
+      }
+
+    if (tx)
+      return {
+        children: <Steps.Transaction hash={tx.hash} />,
+        loading: true,
+        closable: false,
+      }
+    if (!amount)
+      return {
+        children: (
+          <Steps.Purchase purchase={setAmount} getEthPrice={getEthPrice} />
+        ),
+        closable: true,
+        info: Info,
+      }
+    if (!account || !active)
+      return {
+        children: <Steps.Connect />,
+        closable: true,
+      }
+
+    if (remoteChainId !== userChainId)
+      return {
+        children: <Steps.Network chainId={remoteChainId} />,
+        closable: true,
+      }
+
+    return {
+      children: <Steps.Wallet />,
+      closable: true,
+    }
+  }, [
+    isOpen,
+    receipt,
+    tx,
+    account,
+    userChainId,
+    remoteChainId,
+    amount,
+    setAmount,
+  ])
+
+  function openModal(event) {
+    event.preventDefault()
+    event.stopPropagation()
+    setIsOpen(true)
+  }
+
   return (
-    <Container id="invest">
-      <div className="lg:grid lg:grid-cols-5 lg:grid-flow-col-dense lg:gap-8">
-        <div className="col-span-2 flex items-center">
+    <Container id="invest" className="text-center">
+      <Headline>Quiver seed sale</Headline>
+      <Title className="mt-3 mx-auto max-w-md md:max-w-2xl">
+        Become part of the journey as a Quiver early-investor
+      </Title>
+      <Body1 className="mt-6 mx-auto max-w-md md:max-w-4xl">
+        As an early-investor and supporter you will access benefits like QSTK
+        token at a discounted price, eligibility to upcoming airdrops and much
+        more.
+      </Body1>
+      <div className="lg:grid lg:grid-cols-2 lg:gap-8 text-left mt-12">
+        <div className="p-12">
+          <div className="mb-6">
+            <span className="bg-white rounded-2xl shadow-md inline-block overflow-hidden">
+              <img src="/icon.svg" className="m-4 w-10 h-10" />
+            </span>
+          </div>
+          <Headline>Option #1</Headline>
+          <Subtitle className="mt-3">Buy QSTK Token</Subtitle>
+          <Body1 className="mt-6">
+            QSTK Token is the Fuel of the Quiver ecosystem. <br />
+            You can purchase it right now as part of our Seed Sale to become a
+            Quiver investor and access the following benefits:
+          </Body1>
+          <ul className="list-disc list-inside mt-6 text-purple-900">
+            <li>Invest together with DAO</li>
+            <li>Access Quiver IDAO voting power</li>
+            <li>Unlock DICP protocol rewards</li>
+          </ul>
           <div>
-            <Headline>Emotional NFTs sale</Headline>
-            <Title className="mt-3">Become a Community Investor</Title>
-            <Body1 className="mt-6">
-              Quiver Emotional NFTs are designed to be part of our upcoming
-              stressless portfolio tracker. They give you an ability to buy
-              discounted QSTK token along with voting power to become a DAO
-              member.
-            </Body1>
-            <Body2 className="mt-12">
-              <Button
-                href="https://emotional.quiverprotocol.com"
-                target="_blank"
-                large
-                shadow
-              >
-                Become an investor
-              </Button>
-            </Body2>
-            {/* <Body2 className="mt-12">
-              <strong className="text-primary font-bold">
-                Coming early June
-              </strong>
-              , sign up to get notified of the sale
-            </Body2>
-            <Newsletter className="my-6" /> */}
+            <Button
+              onClick={openModal}
+              disabled={!started}
+              large
+              shadow
+              className="mt-12"
+            >
+              Buy QSTK Token
+            </Button>
           </div>
         </div>
-        <div className="col-span-3 mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
-            {nfts.map((x, i) => (
-              <NFT nft={x} index={i} key={i} />
-            ))}
+
+        <div className="p-12">
+          <div className="mb-6">
+            <span className="bg-white rounded-2xl shadow-md inline-block overflow-hidden">
+              <img src="/nft-pic.png" width={72} height={72} />
+            </span>
+          </div>
+          <Headline>Option #2</Headline>
+          <Subtitle className="mt-3">Mint your own Emotional NFTs</Subtitle>
+          <Body1 className="mt-6">
+            Quiver Emotional NFTs are designed to be part of our upcoming
+            stressless portfolio tracker. It’s an innovative way to become an
+            investor and access the following benefits:
+          </Body1>
+          <ul className="list-disc list-inside mt-6 text-purple-900">
+            <li>Lovely art for stressless investment</li>
+            <li>Receive QSTK Token at a discounted price (locked asset)</li>
+            <li>Access Quiver IDAO and DICP voting power </li>
+            <li>Unlock DICP protocol rewards</li>
+          </ul>
+          <div>
+            <Button
+              href="https://emotional.quiverprotocol.com/"
+              large
+              shadow
+              className="mt-12"
+            >
+              Mint Emotional NFTs
+            </Button>
           </div>
         </div>
       </div>
 
-      <Subtitle2 className="mt-12 text-center">
-        Early Investors Bundle Benefits
-      </Subtitle2>
-      <div className="mt-12">
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-11">
-          {benefits.map((x, i) => (
-            <Fragment key={i}>
-              {i > 0 && (
-                <div className="flex items-center">
-                  <span className="border border-purple-300 rounded-full text-purple-300 w-9 h-9 px-2 py-1 text-center mx-auto">
-                    +
-                  </span>
-                </div>
-              )}
-              <Benefit benefit={x} />
-            </Fragment>
-          ))}
-        </div>
-      </div>
+      {modal && (
+        <Modal
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          title="Buy QSTK Token"
+          {...modal}
+        />
+      )}
     </Container>
   )
 }

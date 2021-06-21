@@ -11,6 +11,7 @@ type IProps = {
   text?: boolean
   className?: string
   target?: string
+  disabled?: boolean
 }
 
 const Button: FunctionComponent<IProps> = (props) => {
@@ -27,16 +28,20 @@ const Button: FunctionComponent<IProps> = (props) => {
     : 'px-2'
   const py = props.large ? 'py-3' : 'py-2'
   const size = `${px} ${py}`
-  const border = props.outlined
-    ? 'border border-purple-300 ring-1 ring-black ring-opacity-5'
-    : props.text
-    ? ''
-    : 'ring-1 ring-black ring-opacity-5'
-  const color = props.outlined
-    ? 'text-purple-900 bg-white'
-    : props.text
-    ? 'text-primary'
-    : 'text-white bg-gradient-to-r from-primary to-secondary'
+  let border = 'ring-1 ring-black ring-opacity-5'
+  let color = 'text-white bg-gradient-to-r from-primary to-secondary'
+  if (props.outlined) {
+    border = 'border border-purple-300 ring-1 ring-black ring-opacity-5'
+    color = 'text-purple-900 bg-white'
+  }
+  if (props.text) {
+    border = ''
+    color = 'text-primary'
+  }
+  if (props.disabled) {
+    border = ''
+    color = 'bg-gray-100 text-gray-300'
+  }
   const shadow = props.shadow && !props.text ? 'shadow-xl' : null
   const iconMargin = props.children ? 'mr-3' : ''
   const icon = props.text
@@ -49,7 +54,18 @@ const Button: FunctionComponent<IProps> = (props) => {
   return (
     <a
       href={'href' in props ? props.href : '#'}
-      onClick={'onClick' in props ? props.onClick : null}
+      onClick={
+        'onClick' in props
+          ? (e) => {
+              if (props.disabled) {
+                e.stopPropagation()
+                e.preventDefault()
+                return
+              }
+              props.onClick(e)
+            }
+          : null
+      }
       target={props.target}
       className={classNames(
         structure,
